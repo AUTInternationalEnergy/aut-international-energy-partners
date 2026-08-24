@@ -6,15 +6,26 @@
 
 <title>AUT International Energy Partners</title>
 
+<meta name="description" content="AUT International Energy Partners connects qualified companies, suppliers, contractors and project stakeholders with strategic opportunities across energy, infrastructure and industrial markets.">
+
 <style>
+
+/* =========================================================
+   AUT INTERNATIONAL ENERGY PARTNERS
+   COMPLETE ONE-PAGE WEBSITE
+   ========================================================= */
+
 :root {
-    --navy: #061525;
-    --navy2: #0b1d30;
-    --gold: #e7a92f;
-    --gold-light: #f5bd42;
+    --navy: #031321;
+    --navy2: #071d30;
+    --navy3: #0b263d;
+    --gold: #e9a927;
+    --gold-light: #f4b938;
     --white: #ffffff;
-    --gray: #c8ced6;
-    --dark-text: #101b2b;
+    --text: #172033;
+    --muted: #5f6875;
+    --light: #f7f8fa;
+    --border: #dfe3e8;
 }
 
 * {
@@ -28,9 +39,13 @@ html {
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    color: var(--white);
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+    color: var(--text);
     background: #ffffff;
+    overflow-x: hidden;
 }
 
 a {
@@ -38,805 +53,1239 @@ a {
     color: inherit;
 }
 
-/* =========================
+button {
+    font-family: inherit;
+}
+
+/* =========================================================
    HEADER
-========================= */
+   ========================================================= */
 
 .header {
-    background: var(--navy);
-    min-height: 153px;
+    width: 100%;
+    background:
+        linear-gradient(135deg, #020d18, #061a2c);
+    color: white;
     position: relative;
     z-index: 1000;
 }
 
-.header-inner {
-    max-width: 1400px;
+.header-top {
+    max-width: 1450px;
     margin: auto;
-    padding: 18px 5%;
-}
+    min-height: 170px;
+    padding: 22px 55px 10px;
 
-/* TOP ROW */
-
-.top-row {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    gap: 55px;
-    height: 45px;
-    font-size: 14px;
-}
-
-.top-item {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    white-space: nowrap;
-}
-
-.gold-icon {
-    color: var(--gold);
-    font-size: 21px;
-}
-
-/* MAIN NAVIGATION */
-
-.main-nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-top: -5px;
+    gap: 40px;
 }
 
-.logo {
+/* =========================================================
+   PROFESSIONAL AUT EARTH LOGO
+   ========================================================= */
+
+.brand {
     display: flex;
     align-items: center;
-    min-width: 510px;
+    gap: 22px;
+    min-width: 0;
 }
 
-.logo-symbol {
-    width: 90px;
-    height: 90px;
-    border: 4px solid var(--gold);
+.aut-earth {
+    width: 120px;
+    height: 120px;
+    flex-shrink: 0;
+
     border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle at 35% 28%,
+            #f7d77c 0%,
+            #d99b25 23%,
+            #8d5a13 48%,
+            #263d4b 49%,
+            #071d30 75%
+        );
+
+    border: 2px solid #e8a829;
+
+    box-shadow:
+        inset -18px -14px 30px rgba(0,0,0,.55),
+        inset 12px 8px 18px rgba(255,255,255,.15),
+        0 0 0 3px rgba(233,169,39,.08);
+
+    position: relative;
+
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--gold);
-    font-size: 43px;
-    font-weight: 900;
-    margin-right: 17px;
-    position: relative;
+
+    overflow: hidden;
 }
 
-.logo-symbol::after {
+/* Longitude / latitude lines */
+
+.aut-earth::before {
     content: "";
     position: absolute;
-    width: 110px;
-    height: 38px;
-    border: 3px solid var(--gold);
+    width: 92px;
+    height: 92px;
+    border: 1px solid rgba(255,255,255,.42);
     border-radius: 50%;
-    transform: rotate(-22deg);
+
+    box-shadow:
+        inset 20px 0 0 -19px rgba(255,255,255,.35),
+        inset -20px 0 0 -19px rgba(255,255,255,.35);
 }
 
-.logo-text {
-    border-left: 2px solid var(--gold);
-    padding-left: 20px;
+.aut-earth::after {
+    content: "";
+    position: absolute;
+    width: 102px;
+    height: 42px;
+    border-top: 1px solid rgba(255,255,255,.38);
+    border-bottom: 1px solid rgba(255,255,255,.30);
+    border-radius: 50%;
 }
 
-.logo-main {
-    font-size: 31px;
-    letter-spacing: 2px;
-    font-weight: 500;
+/* AUT lettering */
+
+.aut-lettering {
+    position: relative;
+    z-index: 5;
+
+    font-size: 38px;
+    font-weight: 900;
+    letter-spacing: -3px;
+
+    color: #ffffff;
+
+    text-shadow:
+        1px 2px 3px rgba(0,0,0,.7);
 }
 
-.logo-sub {
+/* Orbit */
+
+.orbit {
+    position: absolute;
+    width: 148px;
+    height: 48px;
+
+    border: 2px solid #e9a927;
+    border-radius: 50%;
+
+    transform: rotate(-28deg);
+    z-index: 6;
+
+    pointer-events: none;
+}
+
+/* Brand text */
+
+.brand-divider {
+    height: 82px;
+    width: 2px;
+    background: var(--gold);
+}
+
+.brand-text {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.brand-title {
+    font-size: 39px;
+    font-weight: 300;
+    letter-spacing: 4px;
+    white-space: nowrap;
+}
+
+.brand-subtitle {
     color: var(--gold);
-    font-size: 17px;
-    letter-spacing: 5px;
-    font-weight: bold;
-    margin-top: 4px;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 6px;
+    white-space: nowrap;
 }
 
-.nav {
+/* =========================================================
+   HEADER CONTACT
+   ========================================================= */
+
+.header-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 15px;
+}
+
+.header-info {
     display: flex;
     align-items: center;
-    gap: 40px;
-    font-size: 15px;
-    font-weight: bold;
+    gap: 28px;
+    font-size: 14px;
+    color: #ffffff;
 }
 
-.nav a {
-    padding: 22px 0 18px;
-    position: relative;
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 9px;
 }
 
-.nav a:hover,
-.nav a.active {
+.info-icon {
     color: var(--gold);
-}
-
-.nav a.active::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 3px;
-    background: var(--gold);
+    font-size: 19px;
 }
 
 .partner-button {
-    background: var(--gold);
-    color: #101b2b;
-    padding: 15px 25px;
-    font-weight: bold;
-    min-width: 220px;
-    text-align: center;
-    transition: .2s;
+    background: var(--gold-light);
+    color: #101b26;
+
+    padding: 15px 28px;
+
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: .4px;
+
+    border: none;
+    border-radius: 2px;
+
+    display: inline-flex;
+    align-items: center;
+    gap: 25px;
+
+    cursor: pointer;
+
+    transition:
+        transform .2s ease,
+        background .2s ease;
 }
 
 .partner-button:hover {
-    background: var(--gold-light);
+    background: #ffc34c;
+    transform: translateY(-2px);
 }
 
-/* =========================
+.arrow {
+    font-size: 20px;
+}
+
+/* =========================================================
+   NAVIGATION
+   ========================================================= */
+
+.nav {
+    max-width: 1450px;
+    margin: auto;
+
+    padding: 0 55px;
+
+    height: 68px;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.nav-list {
+    display: flex;
+    align-items: center;
+    gap: 48px;
+    list-style: none;
+}
+
+.nav-link {
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 700;
+
+    height: 68px;
+
+    display: flex;
+    align-items: center;
+
+    position: relative;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--gold);
+}
+
+.nav-link.active::after {
+    content: "";
+    position: absolute;
+
+    bottom: 9px;
+    left: 0;
+    right: 0;
+
+    height: 3px;
+
+    background: var(--gold);
+}
+
+.dropdown {
+    margin-left: 7px;
+    font-size: 11px;
+}
+
+/* =========================================================
    HERO
-========================= */
+   ========================================================= */
 
 .hero {
-    min-height: 580px;
+    min-height: 650px;
+
+    position: relative;
+
     background-image:
         linear-gradient(
             90deg,
-            rgba(4,16,29,.84) 0%,
-            rgba(4,16,29,.58) 35%,
-            rgba(4,16,29,.10) 72%,
-            rgba(4,16,29,.08) 100%
+            rgba(3,19,33,.97) 0%,
+            rgba(3,19,33,.88) 25%,
+            rgba(3,19,33,.52) 48%,
+            rgba(3,19,33,.08) 72%
         ),
         url("aut-energy-hero.png");
 
     background-size: cover;
-    background-position: center center;
+    background-position: center;
+
+    color: white;
 
     display: flex;
     align-items: center;
 }
 
+/*
+ IMPORTANT:
+ The left side is deliberately darkened.
+ This prevents any words embedded inside the source
+ image from competing with the actual website text.
+ */
+
 .hero-content {
-    width: 1400px;
-    max-width: 90%;
+    width: 100%;
+    max-width: 1450px;
+
     margin: auto;
-    padding-top: 15px;
+
+    padding: 75px 75px 85px;
+
+    position: relative;
+    z-index: 5;
 }
 
-.hero h1 {
-    font-size: 44px;
-    line-height: 1.12;
+.hero-copy {
+    width: min(600px, 100%);
+}
+
+.hero-title {
+    font-size: clamp(42px, 5vw, 72px);
+
+    line-height: 1.03;
+
     font-weight: 800;
-    max-width: 600px;
-    letter-spacing: .5px;
+
+    text-transform: uppercase;
+
+    letter-spacing: -1px;
+
+    margin-bottom: 26px;
 }
 
-.hero h1 span {
-    color: var(--gold);
+.hero-title .gold {
+    color: var(--gold-light);
 }
 
 .hero-line {
     width: 410px;
+    max-width: 100%;
+
     height: 2px;
+
     background: var(--gold);
-    margin: 18px 0;
+
+    margin-bottom: 25px;
 }
 
-.hero p {
-    max-width: 620px;
+.hero-description {
     font-size: 19px;
-    line-height: 1.45;
-    color: #f2f4f7;
+
+    line-height: 1.55;
+
+    color: rgba(255,255,255,.94);
+
+    max-width: 590px;
+
+    margin-bottom: 30px;
 }
 
 .hero-buttons {
     display: flex;
     gap: 18px;
-    margin-top: 28px;
-}
-
-.btn-primary,
-.btn-outline {
-    padding: 14px 25px;
-    font-weight: bold;
-    font-size: 14px;
-    display: inline-flex;
-    align-items: center;
-    gap: 18px;
+    flex-wrap: wrap;
 }
 
 .btn-primary {
-    background: var(--gold);
-    color: #111d2d;
+    background: var(--gold-light);
+    color: #0b1722;
+
+    padding: 17px 29px;
+
+    font-size: 15px;
+    font-weight: 800;
+
+    border: 1px solid var(--gold-light);
+
+    display: inline-flex;
+    align-items: center;
+    gap: 25px;
+
+    transition: .2s ease;
+}
+
+.btn-primary:hover {
+    background: #ffc44c;
+    transform: translateY(-2px);
 }
 
 .btn-outline {
-    border: 1px solid white;
+    color: white;
+
+    padding: 17px 29px;
+
+    font-size: 15px;
+    font-weight: 700;
+
+    border: 1px solid rgba(255,255,255,.75);
+
+    display: inline-flex;
+    align-items: center;
+    gap: 25px;
+
+    transition: .2s ease;
+}
+
+.btn-outline:hover {
+    background: rgba(255,255,255,.12);
+}
+
+/* =========================================================
+   STATISTICS BAND
+   ========================================================= */
+
+.stats {
+    background:
+        linear-gradient(
+            90deg,
+            #031321,
+            #071e32
+        );
+
     color: white;
 }
 
-/* =========================
-   STATS BAR
-========================= */
-
-.stats {
-    background: rgba(4,17,30,.97);
-    min-height: 85px;
-}
-
 .stats-inner {
-    max-width: 1400px;
+    max-width: 1450px;
     margin: auto;
-    min-height: 85px;
+
     display: grid;
     grid-template-columns: repeat(4, 1fr);
 }
 
 .stat {
+    min-height: 145px;
+
+    padding: 25px 28px;
+
     display: flex;
     align-items: center;
-    gap: 18px;
-    padding: 15px 35px;
-    border-right: 1px solid rgba(255,255,255,.35);
+
+    gap: 22px;
+
+    position: relative;
 }
 
-.stat:last-child {
-    border-right: none;
+.stat:not(:last-child)::after {
+    content: "";
+
+    position: absolute;
+
+    right: 0;
+    top: 27px;
+    bottom: 27px;
+
+    width: 1px;
+
+    background: rgba(255,255,255,.35);
 }
 
 .stat-icon {
+    width: 52px;
+    flex-shrink: 0;
+
     color: var(--gold);
-    font-size: 39px;
-    width: 45px;
+
+    font-size: 46px;
+
     text-align: center;
+}
+
+.stat-content {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
 }
 
 .stat-title {
     font-size: 17px;
-    font-weight: bold;
-    line-height: 1.2;
+    font-weight: 800;
+
+    line-height: 1.15;
 }
 
-.stat-sub {
-    font-size: 16px;
-    margin-top: 3px;
+.stat-subtitle {
+    font-size: 15px;
+    line-height: 1.3;
+
+    color: rgba(255,255,255,.88);
 }
 
-/* =========================
-   WHAT WE DO
-========================= */
+/* =========================================================
+   SERVICES
+   ========================================================= */
 
 .services {
     background: #ffffff;
-    color: var(--dark-text);
-    padding: 38px 5% 55px;
+
+    padding: 80px 50px 95px;
 }
 
-.services-header {
-    text-align: center;
-    margin-bottom: 35px;
-}
-
-.services-eyebrow {
-    color: var(--gold);
-    font-size: 14px;
-    letter-spacing: 3px;
-    font-weight: bold;
-    margin-bottom: 7px;
-}
-
-.services-header h2 {
-    font-size: 29px;
-    font-weight: 800;
-}
-
-.services-header-line {
-    width: 60px;
-    height: 2px;
-    background: var(--gold);
-    margin: 10px auto 0;
-}
-
-.service-grid {
-    max-width: 1350px;
+.services-inner {
+    max-width: 1250px;
     margin: auto;
+}
+
+.section-label {
+    text-align: center;
+
+    color: #c48a20;
+
+    font-size: 14px;
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 10px;
+}
+
+.section-title {
+    text-align: center;
+
+    color: #071a31;
+
+    font-size: clamp(30px, 4vw, 42px);
+
+    line-height: 1.15;
+
+    font-weight: 800;
+
+    margin-bottom: 20px;
+}
+
+.section-line {
+    width: 55px;
+    height: 2px;
+
+    background: var(--gold);
+
+    margin: 0 auto 55px;
+}
+
+.services-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+
+    grid-template-columns: repeat(2, 1fr);
+
+    border-top: 1px solid var(--border);
+    border-left: 1px solid transparent;
 }
 
 .service {
-    padding: 0 35px;
-    border-right: 1px solid #ddd;
-    min-height: 130px;
+    min-height: 210px;
+
+    padding: 38px 45px;
+
+    display: flex;
+    align-items: flex-start;
+
+    gap: 30px;
+
+    border-bottom: 1px solid var(--border);
 }
 
-.service:last-child {
-    border-right: none;
+.service:nth-child(odd) {
+    border-right: 1px solid var(--border);
 }
 
 .service-icon {
-    color: #c88f22;
-    font-size: 38px;
-    margin-bottom: 8px;
+    width: 72px;
+    height: 72px;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    background: #fbf5e9;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #c98816;
+
+    font-size: 42px;
 }
 
-.service h3 {
-    font-size: 17px;
+.service-content {
+    padding-top: 4px;
+}
+
+.service-title {
+    font-size: 19px;
+
     line-height: 1.25;
-    margin-bottom: 12px;
-}
 
-.service p {
-    color: #4d5560;
-    font-size: 14px;
-    line-height: 1.6;
-}
-
-/* =========================
-   INQUIRY TAB
-========================= */
-
-.inquiry-tab {
-    position: fixed;
-    right: 0;
-    top: 55%;
-    transform: translateY(-50%);
-    background: var(--gold-light);
-    color: #08172a;
-    width: 58px;
-    height: 210px;
-    z-index: 2000;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    cursor: pointer;
-    box-shadow: 0 5px 18px rgba(0,0,0,.25);
-}
-
-.inquiry-tab span {
-    writing-mode: vertical-rl;
-    transform: rotate(180deg);
     font-weight: 800;
-    letter-spacing: 1px;
+
+    color: #0a1930;
+
+    margin-bottom: 13px;
+}
+
+.service-description {
     font-size: 15px;
+
+    line-height: 1.65;
+
+    color: #596270;
+
+    max-width: 390px;
 }
 
-/* =========================
-   INQUIRY OVERLAY
-========================= */
-
-.inquiry-overlay {
-    position: fixed;
-    inset: 0;
-    background: rgba(0,0,0,.72);
-    z-index: 3000;
-
-    display: none;
-    align-items: center;
-    justify-content: center;
-
-    padding: 20px;
-}
-
-.inquiry-overlay.show {
-    display: flex;
-}
-
-.inquiry-box {
-    width: 620px;
-    max-width: 100%;
-    max-height: 92vh;
-    overflow-y: auto;
-
-    background: white;
-    color: #162233;
-
-    padding: 40px;
-    box-shadow: 0 15px 60px rgba(0,0,0,.4);
-    position: relative;
-}
-
-.close-inquiry {
-    position: absolute;
-    right: 20px;
-    top: 15px;
-
-    border: none;
-    background: transparent;
-
-    font-size: 32px;
-    cursor: pointer;
-    color: #555;
-}
-
-.inquiry-heading {
-    margin-bottom: 28px;
-}
-
-.inquiry-heading small {
-    color: var(--gold);
-    letter-spacing: 2px;
-    font-weight: bold;
-}
-
-.inquiry-heading h2 {
-    font-size: 30px;
-    margin-top: 5px;
-}
-
-.inquiry-heading p {
-    color: #606975;
-    margin-top: 10px;
-    line-height: 1.5;
-}
-
-.form-row {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 18px;
-}
-
-.form-group {
-    margin-bottom: 17px;
-}
-
-.form-group.full {
-    grid-column: 1 / -1;
-}
-
-.form-group label {
-    display: block;
-    font-size: 13px;
-    font-weight: bold;
-    margin-bottom: 7px;
-}
-
-.form-group input,
-.form-group textarea {
-    width: 100%;
-    border: 1px solid #ccd2d9;
-    padding: 13px;
-    font-size: 15px;
-    font-family: inherit;
-    outline: none;
-}
-
-.form-group input:focus,
-.form-group textarea:focus {
-    border-color: var(--gold);
-}
-
-.form-group textarea {
-    min-height: 130px;
-    resize: vertical;
-}
-
-.submit-button {
-    width: 100%;
-    border: none;
-    background: var(--gold);
-    color: #101b2b;
-    padding: 16px;
-    font-weight: 800;
-    font-size: 15px;
-    cursor: pointer;
-}
-
-.submit-button:hover {
-    background: var(--gold-light);
-}
-
-/* =========================
-   FOOTER
-========================= */
+/* =========================================================
+   FOOTER STRIP
+   ========================================================= */
 
 .footer {
-    background: var(--navy);
-    color: #cbd1d9;
-    padding: 40px 5%;
-    text-align: center;
-    font-size: 14px;
+    background: #031321;
+
+    min-height: 100px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: var(--gold);
 }
 
-/* =========================
-   MOBILE
-========================= */
+.footer-line {
+    width: 330px;
+    height: 1px;
 
-@media (max-width: 1000px) {
+    background: var(--gold);
 
-    .header {
-        min-height: auto;
+    opacity: .7;
+}
+
+.footer-globe {
+    margin: 0 25px;
+
+    font-size: 31px;
+}
+
+/* =========================================================
+   MOBILE MENU BUTTON
+   ========================================================= */
+
+.mobile-menu {
+    display: none;
+
+    background: transparent;
+
+    border: 1px solid rgba(255,255,255,.35);
+
+    color: white;
+
+    font-size: 26px;
+
+    width: 48px;
+    height: 48px;
+
+    cursor: pointer;
+}
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1050px) {
+
+    .header-top {
+        padding-left: 30px;
+        padding-right: 30px;
     }
 
-    .top-row {
-        display: none;
-    }
-
-    .main-nav {
-        flex-wrap: wrap;
-        gap: 20px;
-    }
-
-    .logo {
-        min-width: auto;
-    }
-
-    .logo-symbol {
-        width: 65px;
-        height: 65px;
+    .brand-title {
         font-size: 29px;
     }
 
-    .logo-symbol::after {
-        width: 78px;
-        height: 27px;
+    .brand-subtitle {
+        font-size: 14px;
     }
 
-    .logo-main {
-        font-size: 21px;
+    .aut-earth {
+        width: 95px;
+        height: 95px;
     }
 
-    .logo-sub {
-        font-size: 11px;
-        letter-spacing: 3px;
+    .aut-lettering {
+        font-size: 30px;
+    }
+
+    .orbit {
+        width: 118px;
+        height: 40px;
     }
 
     .nav {
-        width: 100%;
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 18px;
+        padding: 0 30px;
     }
 
-    .nav a {
-        font-size: 13px;
+    .nav-list {
+        gap: 27px;
     }
 
-    .partner-button {
-        display: none;
-    }
-
-    .hero {
-        min-height: 550px;
-        background-position: center;
-    }
-
-    .hero h1 {
-        font-size: 35px;
-    }
-
-    .hero p {
-        font-size: 17px;
+    .hero-content {
+        padding-left: 45px;
+        padding-right: 45px;
     }
 
     .stats-inner {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .stat:nth-child(2)::after {
+        display: none;
     }
 
     .stat {
-        border-bottom: 1px solid rgba(255,255,255,.25);
-    }
-
-    .service-grid {
-        grid-template-columns: 1fr 1fr;
-    }
-
-    .service {
-        margin-bottom: 30px;
+        border-bottom: 1px solid rgba(255,255,255,.2);
     }
 }
 
-@media (max-width: 650px) {
+/* =========================================================
+   MOBILE
+   ========================================================= */
 
-    .header-inner {
-        padding: 15px 20px;
+@media (max-width: 760px) {
+
+    /* HEADER */
+
+    .header-top {
+        min-height: auto;
+
+        padding: 18px 20px;
+
+        align-items: center;
     }
 
-    .main-nav {
+    .brand {
+        gap: 12px;
+    }
+
+    .aut-earth {
+        width: 72px;
+        height: 72px;
+    }
+
+    .aut-earth::before {
+        width: 55px;
+        height: 55px;
+    }
+
+    .aut-earth::after {
+        width: 62px;
+        height: 25px;
+    }
+
+    .aut-lettering {
+        font-size: 22px;
+    }
+
+    .orbit {
+        width: 88px;
+        height: 29px;
+    }
+
+    .brand-divider {
+        height: 53px;
+    }
+
+    .brand-title {
+        font-size: 19px;
+        letter-spacing: 2px;
+    }
+
+    .brand-subtitle {
+        font-size: 10px;
+        letter-spacing: 3px;
+    }
+
+    .header-right {
+        display: none;
+    }
+
+    /* NAV */
+
+    .nav {
+        height: auto;
+
+        padding: 0 20px 18px;
+
+        justify-content: flex-end;
+    }
+
+    .mobile-menu {
         display: block;
     }
 
-    .logo {
-        justify-content: center;
-        margin-bottom: 18px;
+    .nav-list {
+        display: none;
+
+        width: 100%;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 0;
+
+        background: #061a2c;
+
+        padding: 10px 0;
     }
 
-    .nav {
-        gap: 13px;
+    .nav-list.open {
+        display: flex;
     }
 
-    .nav a {
-        padding: 8px 4px;
+    .nav-link {
+        width: 100%;
+        height: auto;
+
+        padding: 15px 5px;
+
+        font-size: 15px;
     }
+
+    .nav-link.active::after {
+        display: none;
+    }
+
+    /* HERO */
 
     .hero {
-        min-height: 520px;
+        min-height: auto;
+
+        background-image:
+            linear-gradient(
+                90deg,
+                rgba(3,19,33,.96) 0%,
+                rgba(3,19,33,.84) 52%,
+                rgba(3,19,33,.42) 100%
+            ),
+            url("aut-energy-hero.png");
+
+        background-size: cover;
+
         background-position: 62% center;
     }
 
     .hero-content {
-        max-width: 90%;
+        padding: 65px 25px 70px;
     }
 
-    .hero h1 {
-        font-size: 34px;
+    .hero-copy {
+        width: 100%;
+    }
+
+    .hero-title {
+        font-size: 43px;
+
+        line-height: 1.03;
+
+        margin-bottom: 24px;
     }
 
     .hero-line {
-        width: 260px;
+        width: 230px;
     }
 
-    .hero p {
-        font-size: 16px;
+    .hero-description {
+        font-size: 17px;
+
+        line-height: 1.55;
+
+        margin-bottom: 28px;
     }
 
     .hero-buttons {
         flex-direction: column;
-        width: 210px;
+
+        align-items: flex-start;
     }
 
+    .btn-primary,
+    .btn-outline {
+        width: 100%;
+
+        max-width: 290px;
+
+        justify-content: space-between;
+    }
+
+    /* STATS */
+
     .stats-inner {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr;
     }
 
     .stat {
-        border-right: none;
+        min-height: 145px;
+
+        padding: 22px 14px;
+
+        flex-direction: column;
+
+        justify-content: center;
+
+        text-align: center;
+
+        gap: 8px;
     }
 
-    .service-grid {
+    .stat:not(:last-child)::after {
+        top: 20px;
+        bottom: 20px;
+    }
+
+    .stat-icon {
+        font-size: 36px;
+        width: auto;
+    }
+
+    .stat-title {
+        font-size: 13px;
+    }
+
+    .stat-subtitle {
+        font-size: 11px;
+    }
+
+    /* SERVICES */
+
+    .services {
+        padding: 60px 20px 70px;
+    }
+
+    .section-title {
+        font-size: 29px;
+    }
+
+    .section-line {
+        margin-bottom: 30px;
+    }
+
+    .services-grid {
         grid-template-columns: 1fr;
+
+        border-top: none;
+    }
+
+    .service,
+    .service:nth-child(odd) {
+        min-height: auto;
+
+        padding: 28px 5px;
+
+        border-right: none;
+
+        border-bottom: 1px solid var(--border);
+    }
+
+    .service-icon {
+        width: 60px;
+        height: 60px;
+
+        font-size: 32px;
     }
 
     .service {
-        border-right: none;
-        border-bottom: 1px solid #ddd;
-        padding: 20px 10px;
+        gap: 20px;
     }
 
-    .form-row {
-        grid-template-columns: 1fr;
+    .service-title {
+        font-size: 17px;
     }
 
-    .form-group.full {
-        grid-column: auto;
+    .service-description {
+        font-size: 14px;
     }
 
-    .inquiry-box {
-        padding: 28px 20px;
+    /* FOOTER */
+
+    .footer-line {
+        width: 100px;
     }
 
-    .inquiry-tab {
-        width: 52px;
-        height: 175px;
+    .footer-globe {
+        margin: 0 15px;
     }
 }
+
+/* =========================================================
+   VERY SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 390px) {
+
+    .brand-title {
+        font-size: 16px;
+    }
+
+    .brand-subtitle {
+        font-size: 8px;
+    }
+
+    .aut-earth {
+        width: 62px;
+        height: 62px;
+    }
+
+    .aut-lettering {
+        font-size: 19px;
+    }
+
+    .orbit {
+        width: 76px;
+    }
+
+    .hero-title {
+        font-size: 37px;
+    }
+
+    .hero-description {
+        font-size: 16px;
+    }
+
+    .stat-title {
+        font-size: 12px;
+    }
+
+}
+
 </style>
 </head>
 
 <body>
 
-<!-- =========================
+<!-- =====================================================
      HEADER
-========================= -->
+     ===================================================== -->
 
 <header class="header">
 
-    <div class="header-inner">
+    <div class="header-top">
 
-        <div class="top-row">
+        <!-- BRAND -->
 
-            <div class="top-item">
-                <span class="gold-icon">◎</span>
-                <span>Global Reach. Local Insight.</span>
+        <a href="#" class="brand">
+
+            <div class="aut-earth">
+
+                <div class="aut-lettering">AUT</div>
+
+                <div class="orbit"></div>
+
             </div>
 
-            <div class="top-item">
-                <span class="gold-icon">✉</span>
-                <span>info@autinternational.com</span>
+            <div class="brand-divider"></div>
+
+            <div class="brand-text">
+
+                <div class="brand-title">
+                    INTERNATIONAL
+                </div>
+
+                <div class="brand-subtitle">
+                    ENERGY PARTNERS
+                </div>
+
             </div>
 
-            <a href="#inquiry" class="partner-button">
-                PARTNER WITH US &nbsp; ›
-            </a>
+        </a>
 
-        </div>
+        <!-- CONTACT / PARTNER -->
 
-        <div class="main-nav">
+        <div class="header-right">
 
-            <a href="#" class="logo">
+            <div class="header-info">
 
-                <div class="logo-symbol">
-                    AUT
+                <div class="info-item">
+                    <span class="info-icon">◎</span>
+                    <span>Global Reach. Local Insight.</span>
                 </div>
 
-                <div class="logo-text">
-                    <div class="logo-main">
-                        INTERNATIONAL
-                    </div>
-
-                    <div class="logo-sub">
-                        ENERGY PARTNERS
-                    </div>
+                <div class="info-item">
+                    <span class="info-icon">✉</span>
+                    <span>info@autinternational.com</span>
                 </div>
 
+            </div>
+
+            <a href="#contact" class="partner-button">
+                PARTNER WITH US
+                <span class="arrow">›</span>
             </a>
-
-            <nav class="nav">
-
-                <a href="#" class="active">HOME</a>
-
-                <a href="#about">
-                    ABOUT US
-                    <small>⌄</small>
-                </a>
-
-                <a href="#services">
-                    SERVICES
-                    <small>⌄</small>
-                </a>
-
-                <a href="#industries">
-                    INDUSTRIES
-                    <small>⌄</small>
-                </a>
-
-                <a href="#projects">
-                    PROJECTS
-                </a>
-
-                <a href="#contact">
-                    CONTACT
-                </a>
-
-            </nav>
 
         </div>
 
     </div>
 
+
+    <!-- NAVIGATION -->
+
+    <nav class="nav">
+
+        <button
+            class="mobile-menu"
+            id="mobileMenu"
+            aria-label="Open menu">
+            ☰
+        </button>
+
+        <ul class="nav-list" id="navList">
+
+            <li>
+                <a href="#" class="nav-link active">
+                    HOME
+                </a>
+            </li>
+
+            <li>
+                <a href="#about" class="nav-link">
+                    ABOUT US
+                    <span class="dropdown">⌄</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="#services" class="nav-link">
+                    SERVICES
+                    <span class="dropdown">⌄</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="#industries" class="nav-link">
+                    INDUSTRIES
+                    <span class="dropdown">⌄</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="#projects" class="nav-link">
+                    PROJECTS
+                </a>
+            </li>
+
+            <li>
+                <a href="#contact" class="nav-link">
+                    CONTACT
+                </a>
+            </li>
+
+        </ul>
+
+    </nav>
+
 </header>
 
 
-<!-- =========================
+<!-- =====================================================
      HERO
-========================= -->
+     ===================================================== -->
 
-<section class="hero">
+<section class="hero" id="about">
 
     <div class="hero-content">
 
-        <h1>
-            CONNECTING <span>ENERGY.</span><br>
-            BUILDING OPPORTUNITY.
-        </h1>
+        <div class="hero-copy">
 
-        <div class="hero-line"></div>
+            <h1 class="hero-title">
 
-        <p>
-            AUT International Energy Partners connects qualified companies,
-            suppliers, contractors and project stakeholders with strategic
-            opportunities across energy, infrastructure and industrial markets.
-        </p>
+                CONNECTING
+                <span class="gold">ENERGY.</span>
 
-        <div class="hero-buttons">
+                <br>
 
-            <a href="#inquiry" class="btn-primary">
-                DISCUSS A PROJECT
-                <span>›</span>
-            </a>
+                BUILDING
+                <span class="gold">OPPORTUNITY.</span>
 
-            <a href="#services" class="btn-outline">
-                OUR CAPABILITIES
-                <span>›</span>
-            </a>
+            </h1>
+
+
+            <div class="hero-line"></div>
+
+
+            <p class="hero-description">
+
+                AUT International Energy Partners connects
+                qualified companies, suppliers, contractors
+                and project stakeholders with strategic
+                opportunities across energy, infrastructure
+                and industrial markets.
+
+            </p>
+
+
+            <div class="hero-buttons">
+
+                <a href="#contact" class="btn-primary">
+
+                    DISCUSS A PROJECT
+
+                    <span class="arrow">›</span>
+
+                </a>
+
+                <a href="#services" class="btn-outline">
+
+                    OUR CAPABILITIES
+
+                    <span class="arrow">›</span>
+
+                </a>
+
+            </div>
 
         </div>
 
@@ -845,9 +1294,9 @@ a {
 </section>
 
 
-<!-- =========================
-     STATS
-========================= -->
+<!-- =====================================================
+     STATISTICS
+     ===================================================== -->
 
 <section class="stats">
 
@@ -855,16 +1304,22 @@ a {
 
         <div class="stat">
 
-            <div class="stat-icon">◎</div>
+            <div class="stat-icon">
+                ◎
+            </div>
 
-            <div>
+            <div class="stat-content">
+
                 <div class="stat-title">
                     GLOBAL
-                </div>
-
-                <div class="stat-sub">
+                    <br>
                     PARTNERSHIPS
                 </div>
+
+                <div class="stat-subtitle">
+                    Connecting qualified suppliers worldwide.
+                </div>
+
             </div>
 
         </div>
@@ -872,16 +1327,22 @@ a {
 
         <div class="stat">
 
-            <div class="stat-icon">♧</div>
+            <div class="stat-icon">
+                ♧
+            </div>
 
-            <div>
+            <div class="stat-content">
+
                 <div class="stat-title">
                     100+
-                </div>
-
-                <div class="stat-sub">
+                    <br>
                     QUALIFIED PARTNERS
                 </div>
+
+                <div class="stat-subtitle">
+                    Building strong relationships with trusted industry leaders.
+                </div>
+
             </div>
 
         </div>
@@ -889,16 +1350,22 @@ a {
 
         <div class="stat">
 
-            <div class="stat-icon">♙</div>
+            <div class="stat-icon">
+                ♜
+            </div>
 
-            <div>
+            <div class="stat-content">
+
                 <div class="stat-title">
                     ENERGY
-                </div>
-
-                <div class="stat-sub">
+                    <br>
                     SECTOR FOCUS
                 </div>
+
+                <div class="stat-subtitle">
+                    Specialized in energy, infrastructure and industrial solutions.
+                </div>
+
             </div>
 
         </div>
@@ -906,16 +1373,22 @@ a {
 
         <div class="stat">
 
-            <div class="stat-icon">◇</div>
+            <div class="stat-icon">
+                ♢
+            </div>
 
-            <div>
+            <div class="stat-content">
+
                 <div class="stat-title">
                     SAFE · RELIABLE
-                </div>
-
-                <div class="stat-sub">
+                    <br>
                     RESPONSIBLE
                 </div>
+
+                <div class="stat-subtitle">
+                    Committed to safety, quality and responsible operations.
+                </div>
+
             </div>
 
         </div>
@@ -925,101 +1398,133 @@ a {
 </section>
 
 
-<!-- =========================
+<!-- =====================================================
      SERVICES
-========================= -->
+     ===================================================== -->
 
 <section class="services" id="services">
 
-    <div class="services-header">
+    <div class="services-inner">
 
-        <div class="services-eyebrow">
+        <div class="section-label">
             WHAT WE DO
         </div>
 
-        <h2>
+        <h2 class="section-title">
             Integrated Energy &amp; Industrial Solutions
         </h2>
 
-        <div class="services-header-line"></div>
-
-    </div>
+        <div class="section-line"></div>
 
 
-    <div class="service-grid">
+        <div class="services-grid">
 
-        <div class="service">
+            <!-- SERVICE 1 -->
 
-            <div class="service-icon">
-                ♙
+            <div class="service">
+
+                <div class="service-icon">
+                    ♜
+                </div>
+
+                <div class="service-content">
+
+                    <h3 class="service-title">
+                        ENERGY &amp; OILFIELD
+                        <br>
+                        SOLUTIONS
+                    </h3>
+
+                    <p class="service-description">
+                        Supporting upstream, midstream and
+                        downstream opportunities with strong
+                        technical capabilities.
+                    </p>
+
+                </div>
+
             </div>
 
-            <h3>
-                ENERGY &amp; OILFIELD<br>
-                SOLUTIONS
-            </h3>
 
-            <p>
-                Supporting upstream, midstream and downstream opportunities
-                with strong technical capabilities.
-            </p>
+            <!-- SERVICE 2 -->
 
-        </div>
+            <div class="service">
 
+                <div class="service-icon">
+                    🛒
+                </div>
 
-        <div class="service">
+                <div class="service-content">
 
-            <div class="service-icon">
-                🛒
+                    <h3 class="service-title">
+                        PROCUREMENT &amp;
+                        <br>
+                        SUPPLY
+                    </h3>
+
+                    <p class="service-description">
+                        Connecting projects with qualified
+                        suppliers, manufacturers and technology
+                        providers.
+                    </p>
+
+                </div>
+
             </div>
 
-            <h3>
-                PROCUREMENT &amp;<br>
-                SUPPLY
-            </h3>
 
-            <p>
-                Connecting projects with qualified suppliers,
-                manufacturers and technology providers.
-            </p>
+            <!-- SERVICE 3 -->
 
-        </div>
+            <div class="service">
 
+                <div class="service-icon">
+                    ⚙
+                </div>
 
-        <div class="service">
+                <div class="service-content">
 
-            <div class="service-icon">
-                ⚒
+                    <h3 class="service-title">
+                        HEAVY CONSTRUCTION
+                        <br>
+                        SERVICES
+                    </h3>
+
+                    <p class="service-description">
+                        Access to heavy equipment,
+                        earthmoving, civil works and
+                        infrastructure resources.
+                    </p>
+
+                </div>
+
             </div>
 
-            <h3>
-                HEAVY CONSTRUCTION<br>
-                SERVICES
-            </h3>
 
-            <p>
-                Access to heavy equipment, earthmoving, civil works
-                and infrastructure resources.
-            </p>
+            <!-- SERVICE 4 -->
 
-        </div>
+            <div class="service">
 
+                <div class="service-icon">
+                    🤝
+                </div>
 
-        <div class="service">
+                <div class="service-content">
 
-            <div class="service-icon">
-                🤝
+                    <h3 class="service-title">
+                        STRATEGIC
+                        <br>
+                        PARTNERSHIPS
+                    </h3>
+
+                    <p class="service-description">
+                        Building long-term relationships
+                        that create value and drive
+                        project success.
+                    </p>
+
+                </div>
+
             </div>
-
-            <h3>
-                STRATEGIC<br>
-                PARTNERSHIPS
-            </h3>
-
-            <p>
-                Building long-term relationships that create value
-                and drive project success.
-            </p>
 
         </div>
 
@@ -1028,232 +1533,210 @@ a {
 </section>
 
 
-<!-- =========================
-     INQUIRY TAB
-========================= -->
+<!-- =====================================================
+     INDUSTRIES / PROJECTS PLACEHOLDER
+     ===================================================== -->
 
-<div class="inquiry-tab" onclick="openInquiry()">
-    <span>SEND AN INQUIRY</span>
-</div>
+<section
+    id="industries"
+    style="
+        background:#071d30;
+        color:white;
+        padding:70px 25px;
+        text-align:center;
+    "
+>
 
+    <div style="
+        max-width:900px;
+        margin:auto;
+    ">
 
-<!-- =========================
-     INQUIRY FORM
-========================= -->
-
-<div class="inquiry-overlay" id="inquiry">
-
-    <div class="inquiry-box">
-
-        <button class="close-inquiry" onclick="closeInquiry()">
-            ×
-        </button>
-
-        <div class="inquiry-heading">
-
-            <small>AUT INTERNATIONAL ENERGY PARTNERS</small>
-
-            <h2>
-                Send an Inquiry
-            </h2>
-
-            <p>
-                Please provide your information and briefly describe
-                your inquiry. Our team will review your request and
-                determine the appropriate contact for follow-up.
-            </p>
-
+        <div style="
+            color:#e9a927;
+            font-size:14px;
+            font-weight:800;
+            letter-spacing:2px;
+            margin-bottom:12px;
+        ">
+            INDUSTRIES
         </div>
 
+        <h2 style="
+            font-size:38px;
+            margin-bottom:20px;
+        ">
+            Energy. Infrastructure. Industry.
+        </h2>
 
-        <form action="https://formsubmit.co/info@autinternational.com"
-              method="POST">
-
-            <input type="hidden"
-                   name="_subject"
-                   value="New Inquiry — AUT International Energy Partners">
-
-            <input type="hidden"
-                   name="_captcha"
-                   value="false">
-
-            <input type="hidden"
-                   name="_template"
-                   value="table">
-
-
-            <div class="form-row">
-
-                <div class="form-group">
-
-                    <label>
-                        NAME *
-                    </label>
-
-                    <input
-                        type="text"
-                        name="Name"
-                        placeholder="Your full name"
-                        required
-                    >
-
-                </div>
-
-
-                <div class="form-group">
-
-                    <label>
-                        JOB TITLE / POSITION
-                    </label>
-
-                    <input
-                        type="text"
-                        name="Job Title / Position"
-                        placeholder="Your position"
-                    >
-
-                </div>
-
-
-                <div class="form-group">
-
-                    <label>
-                        COMPANY NAME *
-                    </label>
-
-                    <input
-                        type="text"
-                        name="Company Name"
-                        placeholder="Company name"
-                        required
-                    >
-
-                </div>
-
-
-                <div class="form-group">
-
-                    <label>
-                        BUSINESS EMAIL *
-                    </label>
-
-                    <input
-                        type="email"
-                        name="Business Email"
-                        placeholder="name@company.com"
-                        required
-                    >
-
-                </div>
-
-
-                <div class="form-group">
-
-                    <label>
-                        PHONE
-                    </label>
-
-                    <input
-                        type="tel"
-                        name="Phone"
-                        placeholder="Phone number"
-                    >
-
-                </div>
-
-
-                <div class="form-group">
-
-                    <label>
-                        COUNTRY / REGION
-                    </label>
-
-                    <input
-                        type="text"
-                        name="Country / Region"
-                        placeholder="Country or region"
-                    >
-
-                </div>
-
-
-                <div class="form-group full">
-
-                    <label>
-                        INQUIRY *
-                    </label>
-
-                    <textarea
-                        name="Inquiry"
-                        placeholder="Please tell us briefly about your inquiry, project, services, capabilities or partnership opportunity."
-                        required
-                    ></textarea>
-
-                </div>
-
-            </div>
-
-
-            <button class="submit-button" type="submit">
-                SUBMIT INQUIRY
-            </button>
-
-        </form>
+        <p style="
+            font-size:17px;
+            line-height:1.7;
+            color:rgba(255,255,255,.82);
+        ">
+            Connecting qualified companies and project
+            stakeholders across energy, oilfield services,
+            industrial supply, infrastructure and heavy
+            construction markets.
+        </p>
 
     </div>
 
-</div>
+</section>
 
 
-<!-- =========================
+<section
+    id="projects"
+    style="
+        background:#ffffff;
+        padding:70px 25px;
+        text-align:center;
+    "
+>
+
+    <div style="
+        max-width:900px;
+        margin:auto;
+    ">
+
+        <div style="
+            color:#c48a20;
+            font-size:14px;
+            font-weight:800;
+            letter-spacing:2px;
+            margin-bottom:12px;
+        ">
+            PROJECTS
+        </div>
+
+        <h2 style="
+            color:#071a31;
+            font-size:38px;
+            margin-bottom:20px;
+        ">
+            Building Strategic Opportunities
+        </h2>
+
+        <p style="
+            color:#596270;
+            font-size:17px;
+            line-height:1.7;
+        ">
+            AUT International Energy Partners works to
+            connect qualified capabilities with projects
+            requiring reliable energy, industrial,
+            construction and supply solutions.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     CONTACT
+     ===================================================== -->
+
+<section
+    id="contact"
+    style="
+        background:#f7f8fa;
+        padding:75px 25px;
+        text-align:center;
+    "
+>
+
+    <div style="
+        max-width:800px;
+        margin:auto;
+    ">
+
+        <div style="
+            color:#c48a20;
+            font-size:14px;
+            font-weight:800;
+            letter-spacing:2px;
+            margin-bottom:12px;
+        ">
+            GET IN TOUCH
+        </div>
+
+        <h2 style="
+            color:#071a31;
+            font-size:38px;
+            margin-bottom:20px;
+        ">
+            Discuss a Project
+        </h2>
+
+        <p style="
+            color:#596270;
+            font-size:17px;
+            line-height:1.7;
+            margin-bottom:25px;
+        ">
+            Contact AUT International Energy Partners to
+            discuss qualified suppliers, project
+            opportunities, strategic partnerships and
+            international energy solutions.
+        </p>
+
+        <a
+            href="mailto:info@autinternational.com"
+            class="btn-primary"
+            style="display:inline-flex;"
+        >
+            CONTACT AUT
+            <span class="arrow">›</span>
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
      FOOTER
-========================= -->
+     ===================================================== -->
 
-<footer class="footer" id="contact">
+<footer class="footer">
 
-    <p>
-        © 2026 AUT International Energy Partners.
-        All rights reserved.
-    </p>
+    <div class="footer-line"></div>
 
-    <p style="margin-top:8px;">
-        info@autinternational.com
-    </p>
+    <div class="footer-globe">
+        ◎
+    </div>
+
+    <div class="footer-line"></div>
 
 </footer>
 
 
+<!-- =====================================================
+     MOBILE MENU JAVASCRIPT
+     ===================================================== -->
+
 <script>
 
-function openInquiry() {
-    document.getElementById("inquiry").classList.add("show");
-    document.body.style.overflow = "hidden";
-}
+const mobileMenu =
+    document.getElementById("mobileMenu");
 
-function closeInquiry() {
-    document.getElementById("inquiry").classList.remove("show");
-    document.body.style.overflow = "";
-}
+const navList =
+    document.getElementById("navList");
 
+mobileMenu.addEventListener("click", function () {
 
-/* Close when clicking outside the form */
-
-document.getElementById("inquiry").addEventListener("click", function(e) {
-
-    if (e.target === this) {
-        closeInquiry();
-    }
+    navList.classList.toggle("open");
 
 });
 
+document.querySelectorAll(".nav-link").forEach(function(link) {
 
-/* ESC key closes form */
+    link.addEventListener("click", function() {
 
-document.addEventListener("keydown", function(e) {
+        navList.classList.remove("open");
 
-    if (e.key === "Escape") {
-        closeInquiry();
-    }
+    });
 
 });
 
