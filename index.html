@@ -1,1436 +1,792 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<meta name="description"
-content="AUT International Energy Partners connects energy, oilfield, infrastructure, construction and industrial opportunities with qualified companies, suppliers and project partners.">
-
-<title>AUT International Energy Partners | Energy • Infrastructure • Procurement</title>
-
-<style>
-
-:root{
---navy:#071a2b;
---navy2:#04111d;
---gold:#c9a04f;
---gold2:#e0bd6b;
---white:#ffffff;
---cream:#f4f0e6;
---gray:#66717c;
---light:#f7f8fa;
---line:#dfe4e8;
-}
-
-*{
-box-sizing:border-box;
-margin:0;
-padding:0;
-}
-
-html{
-scroll-behavior:smooth;
-}
-
-body{
-font-family:Arial,Helvetica,sans-serif;
-color:#17212b;
-background:#fff;
-line-height:1.6;
-}
-
-a{
-text-decoration:none;
-color:inherit;
-}
-
-img{
-max-width:100%;
-display:block;
-}
-
-.container{
-width:min(1180px,92%);
-margin:auto;
-}
-
-/* TOP BAR */
-
-.topbar{
-background:var(--navy2);
-color:#d8e0e6;
-font-size:13px;
-padding:9px 0;
-}
-
-.topbar .container{
-display:flex;
-justify-content:space-between;
-gap:20px;
-}
-
-/* NAVIGATION */
-
-nav{
-position:absolute;
-top:38px;
-left:0;
-right:0;
-z-index:20;
-}
-
-.nav-inner{
-display:flex;
-align-items:center;
-justify-content:space-between;
-padding:20px 0;
-border-bottom:1px solid rgba(255,255,255,.22);
-}
-
-.logo{
-display:flex;
-align-items:center;
-gap:13px;
-color:#fff;
-}
-
-.logo-mark{
-width:43px;
-height:43px;
-border:2px solid var(--gold);
-display:grid;
-place-items:center;
-font-weight:bold;
-font-size:17px;
-}
-
-.logo-text{
-font-weight:700;
-font-size:17px;
-letter-spacing:1.5px;
-}
-
-.logo-text span{
-display:block;
-font-size:10px;
-letter-spacing:3px;
-color:var(--gold2);
-margin-top:2px;
-}
-
-.nav-links{
-display:flex;
-gap:30px;
-align-items:center;
-color:white;
-font-size:14px;
-}
-
-.nav-links a{
-opacity:.92;
-transition:.25s;
-}
-
-.nav-links a:hover{
-color:var(--gold2);
-}
-
-.nav-button{
-border:1px solid var(--gold);
-padding:11px 18px;
-color:#fff;
-}
-
-/* HERO */
-
-.hero{
-min-height:760px;
-position:relative;
-background:
-linear-gradient(90deg,rgba(3,16,28,.94) 0%,rgba(4,19,32,.76) 48%,rgba(4,17,29,.32) 100%),
-url("https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=2200&q=85")
-center/cover;
-display:flex;
-align-items:center;
-color:white;
-}
-
-.hero-content{
-padding-top:90px;
-max-width:760px;
-}
-
-.eyebrow{
-color:var(--gold2);
-font-size:13px;
-font-weight:bold;
-letter-spacing:3px;
-text-transform:uppercase;
-margin-bottom:22px;
-}
-
-.hero h1{
-font-size:clamp(45px,6vw,78px);
-line-height:1.03;
-letter-spacing:-2px;
-margin-bottom:28px;
-}
-
-.hero h1 span{
-color:var(--gold2);
-}
-
-.hero p{
-font-size:19px;
-color:#e3e8ec;
-max-width:680px;
-margin-bottom:36px;
-}
-
-.buttons{
-display:flex;
-flex-wrap:wrap;
-gap:14px;
-}
-
-.btn{
-display:inline-block;
-padding:15px 25px;
-font-size:14px;
-font-weight:bold;
-letter-spacing:.5px;
-transition:.25s;
-}
-
-.btn-gold{
-background:var(--gold);
-color:#081522;
-}
-
-.btn-gold:hover{
-background:var(--gold2);
-transform:translateY(-2px);
-}
-
-.btn-outline{
-border:1px solid rgba(255,255,255,.55);
-color:white;
-}
-
-.btn-outline:hover{
-border-color:var(--gold);
-color:var(--gold2);
-}
-
-.hero-stat{
-position:absolute;
-bottom:0;
-right:0;
-background:rgba(7,26,43,.93);
-padding:25px 35px;
-display:flex;
-gap:38px;
-}
-
-.hero-stat strong{
-font-size:25px;
-color:var(--gold2);
-display:block;
-}
-
-.hero-stat span{
-font-size:11px;
-color:#c5d0d8;
-text-transform:uppercase;
-letter-spacing:1px;
-}
-
-/* INTRO */
-
-.intro{
-padding:100px 0;
-}
-
-.intro-grid{
-display:grid;
-grid-template-columns:1fr 1.3fr;
-gap:75px;
-align-items:center;
-}
-
-.section-label{
-font-size:12px;
-font-weight:bold;
-letter-spacing:3px;
-text-transform:uppercase;
-color:var(--gold);
-margin-bottom:14px;
-}
-
-h2{
-font-size:clamp(32px,4vw,50px);
-line-height:1.1;
-color:var(--navy);
-margin-bottom:24px;
-}
-
-.intro p{
-font-size:17px;
-color:#58636d;
-margin-bottom:20px;
-}
-
-.intro-card{
-background:var(--cream);
-padding:42px;
-border-left:5px solid var(--gold);
-}
-
-.intro-card h3{
-font-size:23px;
-color:var(--navy);
-margin-bottom:12px;
-}
-
-/* SERVICES */
-
-.services{
-background:var(--navy);
-color:white;
-padding:100px 0;
-}
-
-.services h2{
-color:white;
-}
-
-.services-intro{
-max-width:680px;
-color:#b9c6d0;
-margin-bottom:50px;
-font-size:17px;
-}
-
-.service-grid{
-display:grid;
-grid-template-columns:repeat(4,1fr);
-gap:1px;
-background:rgba(255,255,255,.15);
-}
-
-.service{
-background:var(--navy);
-padding:38px 28px;
-min-height:280px;
-transition:.3s;
-}
-
-.service:hover{
-background:#0d2b43;
-transform:translateY(-4px);
-}
-
-.service-number{
-font-size:13px;
-color:var(--gold2);
-letter-spacing:2px;
-margin-bottom:30px;
-}
-
-.service h3{
-font-size:21px;
-margin-bottom:14px;
-}
-
-.service p{
-color:#b7c4ce;
-font-size:14px;
-}
-
-/* IMAGE SPLIT */
-
-.split{
-display:grid;
-grid-template-columns:1fr 1fr;
-min-height:600px;
-}
-
-.split-image{
-background:
-linear-gradient(rgba(4,17,29,.15),rgba(4,17,29,.15)),
-url("https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=1800&q=85")
-center/cover;
-}
-
-.split-content{
-background:var(--cream);
-padding:85px 9%;
-display:flex;
-justify-content:center;
-flex-direction:column;
-}
-
-.split-content p{
-color:#58636d;
-font-size:16px;
-margin-bottom:25px;
-}
-
-.check-list{
-list-style:none;
-margin-top:15px;
-}
-
-.check-list li{
-margin:13px 0;
-padding-left:28px;
-position:relative;
-font-weight:bold;
-color:#25313b;
-}
-
-.check-list li:before{
-content:"✓";
-position:absolute;
-left:0;
-color:var(--gold);
-font-weight:bold;
-}
-
-/* EQUIPMENT */
-
-.equipment{
-padding:100px 0;
-}
-
-.equipment-header{
-display:flex;
-justify-content:space-between;
-align-items:end;
-gap:30px;
-margin-bottom:45px;
-}
-
-.equipment-header p{
-max-width:500px;
-color:#66717c;
-}
-
-.equipment-grid{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:22px;
-}
-
-.equipment-card{
-position:relative;
-height:370px;
-overflow:hidden;
-background:#111;
-}
-
-.equipment-card img{
-width:100%;
-height:100%;
-object-fit:cover;
-transition:.5s;
-}
-
-.equipment-card:hover img{
-transform:scale(1.06);
-}
-
-.equipment-overlay{
-position:absolute;
-inset:0;
-display:flex;
-flex-direction:column;
-justify-content:end;
-padding:28px;
-background:linear-gradient(transparent 35%,rgba(0,0,0,.9));
-color:white;
-}
-
-.equipment-overlay h3{
-font-size:23px;
-margin-bottom:5px;
-}
-
-.equipment-overlay p{
-color:#d6dce1;
-font-size:13px;
-}
-
-/* APPROACH */
-
-.approach{
-background:#f6f7f8;
-padding:100px 0;
-}
-
-.approach-header{
-text-align:center;
-max-width:720px;
-margin:auto;
-margin-bottom:60px;
-}
-
-.approach-header p{
-color:#66717c;
-}
-
-.steps{
-display:grid;
-grid-template-columns:repeat(4,1fr);
-gap:25px;
-}
-
-.step{
-background:#fff;
-padding:34px 28px;
-border-top:3px solid var(--gold);
-box-shadow:0 8px 30px rgba(0,0,0,.05);
-}
-
-.step-number{
-font-size:35px;
-font-weight:bold;
-color:#d9dde0;
-margin-bottom:18px;
-}
-
-.step h3{
-color:var(--navy);
-margin-bottom:10px;
-}
-
-.step p{
-font-size:14px;
-color:#68747d;
-}
-
-/* INDUSTRIES */
-
-.industries{
-padding:100px 0;
-}
-
-.industry-grid{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:20px;
-margin-top:45px;
-}
-
-.industry{
-border:1px solid var(--line);
-padding:30px;
-min-height:170px;
-transition:.25s;
-}
-
-.industry:hover{
-border-color:var(--gold);
-box-shadow:0 12px 30px rgba(0,0,0,.06);
-}
-
-.industry h3{
-color:var(--navy);
-margin-bottom:10px;
-}
-
-.industry p{
-font-size:14px;
-color:#68747d;
-}
-
-/* CTA */
-
-.cta{
-background:
-linear-gradient(90deg,rgba(4,17,29,.95),rgba(4,17,29,.75)),
-url("https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=2000&q=85")
-center/cover;
-padding:105px 0;
-color:white;
-}
-
-.cta-inner{
-display:flex;
-justify-content:space-between;
-align-items:center;
-gap:40px;
-}
-
-.cta h2{
-color:white;
-max-width:700px;
-margin-bottom:12px;
-}
-
-.cta p{
-color:#c8d1d8;
-max-width:650px;
-}
-
-/* CONTACT */
-
-.contact{
-padding:90px 0;
-background:white;
-}
-
-.contact-grid{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:70px;
-}
-
-.contact-info h2{
-margin-bottom:20px;
-}
-
-.contact-info p{
-color:#66717c;
-max-width:570px;
-margin-bottom:25px;
-}
-
-.contact-box{
-border-left:3px solid var(--gold);
-padding:15px 20px;
-margin:18px 0;
-}
-
-.contact-box strong{
-display:block;
-color:var(--navy);
-}
-
-.contact-box span{
-color:#66717c;
-font-size:14px;
-}
-
-form{
-background:#f7f8fa;
-padding:35px;
-}
-
-input,
-textarea,
-select{
-width:100%;
-padding:15px;
-border:1px solid #d9dfe3;
-margin-bottom:15px;
-font-family:inherit;
-background:white;
-}
-
-textarea{
-min-height:130px;
-resize:vertical;
-}
-
-form button{
-border:0;
-cursor:pointer;
-}
-
-/* FOOTER */
-
-footer{
-background:#03101b;
-color:#aebbc5;
-padding:50px 0 25px;
-}
-
-.footer-grid{
-display:grid;
-grid-template-columns:2fr 1fr 1fr;
-gap:50px;
-padding-bottom:40px;
-border-bottom:1px solid rgba(255,255,255,.12);
-}
-
-.footer-brand{
-color:white;
-font-size:19px;
-font-weight:bold;
-margin-bottom:12px;
-}
-
-footer p{
-font-size:13px;
-}
-
-footer h4{
-color:white;
-margin-bottom:15px;
-}
-
-.footer-links a{
-display:block;
-font-size:13px;
-margin:8px 0;
-}
-
-.copyright{
-padding-top:22px;
-font-size:12px;
-display:flex;
-justify-content:space-between;
-}
-
-/* MOBILE */
-
-@media(max-width:900px){
-
-.nav-links{
-display:none;
-}
-
-.hero{
-min-height:720px;
-}
-
-.hero-stat{
-position:static;
-margin-top:55px;
-width:max-content;
-max-width:100%;
-}
-
-.intro-grid,
-.split,
-.contact-grid{
-grid-template-columns:1fr;
-}
-
-.service-grid{
-grid-template-columns:1fr 1fr;
-}
-
-.equipment-grid{
-grid-template-columns:1fr 1fr;
-}
-
-.steps{
-grid-template-columns:1fr 1fr;
-}
-
-.industry-grid{
-grid-template-columns:1fr 1fr;
-}
-
-.split-image{
-min-height:420px;
-}
-
-.cta-inner{
-flex-direction:column;
-align-items:flex-start;
-}
-
-.footer-grid{
-grid-template-columns:1fr 1fr;
-}
-
-}
-
-@media(max-width:600px){
-
-.topbar{
-display:none;
-}
-
-nav{
-top:0;
-}
-
-.nav-inner{
-padding:16px 0;
-}
-
-.logo-text{
-font-size:13px;
-}
-
-.logo-mark{
-width:37px;
-height:37px;
-}
-
-.hero{
-min-height:760px;
-}
-
-.hero-content{
-padding-top:90px;
-}
-
-.hero h1{
-font-size:44px;
-}
-
-.hero p{
-font-size:16px;
-}
-
-.hero-stat{
-gap:18px;
-padding:20px;
-}
-
-.hero-stat strong{
-font-size:21px;
-}
-
-.intro,
-.services,
-.equipment,
-.approach,
-.industries,
-.contact{
-padding:70px 0;
-}
-
-.service-grid,
-.equipment-grid,
-.steps,
-.industry-grid,
-.footer-grid{
-grid-template-columns:1fr;
-}
-
-.equipment-card{
-height:320px;
-}
-
-.split-content{
-padding:65px 8%;
-}
-
-form{
-padding:25px;
-}
-
-.copyright{
-display:block;
-}
-
-.copyright span{
-display:block;
-margin-top:8px;
-}
-
-}
-
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contact AUT International Energy Partners</title>
+
+    <meta name="description"
+          content="Contact AUT International Energy Partners for energy, oilfield, procurement, construction and strategic partnership opportunities.">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f7f8fa;
+            color: #101b2d;
+        }
+
+        /* =========================
+           HEADER
+        ========================= */
+
+        header {
+            background: #061321;
+            padding: 20px 5%;
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+        }
+
+        .header-container {
+            max-width: 1250px;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 30px;
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo-area img {
+            width: 270px;
+            max-width: 100%;
+            height: auto;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #e5a82f;
+        }
+
+        .partner-button {
+            background: #e5a82f;
+            color: #071321;
+            padding: 14px 22px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 14px;
+        }
+
+        /* =========================
+           PAGE HERO
+        ========================= */
+
+        .page-hero {
+            background:
+                linear-gradient(
+                    rgba(4, 16, 29, 0.88),
+                    rgba(4, 16, 29, 0.88)
+                ),
+                url("https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=2000&q=85")
+                center/cover no-repeat;
+
+            padding: 90px 20px;
+            text-align: center;
+        }
+
+        .page-hero .small-title {
+            color: #e5a82f;
+            font-size: 14px;
+            font-weight: 700;
+            letter-spacing: 3px;
+            margin-bottom: 15px;
+        }
+
+        .page-hero h1 {
+            color: white;
+            font-size: 48px;
+            line-height: 1.15;
+            margin-bottom: 20px;
+        }
+
+        .page-hero p {
+            color: #e7ebef;
+            max-width: 750px;
+            margin: auto;
+            font-size: 17px;
+            line-height: 1.7;
+        }
+
+        /* =========================
+           FORM SECTION
+        ========================= */
+
+        .contact-section {
+            padding: 70px 20px;
+        }
+
+        .contact-container {
+            max-width: 1050px;
+            margin: auto;
+        }
+
+        .form-box {
+            background: white;
+            padding: 45px;
+            box-shadow: 0 12px 40px rgba(0,0,0,0.08);
+            border-top: 4px solid #e5a82f;
+        }
+
+        .form-header {
+            margin-bottom: 35px;
+        }
+
+        .form-header span {
+            color: #d79b25;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .form-header h2 {
+            font-size: 30px;
+            margin-top: 8px;
+            margin-bottom: 10px;
+            color: #101b2d;
+        }
+
+        .form-header p {
+            color: #626b76;
+            font-size: 15px;
+            line-height: 1.6;
+        }
+
+        /* =========================
+           FORM GRID
+        ========================= */
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 22px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group.full-width {
+            grid-column: 1 / -1;
+        }
+
+        label {
+            font-size: 13px;
+            font-weight: 700;
+            color: #182536;
+            margin-bottom: 8px;
+        }
+
+        label span {
+            color: #d79b25;
+        }
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+            border: 1px solid #d5d9df;
+            background: #fff;
+            padding: 14px 15px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 15px;
+            color: #172234;
+            outline: none;
+            transition: 0.25s;
+        }
+
+        input,
+        select {
+            height: 50px;
+        }
+
+        textarea {
+            min-height: 170px;
+            resize: vertical;
+        }
+
+        input:focus,
+        select:focus,
+        textarea:focus {
+            border-color: #e5a82f;
+            box-shadow: 0 0 0 2px rgba(229,168,47,0.12);
+        }
+
+        input::placeholder,
+        textarea::placeholder {
+            color: #9aa1aa;
+        }
+
+        /* =========================
+           SUBMIT
+        ========================= */
+
+        .submit-area {
+            margin-top: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .privacy-text {
+            color: #737b85;
+            font-size: 12px;
+            line-height: 1.5;
+            max-width: 500px;
+        }
+
+        .submit-button {
+            border: none;
+            background: #e5a82f;
+            color: #071321;
+            padding: 16px 30px;
+            font-size: 14px;
+            font-weight: 800;
+            cursor: pointer;
+            min-width: 190px;
+            transition: 0.25s;
+        }
+
+        .submit-button:hover {
+            background: #c88e1f;
+            transform: translateY(-1px);
+        }
+
+        /* =========================
+           SUCCESS MESSAGE
+        ========================= */
+
+        .success-message {
+            display: none;
+            margin-top: 25px;
+            padding: 18px;
+            background: #eef8f0;
+            border-left: 4px solid #3c8d4b;
+            color: #285d31;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            background: #061321;
+            color: white;
+            padding: 45px 20px;
+        }
+
+        .footer-container {
+            max-width: 1100px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .footer-container h3 {
+            font-size: 20px;
+            margin-bottom: 12px;
+        }
+
+        .footer-container p {
+            color: #b9c0c8;
+            font-size: 14px;
+            margin-bottom: 8px;
+        }
+
+        .footer-email {
+            color: #e5a82f;
+            text-decoration: none;
+        }
+
+        .copyright {
+            margin-top: 25px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 12px;
+            color: #8e98a4;
+        }
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 900px) {
+
+            .header-container {
+                flex-direction: column;
+            }
+
+            nav {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 18px;
+            }
+
+            .logo-area img {
+                width: 230px;
+            }
+
+            .page-hero h1 {
+                font-size: 36px;
+            }
+
+            .form-box {
+                padding: 30px 22px;
+            }
+        }
+
+        @media (max-width: 650px) {
+
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .form-group.full-width {
+                grid-column: auto;
+            }
+
+            .submit-area {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .submit-button {
+                width: 100%;
+            }
+
+            .page-hero {
+                padding: 65px 20px;
+            }
+
+            .page-hero h1 {
+                font-size: 30px;
+            }
+
+            .page-hero p {
+                font-size: 15px;
+            }
+
+            header {
+                padding: 18px 15px;
+            }
+
+            nav a {
+                font-size: 13px;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-<div class="topbar">
-<div class="container">
-<span>GLOBAL ENERGY • INFRASTRUCTURE • INDUSTRIAL PARTNERSHIPS</span>
-<span>Professional Opportunities & Project Development</span>
-</div>
-</div>
+<!-- =========================
+     HEADER
+========================= -->
 
-<nav>
-<div class="container nav-inner">
+<header>
 
-<a href="#" class="logo">
-<div class="logo-mark">AUT</div>
-<div class="logo-text">
-AUT INTERNATIONAL
-<span>ENERGY PARTNERS</span>
-</div>
-</a>
+    <div class="header-container">
 
-<div class="nav-links">
-<a href="#about">About</a>
-<a href="#services">Services</a>
-<a href="#equipment">Capabilities</a>
-<a href="#approach">Approach</a>
-<a href="#industries">Industries</a>
-<a href="#contact" class="nav-button">Contact</a>
-</div>
+        <div class="logo-area">
 
-</div>
-</nav>
+            <!-- Replace with your actual AUT logo file -->
+            <img src="AUT-logo.png"
+                 alt="AUT International Energy Partners">
 
-<section class="hero">
+        </div>
 
-<div class="container">
+        <nav>
 
-<div class="hero-content">
+            <a href="index.html">HOME</a>
 
-<div class="eyebrow">
-International Energy & Industrial Partnerships
-</div>
+            <a href="about.html">ABOUT US</a>
 
-<h1>
-Connecting<br>
-<span>Energy.</span><br>
-Building Opportunity.
-</h1>
+            <a href="services.html">SERVICES</a>
 
-<p>
-AUT International Energy Partners connects qualified companies,
-suppliers, contractors and project stakeholders with strategic
-opportunities across energy, oilfield, infrastructure and
-heavy industrial markets.
-</p>
+            <a href="industries.html">INDUSTRIES</a>
 
-<div class="buttons">
-<a href="#contact" class="btn btn-gold">
-Discuss a Project
-</a>
+            <a href="projects.html">PROJECTS</a>
 
-<a href="#services" class="btn btn-outline">
-Explore Our Capabilities
-</a>
-</div>
+            <a href="contact.html">CONTACT</a>
 
-</div>
+            <a class="partner-button" href="#inquiry">
+                PARTNER WITH US
+            </a>
 
-<div class="hero-stat">
+        </nav>
 
-<div>
-<strong>ENERGY</strong>
-<span>Sector Focus</span>
-</div>
+    </div>
 
-<div>
-<strong>GLOBAL</strong>
-<span>Partnerships</span>
-</div>
+</header>
 
-<div>
-<strong>PROJECT</strong>
-<span>Development</span>
-</div>
 
-</div>
+<!-- =========================
+     HERO
+========================= -->
 
-</div>
+<section class="page-hero">
+
+    <div class="small-title">
+        AUT INTERNATIONAL ENERGY PARTNERS
+    </div>
+
+    <h1>
+        Let's Discuss Your Opportunity.
+    </h1>
+
+    <p>
+        Tell us briefly about your company, position and inquiry.
+        Our team will review your information and determine the
+        appropriate next step.
+    </p>
 
 </section>
 
-<section class="intro" id="about">
 
-<div class="container intro-grid">
+<!-- =========================
+     CONTACT FORM
+========================= -->
 
-<div>
-<div class="section-label">Who We Are</div>
+<section class="contact-section" id="inquiry">
 
-<h2>
-Connecting capability with opportunity.
-</h2>
-</div>
+    <div class="contact-container">
 
-<div>
+        <div class="form-box">
 
-<p>
-AUT International Energy Partners is focused on developing
-professional relationships between qualified companies and
-opportunities within the energy, infrastructure, construction
-and industrial sectors.
-</p>
+            <div class="form-header">
 
-<p>
-Our approach is built around understanding the requirements of
-each project, identifying suitable capabilities and creating
-productive relationships between project owners, contractors,
-suppliers and strategic partners.
-</p>
+                <span>
+                    BUSINESS INQUIRY
+                </span>
 
-<div class="intro-card">
+                <h2>
+                    Submit Your Inquiry
+                </h2>
 
-<h3>
-Built Around Relationships.
-</h3>
+                <p>
+                    Please provide the information below so we can
+                    understand your inquiry and connect you with
+                    the appropriate person.
+                </p>
 
-<p>
-We believe successful international projects begin with the
-right relationships, the right information and the right
-execution partners.
-</p>
+            </div>
 
-</div>
 
-</div>
+            <form id="inquiryForm">
 
-</div>
+                <div class="form-grid">
+
+
+                    <!-- FULL NAME -->
+
+                    <div class="form-group">
+
+                        <label for="name">
+                            Full Name <span>*</span>
+                        </label>
+
+                        <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            placeholder="Your full name"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- JOB TITLE -->
+
+                    <div class="form-group">
+
+                        <label for="jobTitle">
+                            Job Title / Position
+                        </label>
+
+                        <input
+                            type="text"
+                            id="jobTitle"
+                            name="jobTitle"
+                            placeholder="Your position"
+                        >
+
+                    </div>
+
+
+                    <!-- COMPANY -->
+
+                    <div class="form-group">
+
+                        <label for="company">
+                            Company Name <span>*</span>
+                        </label>
+
+                        <input
+                            type="text"
+                            id="company"
+                            name="company"
+                            placeholder="Company name"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- BUSINESS EMAIL -->
+
+                    <div class="form-group">
+
+                        <label for="email">
+                            Business Email <span>*</span>
+                        </label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="name@company.com"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- PHONE -->
+
+                    <div class="form-group">
+
+                        <label for="phone">
+                            Phone Number
+                        </label>
+
+                        <input
+                            type="tel"
+                            id="phone"
+                            name="phone"
+                            placeholder="+1 000 000 0000"
+                        >
+
+                    </div>
+
+
+                    <!-- COUNTRY / REGION -->
+
+                    <div class="form-group">
+
+                        <label for="country">
+                            Country / Region <span>*</span>
+                        </label>
+
+                        <input
+                            type="text"
+                            id="country"
+                            name="country"
+                            placeholder="Country or region"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- INQUIRY -->
+
+                    <div class="form-group full-width">
+
+                        <label for="message">
+                            Your Inquiry <span>*</span>
+                        </label>
+
+                        <textarea
+                            id="message"
+                            name="message"
+                            placeholder="Please briefly describe your inquiry, project, opportunity or the type of assistance you are seeking."
+                            required
+                        ></textarea>
+
+                    </div>
+
+
+                </div>
+
+
+                <!-- SUBMIT -->
+
+                <div class="submit-area">
+
+                    <p class="privacy-text">
+                        By submitting this form, you agree that AUT
+                        International Energy Partners may contact you
+                        regarding your inquiry.
+                    </p>
+
+                    <button
+                        type="submit"
+                        class="submit-button">
+                        SUBMIT INQUIRY →
+                    </button>
+
+                </div>
+
+
+                <!-- SUCCESS MESSAGE -->
+
+                <div
+                    class="success-message"
+                    id="successMessage">
+
+                    Thank you. Your inquiry has been submitted.
+                    A representative from AUT International Energy
+                    Partners will review your information and contact
+                    you if further information is required.
+
+                </div>
+
+
+            </form>
+
+        </div>
+
+    </div>
 
 </section>
 
-<section class="services" id="services">
 
-<div class="container">
-
-<div class="section-label">
-What We Do
-</div>
-
-<h2>
-Integrated Energy & Industrial Capabilities
-</h2>
-
-<p class="services-intro">
-Our role is to help connect qualified capabilities with
-appropriate projects, suppliers and strategic opportunities.
-</p>
-
-<div class="service-grid">
-
-<div class="service">
-<div class="service-number">01</div>
-<h3>Energy & Oilfield Solutions</h3>
-<p>
-Support for energy-sector opportunities, oilfield services,
-technical capabilities and project requirements.
-</p>
-</div>
-
-<div class="service">
-<div class="service-number">02</div>
-<h3>Procurement & Supply</h3>
-<p>
-Connecting projects with qualified manufacturers, equipment
-providers, technology companies and industrial suppliers.
-</p>
-</div>
-
-<div class="service">
-<div class="service-number">03</div>
-<h3>Heavy Construction</h3>
-<p>
-Access to construction equipment, earthmoving capabilities,
-infrastructure resources and industrial project support.
-</p>
-</div>
-
-<div class="service">
-<div class="service-number">04</div>
-<h3>Strategic Partnerships</h3>
-<p>
-Developing relationships between international companies,
-local stakeholders, contractors and project opportunities.
-</p>
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<section class="split">
-
-<div class="split-image"></div>
-
-<div class="split-content">
-
-<div class="section-label">
-Our Philosophy
-</div>
-
-<h2>
-From opportunity to execution.
-</h2>
-
-<p>
-The strongest projects are built through careful qualification,
-clear communication and dependable execution partners.
-</p>
-
-<ul class="check-list">
-
-<li>Understand the project requirement</li>
-
-<li>Identify qualified capabilities</li>
-
-<li>Evaluate potential partners</li>
-
-<li>Connect the right stakeholders</li>
-
-<li>Support professional project development</li>
-
-</ul>
-
-</div>
-
-</section>
-
-<section class="equipment" id="equipment">
-
-<div class="container">
-
-<div class="equipment-header">
-
-<div>
-<div class="section-label">Industrial Capability</div>
-<h2>Heavy Equipment & Field Operations</h2>
-</div>
-
-<p>
-Industrial projects require reliable equipment and capable
-partners. We help identify resources aligned with project
-requirements and operating environments.
-</p>
-
-</div>
-
-<div class="equipment-grid">
-
-<div class="equipment-card">
-
-<img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=1200&q=85"
-alt="Heavy construction equipment">
-
-<div class="equipment-overlay">
-<h3>Earthmoving Equipment</h3>
-<p>Bulldozers • Excavators • Grading Equipment</p>
-</div>
-
-</div>
-
-<div class="equipment-card">
-
-<img src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=1200&q=85"
-alt="Industrial construction equipment">
-
-<div class="equipment-overlay">
-<h3>Industrial Construction</h3>
-<p>Construction • Infrastructure • Field Operations</p>
-</div>
-
-</div>
-
-<div class="equipment-card">
-
-<img src="https://images.unsplash.com/photo-1473448912268-2022ce9509d8?auto=format&fit=crop&w=1200&q=85"
-alt="Energy industrial field">
-
-<div class="equipment-overlay">
-<h3>Energy Infrastructure</h3>
-<p>Oilfield • Pipelines • Industrial Facilities</p>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<section class="approach" id="approach">
-
-<div class="container">
-
-<div class="approach-header">
-
-<div class="section-label">
-Our Approach
-</div>
-
-<h2>
-A disciplined path from opportunity to partnership.
-</h2>
-
-<p>
-We focus on understanding requirements first, then identifying
-the capabilities and relationships necessary to move an
-opportunity forward professionally.
-</p>
-
-</div>
-
-<div class="steps">
-
-<div class="step">
-<div class="step-number">01</div>
-<h3>Identify</h3>
-<p>
-Understand the project, market requirement and desired
-capabilities.
-</p>
-</div>
-
-<div class="step">
-<div class="step-number">02</div>
-<h3>Source</h3>
-<p>
-Identify qualified companies, suppliers, contractors and
-technology providers.
-</p>
-</div>
-
-<div class="step">
-<div class="step-number">03</div>
-<h3>Connect</h3>
-<p>
-Facilitate professional communication between appropriate
-stakeholders.
-</p>
-</div>
-
-<div class="step">
-<div class="step-number">04</div>
-<h3>Develop</h3>
-<p>
-Support the relationship as the opportunity progresses toward
-a potential project or commercial engagement.
-</p>
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<section class="industries" id="industries">
-
-<div class="container">
-
-<div class="section-label">
-Industries
-</div>
-
-<h2>
-Markets We Support
-</h2>
-
-<div class="industry-grid">
-
-<div class="industry">
-<h3>Oil & Gas</h3>
-<p>
-Upstream, midstream, downstream and oilfield-related
-opportunities.
-</p>
-</div>
-
-<div class="industry">
-<h3>Energy</h3>
-<p>
-Energy infrastructure, technology, equipment and services.
-</p>
-</div>
-
-<div class="industry">
-<h3>Infrastructure</h3>
-<p>
-Large-scale infrastructure, civil works and development
-requirements.
-</p>
-</div>
-
-<div class="industry">
-<h3>Construction</h3>
-<p>
-Heavy construction equipment, contractors and project
-capabilities.
-</p>
-</div>
-
-<div class="industry">
-<h3>Industrial</h3>
-<p>
-Industrial equipment, manufacturing capabilities and technical
-solutions.
-</p>
-</div>
-
-<div class="industry">
-<h3>Technology</h3>
-<p>
-Specialized technologies and innovative solutions for
-industrial applications.
-</p>
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<section class="cta">
-
-<div class="container cta-inner">
-
-<div>
-
-<div class="section-label">
-Start a Conversation
-</div>
-
-<h2>
-Have a project, capability or technology to discuss?
-</h2>
-
-<p>
-Tell us what you are looking for and provide your company
-profile or project information for professional evaluation.
-</p>
-
-</div>
-
-<a href="#contact" class="btn btn-gold">
-Request an Introduction
-</a>
-
-</div>
-
-</section>
-
-<section class="contact" id="contact">
-
-<div class="container contact-grid">
-
-<div class="contact-info">
-
-<div class="section-label">
-Contact AUT
-</div>
-
-<h2>
-Let's discuss the opportunity.
-</h2>
-
-<p>
-We welcome qualified companies, manufacturers, contractors,
-technology providers and project stakeholders interested in
-exploring international energy and industrial opportunities.
-</p>
-
-<div class="contact-box">
-<strong>Company Profiles</strong>
-<span>Submit your company profile for evaluation.</span>
-</div>
-
-<div class="contact-box">
-<strong>Project Opportunities</strong>
-<span>Discuss project requirements and capabilities.</span>
-</div>
-
-<div class="contact-box">
-<strong>Strategic Partnerships</strong>
-<span>Explore potential international cooperation.</span>
-</div>
-
-</div>
-
-<form action="mailto:info@autinternationalenergypartners.com"
-method="post"
-enctype="text/plain">
-
-<h3 style="color:#071a2b;margin-bottom:20px;">
-Project & Partnership Inquiry
-</h3>
-
-<input type="text" name="name" placeholder="Full Name" required>
-
-<input type="text" name="company" placeholder="Company Name">
-
-<input type="email" name="email" placeholder="Email Address" required>
-
-<select name="interest">
-<option value="">Area of Interest</option>
-<option>Energy & Oilfield</option>
-<option>Procurement & Supply</option>
-<option>Heavy Construction</option>
-<option>Industrial Equipment</option>
-<option>Strategic Partnership</option>
-<option>Project Opportunity</option>
-</select>
-
-<textarea name="message"
-placeholder="Tell us briefly about your company, project or opportunity."></textarea>
-
-<button class="btn btn-gold" type="submit">
-Send Inquiry
-</button>
-
-</form>
-
-</div>
-
-</section>
+<!-- =========================
+     FOOTER
+========================= -->
 
 <footer>
 
-<div class="container">
+    <div class="footer-container">
 
-<div class="footer-grid">
+        <h3>
+            AUT International Energy Partners
+        </h3>
 
-<div>
+        <p>
+            Connecting Energy. Building Opportunity.
+        </p>
 
-<div class="footer-brand">
-AUT INTERNATIONAL ENERGY PARTNERS
-</div>
+        <p>
+            <a
+                class="footer-email"
+                href="mailto:info@autinternational.com">
+                info@autinternational.com
+            </a>
+        </p>
 
-<p>
-Energy • Infrastructure • Procurement • Industrial Partnerships
-</p>
+        <div class="copyright">
+            © 2026 AUT International Energy Partners.
+            All Rights Reserved.
+        </div>
 
-<p style="margin-top:15px;">
-Connecting qualified capabilities with international
-opportunities.
-</p>
-
-</div>
-
-<div>
-
-<h4>Explore</h4>
-
-<div class="footer-links">
-<a href="#about">About</a>
-<a href="#services">Services</a>
-<a href="#equipment">Capabilities</a>
-<a href="#approach">Approach</a>
-</div>
-
-</div>
-
-<div>
-
-<h4>Connect</h4>
-
-<div class="footer-links">
-<a href="#contact">Contact</a>
-<a href="#contact">Company Profile</a>
-<a href="#contact">Project Inquiry</a>
-</div>
-
-</div>
-
-</div>
-
-<div class="copyright">
-
-<span>
-© 2026 AUT International Energy Partners. All Rights Reserved.
-</span>
-
-<span>
-International Energy • Equipment • Industrial Partnerships
-</span>
-
-</div>
-
-</div>
+    </div>
 
 </footer>
+
+
+<!-- =========================
+     FORM SCRIPT
+========================= -->
+
+<script>
+
+document
+.getElementById("inquiryForm")
+.addEventListener("submit", function(event) {
+
+    event.preventDefault();
+
+    const name =
+        document.getElementById("name").value;
+
+    const jobTitle =
+        document.getElementById("jobTitle").value;
+
+    const company =
+        document.getElementById("company").value;
+
+    const email =
+        document.getElementById("email").value;
+
+    const phone =
+        document.getElementById("phone").value;
+
+    const country =
+        document.getElementById("country").value;
+
+    const message =
+        document.getElementById("message").value;
+
+
+    /*
+       Temporary email method.
+
+       This opens the visitor's email program.
+       Once your website has a real form-processing
+       system, this section can be replaced with
+       the secure server submission.
+    */
+
+    const subject =
+        encodeURIComponent(
+            "New Business Inquiry - AUT International Energy Partners"
+        );
+
+
+    const body =
+        encodeURIComponent(
+
+            "NEW BUSINESS INQUIRY\n\n" +
+
+            "Full Name: " + name + "\n" +
+
+            "Job Title / Position: " + jobTitle + "\n" +
+
+            "Company Name: " + company + "\n" +
+
+            "Business Email: " + email + "\n" +
+
+            "Phone Number: " + phone + "\n" +
+
+            "Country / Region: " + country + "\n\n" +
+
+            "INQUIRY:\n" +
+
+            message
+
+        );
+
+
+    window.location.href =
+        "mailto:info@autinternational.com" +
+        "?subject=" + subject +
+        "&body=" + body;
+
+
+    document
+        .getElementById("successMessage")
+        .style.display = "block";
+
+});
+
+</script>
 
 </body>
 </html>
