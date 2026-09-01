@@ -2,17 +2,12 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta name="viewport"
-      content="width=device-width, initial-scale=1.0">
-
-<title>AUT International Energy Partners</title>
+<title>AUT International Energy Partners | International Business Development</title>
 
 <meta name="description"
-      content="AUT International Energy Partners connects qualified suppliers, manufacturers, contractors and technology companies with strategic opportunities across energy, infrastructure and industrial markets.">
-
-<meta name="keywords"
-      content="AUT International Energy Partners, oilfield services, energy, oil and gas, industrial solutions, equipment, technology, international business development">
+content="AUT International Energy Partners connects qualified suppliers, manufacturers, contractors and technology companies with strategic opportunities across energy, infrastructure and industrial markets.">
 
 <style>
 
@@ -22,13 +17,14 @@
     --gold: #e7a21a;
     --gold2: #f4b52a;
     --white: #ffffff;
-    --light: #f6f7f9;
+    --light: #f5f7f9;
     --text: #172638;
     --muted: #667789;
-    --border: #d9dee5;
 }
 
 * {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
@@ -37,16 +33,10 @@ html {
 }
 
 body {
-    margin: 0;
     font-family: Arial, Helvetica, sans-serif;
     color: var(--text);
     background: var(--white);
     line-height: 1.6;
-}
-
-img {
-    max-width: 100%;
-    display: block;
 }
 
 a {
@@ -54,497 +44,453 @@ a {
     color: inherit;
 }
 
-/* =========================================================
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* =========================
    HEADER
-========================================================= */
+========================= */
 
 header {
     background: var(--navy);
     color: var(--white);
-    position: sticky;
-    top: 0;
+    position: relative;
     z-index: 1000;
-    box-shadow: 0 3px 12px rgba(0,0,0,0.15);
 }
 
-.navbar {
-    max-width: 1250px;
+.header-inner {
+    max-width: 1400px;
     margin: auto;
-    padding: 18px 28px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 30px;
+    padding: 22px 45px 18px;
 }
 
-/* AUT LOGO */
+/* LOGO */
 
 .logo {
     display: flex;
     align-items: center;
-    gap: 16px;
-    min-width: 250px;
+    gap: 18px;
 }
 
 .logo-mark {
-    width: 72px;
-    height: 72px;
+    width: 76px;
+    height: 76px;
     border: 4px solid var(--gold);
     border-radius: 50%;
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--gold);
-    font-size: 37px;
-    font-weight: 900;
-    position: relative;
     flex-shrink: 0;
 }
 
-.logo-mark::before {
-    content: "";
-    position: absolute;
-    width: 52px;
-    height: 25px;
-    border-top: 2px solid var(--gold);
-    border-bottom: 2px solid var(--gold);
-    border-radius: 50%;
-}
-
+.logo-mark::before,
 .logo-mark::after {
     content: "";
     position: absolute;
-    width: 2px;
-    height: 58px;
-    background: var(--gold);
-    opacity: 0.9;
+    border: 2px solid var(--gold);
+    border-radius: 50%;
 }
 
-.logo-text {
-    display: flex;
-    flex-direction: column;
-    line-height: 1.05;
+.logo-mark::before {
+    width: 54px;
+    height: 28px;
 }
 
-.logo-main {
-    font-size: 40px;
-    font-weight: 900;
-    letter-spacing: 1px;
+.logo-mark::after {
+    width: 28px;
+    height: 54px;
 }
 
-.logo-sub {
-    font-size: 18px;
+.logo-a {
+    font-size: 34px;
+    font-weight: 800;
+    color: var(--gold);
+    z-index: 2;
+}
+
+.logo-text-main {
+    font-size: 58px;
+    font-weight: 800;
+    letter-spacing: -2px;
+    line-height: 0.9;
+}
+
+.logo-text-sub {
+    margin-top: 7px;
+    font-size: 19px;
     font-weight: 700;
-    letter-spacing: 1.5px;
-    margin-top: 5px;
+    letter-spacing: 2px;
+    line-height: 1.1;
 }
+
+/* NAVIGATION */
 
 nav {
+    margin-top: 28px;
     display: flex;
+    justify-content: center;
     align-items: center;
-    gap: 28px;
+    gap: 42px;
+    flex-wrap: wrap;
 }
 
 nav a {
     color: var(--white);
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 700;
-    letter-spacing: 0.4px;
-    transition: color 0.2s ease;
+    letter-spacing: 0.5px;
+    transition: 0.2s ease;
 }
 
 nav a:hover {
-    color: var(--gold2);
+    color: var(--gold);
 }
 
-.nav-contact {
+.contact-nav {
     background: var(--gold);
     color: var(--navy) !important;
-    padding: 13px 22px;
+    padding: 15px 32px;
     border-radius: 4px;
 }
 
-.nav-contact:hover {
+.contact-nav:hover {
     background: var(--gold2);
 }
 
-/* =========================================================
+/* =========================
    HERO
-========================================================= */
+========================= */
 
 .hero {
-    background: var(--light);
-    padding: 0;
-}
-
-/*
-   IMPORTANT:
-   The image is completely separated from the text.
-   No text is placed on top of the photograph.
-*/
-
-.hero-image {
-    width: 100%;
-    height: 470px;
+    position: relative;
+    min-height: 760px;
+    display: flex;
+    align-items: center;
     overflow: hidden;
-    background: #dfe4e8;
-}
 
-.hero-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-}
+    background-image:
+        linear-gradient(
+            90deg,
+            rgba(255,255,255,0.96) 0%,
+            rgba(255,255,255,0.82) 34%,
+            rgba(255,255,255,0.30) 62%,
+            rgba(255,255,255,0.08) 100%
+        ),
+        url("aut-energy-hero.png");
 
-/* HERO TEXT PANEL */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
 
 .hero-content {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 70px 35px 80px;
-    background: var(--white);
+    width: 100%;
+    max-width: 1400px;
+    margin: auto;
+    padding: 80px 55px;
+    position: relative;
+    z-index: 2;
 }
 
 .hero-kicker {
-    color: var(--navy);
-    font-size: 22px;
+    font-size: 25px;
     font-weight: 800;
-    letter-spacing: 4px;
-    margin-bottom: 25px;
+    letter-spacing: 5px;
+    color: var(--navy);
+    margin-bottom: 38px;
 }
 
 .hero-title {
-    margin: 0;
-    font-size: clamp(44px, 6vw, 78px);
+    font-size: clamp(54px, 7vw, 100px);
     line-height: 0.98;
     font-weight: 900;
-    letter-spacing: -2px;
-}
-
-.hero-title .dark {
-    color: var(--navy);
-    display: block;
+    letter-spacing: -3px;
+    text-transform: uppercase;
+    max-width: 850px;
 }
 
 .hero-title .gold {
     color: var(--gold);
-    display: block;
 }
 
-.hero-line {
-    width: 115px;
+.gold-line {
+    width: 120px;
     height: 7px;
     background: var(--gold);
-    margin: 35px 0;
+    margin: 42px 0 38px;
 }
 
 .hero-description {
-    max-width: 900px;
-    font-size: 22px;
-    line-height: 1.65;
+    max-width: 720px;
+    font-size: 25px;
+    line-height: 1.7;
     color: var(--text);
-    margin: 0;
 }
 
-/* =========================================================
-   BUTTON
-========================================================= */
+/* HERO BUTTON */
 
-.primary-button {
-    display: inline-block;
-    margin-top: 35px;
+.hero-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+    margin-top: 42px;
     background: var(--gold);
     color: var(--navy);
-    padding: 17px 32px;
-    border-radius: 4px;
+    padding: 21px 34px;
+    font-size: 19px;
     font-weight: 800;
-    font-size: 17px;
     letter-spacing: 0.5px;
-    border: none;
-    cursor: pointer;
-    transition: all 0.2s ease;
+    border-radius: 3px;
+    transition: 0.25s ease;
 }
 
-.primary-button:hover {
+.hero-button:hover {
     background: var(--gold2);
-    transform: translateY(-1px);
+    transform: translateY(-2px);
 }
 
-/* =========================================================
-   SECTION GENERAL
-========================================================= */
+/* =========================
+   WHAT WE DO
+========================= */
 
 .section {
-    padding: 80px 25px;
+    padding: 85px 45px;
+}
+
+.section-light {
+    background: var(--light);
 }
 
 .section-inner {
-    max-width: 1200px;
+    max-width: 1400px;
     margin: auto;
 }
 
 .section-title {
     text-align: center;
-    color: var(--navy);
     font-size: 38px;
-    margin: 0 0 15px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    color: var(--navy);
+}
+
+.section-title::after {
+    content: "";
+    display: block;
+    width: 65px;
+    height: 5px;
+    background: var(--gold);
+    margin: 18px auto 50px;
+}
+
+.capabilities {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 45px;
+}
+
+.capability {
+    background: var(--white);
+    padding: 35px;
+    border-top: 5px solid var(--gold);
+}
+
+.capability-icon {
+    width: 62px;
+    height: 62px;
+    background: var(--navy);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--gold);
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.capability h3 {
+    font-size: 21px;
+    color: var(--navy);
+    margin-bottom: 20px;
+}
+
+.capability ul {
+    list-style: none;
+}
+
+.capability li {
+    margin-bottom: 9px;
+    padding-left: 18px;
+    position: relative;
+}
+
+.capability li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--gold);
+    font-weight: 900;
+}
+
+/* =========================
+   PROJECT BANNER
+========================= */
+
+.project-banner {
+    position: relative;
+    background:
+        linear-gradient(rgba(6,26,45,0.86), rgba(6,26,45,0.86)),
+        url("aut-energy-hero.png");
+    background-size: cover;
+    background-position: center;
+    padding: 95px 45px;
+    text-align: center;
+    color: var(--white);
+}
+
+.project-banner h2 {
+    font-size: 40px;
+    margin-bottom: 18px;
+}
+
+.project-banner p {
+    max-width: 750px;
+    margin: auto;
+    font-size: 20px;
+    color: #e7edf3;
+}
+
+.project-button {
+    display: inline-block;
+    margin-top: 35px;
+    padding: 22px 65px;
+    background: var(--gold);
+    color: var(--navy);
+    font-size: 22px;
     font-weight: 900;
     letter-spacing: 1px;
 }
 
-.section-gold-line {
-    width: 70px;
-    height: 4px;
-    background: var(--gold);
-    margin: 0 auto 50px;
-}
+/* =========================
+   CONTACT / INQUIRY
+========================= */
 
-/* =========================================================
-   WHAT WE DO
-========================================================= */
-
-.services {
-    background: var(--white);
-}
-
-.service-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 35px;
-}
-
-.service-card {
-    border: 1px solid var(--border);
-    padding: 35px 30px;
-    background: var(--white);
-    box-shadow: 0 5px 20px rgba(6,26,45,0.06);
-}
-
-.service-icon {
-    width: 62px;
-    height: 62px;
-    border-radius: 50%;
-    background: var(--navy);
-    color: var(--gold);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 27px;
-    margin-bottom: 20px;
-}
-
-.service-card h3 {
-    color: var(--navy);
-    font-size: 20px;
-    margin: 0 0 18px;
-}
-
-.service-card ul {
-    padding-left: 20px;
-    margin: 0;
-}
-
-.service-card li {
-    margin-bottom: 8px;
-}
-
-/* =========================================================
-   STRATEGIC BAND
-========================================================= */
-
-.strategy {
-    background: var(--navy);
-    color: var(--white);
-    padding: 65px 25px;
-}
-
-.strategy-inner {
-    max-width: 1100px;
-    margin: auto;
-    text-align: center;
-}
-
-.strategy-icon {
-    color: var(--gold);
-    font-size: 50px;
-    margin-bottom: 15px;
-}
-
-.strategy-text {
-    font-size: 24px;
-    line-height: 1.6;
-    max-width: 900px;
-    margin: auto;
-}
-
-/* =========================================================
-   VALUES
-========================================================= */
-
-.values {
-    background: var(--navy2);
-    color: var(--white);
-    padding: 65px 25px;
-}
-
-.values-grid {
-    max-width: 1200px;
-    margin: auto;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-}
-
-.value {
-    text-align: center;
-    padding: 10px 25px;
-    border-right: 1px solid rgba(255,255,255,0.3);
-}
-
-.value:last-child {
-    border-right: none;
-}
-
-.value-icon {
-    font-size: 38px;
-    color: var(--gold);
-    margin-bottom: 10px;
-}
-
-.value h3 {
-    margin: 5px 0 10px;
-    font-size: 18px;
-}
-
-.value p {
-    margin: 0;
-    color: #e6ebf0;
-    font-size: 15px;
-}
-
-/* =========================================================
-   CONTACT SECTION
-========================================================= */
-
-.contact {
+.contact-section {
     background: var(--light);
+    padding: 90px 30px;
 }
 
-.contact-grid {
-    max-width: 1100px;
+.contact-container {
+    max-width: 1050px;
     margin: auto;
-    display: grid;
-    grid-template-columns: 0.8fr 1.2fr;
-    gap: 50px;
-    align-items: start;
 }
 
-.contact-info {
-    background: var(--navy);
-    color: var(--white);
-    padding: 45px 35px;
+.contact-header {
+    text-align: center;
+    margin-bottom: 45px;
 }
 
-.contact-info h2 {
-    margin-top: 0;
-    font-size: 34px;
-}
-
-.contact-info .gold-line {
-    width: 70px;
-    height: 4px;
-    background: var(--gold);
-    margin: 20px 0 25px;
-}
-
-.contact-info p {
-    font-size: 17px;
-    line-height: 1.7;
-}
-
-.contact-email {
-    color: var(--gold2);
-    font-weight: 700;
-    word-break: break-word;
-}
-
-/* FORM */
-
-.contact-form {
-    background: var(--white);
-    padding: 40px;
-    border: 1px solid var(--border);
-    box-shadow: 0 5px 25px rgba(6,26,45,0.08);
-}
-
-.contact-form h2 {
+.contact-header h2 {
+    font-size: 42px;
     color: var(--navy);
-    margin-top: 0;
-    font-size: 30px;
+    font-weight: 900;
 }
 
-.form-row {
+.contact-header p {
+    margin-top: 12px;
+    color: var(--muted);
+    font-size: 19px;
+}
+
+.inquiry-form {
+    background: var(--white);
+    padding: 45px;
+    border-top: 6px solid var(--gold);
+    box-shadow: 0 12px 40px rgba(6,26,45,0.10);
+}
+
+.form-title {
+    font-size: 26px;
+    color: var(--navy);
+    margin-bottom: 30px;
+    font-weight: 800;
+}
+
+.form-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 20px;
+    gap: 24px;
 }
 
 .form-group {
-    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group.full {
+    grid-column: 1 / -1;
 }
 
 .form-group label {
-    display: block;
-    font-weight: 700;
+    font-size: 15px;
+    font-weight: 800;
     color: var(--navy);
-    margin-bottom: 7px;
+    margin-bottom: 8px;
 }
 
 .form-group input,
 .form-group textarea,
 .form-group select {
     width: 100%;
-    padding: 14px 15px;
-    border: 1px solid #cbd2da;
-    border-radius: 4px;
-    font-family: Arial, Helvetica, sans-serif;
+    border: 1px solid #ccd4dc;
+    border-radius: 3px;
+    padding: 15px;
+    font-family: inherit;
     font-size: 16px;
     color: var(--text);
     background: #fff;
-}
-
-.form-group textarea {
-    min-height: 160px;
-    resize: vertical;
+    outline: none;
 }
 
 .form-group input:focus,
 .form-group textarea:focus,
 .form-group select:focus {
-    outline: none;
     border-color: var(--gold);
-    box-shadow: 0 0 0 2px rgba(231,162,26,0.15);
+    box-shadow: 0 0 0 2px rgba(231,162,26,0.12);
+}
+
+.form-group textarea {
+    min-height: 170px;
+    resize: vertical;
+}
+
+.required {
+    color: #b33;
 }
 
 .form-submit {
-    width: 100%;
-    padding: 16px;
-    border: none;
-    border-radius: 4px;
+    margin-top: 30px;
     background: var(--gold);
     color: var(--navy);
-    font-size: 17px;
-    font-weight: 800;
+    border: none;
+    padding: 19px 40px;
+    font-size: 18px;
+    font-weight: 900;
     cursor: pointer;
+    border-radius: 3px;
+    transition: 0.25s ease;
 }
 
 .form-submit:hover {
     background: var(--gold2);
 }
 
-/* =========================================================
+/* =========================
    FOOTER
-========================================================= */
+========================= */
 
 footer {
     background: var(--navy);
@@ -552,193 +498,209 @@ footer {
 }
 
 .footer-main {
-    max-width: 1200px;
+    max-width: 1400px;
     margin: auto;
-    padding: 50px 25px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 30px;
+    padding: 65px 45px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
 }
 
-.footer-brand {
-    font-size: 25px;
+.footer-heading {
+    color: var(--gold);
+    font-size: 20px;
     font-weight: 800;
+    margin-bottom: 15px;
 }
 
-.footer-email {
-    color: var(--gold2);
+.footer-main p {
+    color: #d6e0e8;
+    margin-bottom: 10px;
+}
+
+.footer-main a:hover {
+    color: var(--gold);
 }
 
 .footer-bottom {
     border-top: 1px solid rgba(255,255,255,0.15);
     text-align: center;
     padding: 22px 20px;
+    color: #c3ced8;
     font-size: 13px;
     letter-spacing: 2px;
-    color: #dbe2e8;
 }
 
-/* =========================================================
+/* =========================
    MOBILE
-========================================================= */
+========================= */
 
 @media (max-width: 900px) {
 
-    .navbar {
-        flex-direction: column;
-        padding: 18px 15px 22px;
-        gap: 20px;
+    .header-inner {
+        padding: 20px 20px 25px;
     }
 
-    .logo {
-        justify-content: center;
+    .logo-mark {
+        width: 65px;
+        height: 65px;
     }
 
-    .logo-main {
-        font-size: 34px;
+    .logo-text-main {
+        font-size: 42px;
     }
 
-    .logo-sub {
-        font-size: 15px;
+    .logo-text-sub {
+        font-size: 14px;
+        letter-spacing: 1.5px;
     }
 
     nav {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 15px 22px;
+        gap: 22px;
+        margin-top: 25px;
     }
 
     nav a {
-        font-size: 14px;
+        font-size: 15px;
     }
 
-    .hero-image {
-        height: 330px;
+    .contact-nav {
+        padding: 12px 22px;
+    }
+
+    .hero {
+        min-height: 720px;
+        background-position: 64% center;
     }
 
     .hero-content {
-        padding: 50px 22px 60px;
+        padding: 65px 25px;
     }
 
     .hero-kicker {
         font-size: 16px;
-        letter-spacing: 2.5px;
+        letter-spacing: 3px;
+        margin-bottom: 25px;
     }
 
     .hero-title {
-        font-size: 47px;
-        letter-spacing: -1px;
+        font-size: 55px;
+        letter-spacing: -2px;
+        max-width: 100%;
     }
 
     .hero-description {
-        font-size: 19px;
+        font-size: 20px;
+        line-height: 1.55;
+        max-width: 650px;
     }
 
-    .service-grid {
+    .capabilities {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .section {
+        padding: 65px 22px;
+    }
+
+    .project-banner {
+        padding: 70px 25px;
+    }
+
+    .project-banner h2 {
+        font-size: 30px;
+    }
+
+    .project-button {
+        padding: 19px 30px;
+        font-size: 18px;
+    }
+
+    .form-grid {
         grid-template-columns: 1fr;
     }
 
-    .values-grid {
-        grid-template-columns: 1fr 1fr;
-        gap: 30px 0;
+    .form-group.full {
+        grid-column: auto;
     }
 
-    .value:nth-child(2) {
-        border-right: none;
+    .inquiry-form {
+        padding: 25px;
     }
 
-    .contact-grid {
+    .footer-main {
         grid-template-columns: 1fr;
+        padding: 50px 25px;
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 520px) {
+
+    .logo {
+        gap: 10px;
+    }
 
     .logo-mark {
-        width: 62px;
-        height: 62px;
-        font-size: 31px;
+        width: 58px;
+        height: 58px;
+        border-width: 3px;
     }
 
-    .logo-main {
-        font-size: 29px;
+    .logo-a {
+        font-size: 26px;
     }
 
-    .logo-sub {
-        font-size: 12px;
+    .logo-text-main {
+        font-size: 34px;
+    }
+
+    .logo-text-sub {
+        font-size: 11px;
         letter-spacing: 1px;
     }
 
     nav {
-        gap: 12px 17px;
+        gap: 14px 20px;
     }
 
-    .nav-contact {
-        padding: 11px 18px;
+    nav a {
+        font-size: 13px;
     }
 
-    .hero-image {
-        height: 260px;
+    .contact-nav {
+        padding: 10px 16px;
+    }
+
+    .hero {
+        min-height: 730px;
+        background-position: 65% center;
     }
 
     .hero-content {
-        padding: 42px 20px 50px;
+        padding: 50px 20px;
     }
 
     .hero-kicker {
-        font-size: 14px;
+        font-size: 13px;
+        letter-spacing: 2px;
     }
 
     .hero-title {
-        font-size: 39px;
-    }
-
-    .hero-line {
-        height: 5px;
-        width: 90px;
-        margin: 27px 0;
+        font-size: 47px;
+        line-height: 1;
     }
 
     .hero-description {
         font-size: 18px;
-        line-height: 1.55;
     }
 
-    .section {
-        padding: 60px 20px;
+    .gold-line {
+        margin: 30px 0;
     }
 
-    .section-title {
-        font-size: 30px;
-    }
-
-    .values-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .value {
-        border-right: none;
-        border-bottom: 1px solid rgba(255,255,255,0.2);
-        padding-bottom: 25px;
-    }
-
-    .value:last-child {
-        border-bottom: none;
-    }
-
-    .contact-form {
-        padding: 25px 20px;
-    }
-
-    .form-row {
-        grid-template-columns: 1fr;
-        gap: 0;
-    }
-
-    .footer-main {
-        flex-direction: column;
-        text-align: center;
+    .contact-header h2 {
+        font-size: 32px;
     }
 }
 
@@ -747,21 +709,23 @@ footer {
 
 <body>
 
-<!-- =======================================================
+<!-- =========================
      HEADER
-======================================================= -->
+========================= -->
 
 <header>
 
-    <div class="navbar">
+    <div class="header-inner">
 
         <a href="#home" class="logo">
 
-            <div class="logo-mark">A</div>
+            <div class="logo-mark">
+                <span class="logo-a">A</span>
+            </div>
 
-            <div class="logo-text">
-                <div class="logo-main">AUT</div>
-                <div class="logo-sub">
+            <div>
+                <div class="logo-text-main">AUT</div>
+                <div class="logo-text-sub">
                     INTERNATIONAL<br>
                     ENERGY PARTNERS
                 </div>
@@ -779,7 +743,7 @@ footer {
 
             <a href="#capabilities">CAPABILITIES</a>
 
-            <a href="#contact" class="nav-contact">
+            <a href="#contact" class="contact-nav">
                 CONTACT US
             </a>
 
@@ -790,31 +754,11 @@ footer {
 </header>
 
 
-<!-- =======================================================
+<!-- =========================
      HERO
-======================================================= -->
+========================= -->
 
-<main id="home">
-
-<section class="hero">
-
-    <!--
-        Replace the image filename below ONLY if your
-        uploaded image has a different filename.
-
-        The image is kept completely separate from the text
-        to prevent overlapping.
-    -->
-
-    <div class="hero-image">
-
-        <img
-            src="aut-energy-hero.png"
-            alt="Oilfield with drilling rig, pumpjacks and bulldozer"
-        >
-
-    </div>
-
+<section id="home" class="hero">
 
     <div class="hero-content">
 
@@ -824,36 +768,30 @@ footer {
 
         <h1 class="hero-title">
 
-            <span class="dark">
-                CONNECTING
-            </span>
+            CONNECTING
+            <span class="gold">ENERGY.</span>
 
-            <span class="gold">
-                CAPABILITIES.
-            </span>
+            <br>
 
-            <span class="dark">
-                DELIVERING
-            </span>
-
-            <span class="gold">
-                OPPORTUNITIES.
-            </span>
+            BUILDING
+            <span class="gold">OPPORTUNITY.</span>
 
         </h1>
 
-        <div class="hero-line"></div>
+        <div class="gold-line"></div>
 
         <p class="hero-description">
+
             AUT International Energy Partners connects
             qualified suppliers, manufacturers, contractors
             and technology companies with strategic
             opportunities across energy, infrastructure
             and industrial markets.
+
         </p>
 
-        <a href="#contact" class="primary-button">
-            LET'S BUILD SUCCESS TOGETHER
+        <a href="#contact" class="hero-button">
+            ✉ &nbsp; LET'S BUILD SUCCESS TOGETHER
         </a>
 
     </div>
@@ -861,37 +799,11 @@ footer {
 </section>
 
 
-<!-- =======================================================
+<!-- =========================
      ABOUT
-======================================================= -->
+========================= -->
 
-<section class="section" id="about">
-
-    <div class="section-inner">
-
-        <h2 class="section-title">
-            ABOUT AUT
-        </h2>
-
-        <div class="section-gold-line"></div>
-
-        <p style="max-width:900px;margin:auto;text-align:center;font-size:19px;">
-            AUT International Energy Partners works to connect
-            qualified companies with international business
-            development opportunities across energy,
-            infrastructure, equipment and industrial markets.
-        </p>
-
-    </div>
-
-</section>
-
-
-<!-- =======================================================
-     SERVICES
-======================================================= -->
-
-<section class="section services" id="services">
+<section id="about" class="section section-light">
 
     <div class="section-inner">
 
@@ -899,19 +811,14 @@ footer {
             WHAT WE DO
         </h2>
 
-        <div class="section-gold-line"></div>
+        <div class="capabilities">
 
+            <div class="capability">
 
-        <div class="service-grid">
-
-            <div class="service-card">
-
-                <div class="service-icon">
-                    ⚙
-                </div>
+                <div class="capability-icon">⚙</div>
 
                 <h3>
-                    ENERGY &amp; OILFIELD SOLUTIONS
+                    ENERGY & OILFIELD SOLUTIONS
                 </h3>
 
                 <ul>
@@ -927,15 +834,12 @@ footer {
             </div>
 
 
-            <div class="service-card">
+            <div class="capability">
 
-                <div class="service-icon">
-                    🚜
-                </div>
+                <div class="capability-icon">🚜</div>
 
                 <h3>
-                    HEAVY CONSTRUCTION &amp;
-                    EARTHMOVING EQUIPMENT
+                    HEAVY CONSTRUCTION & EARTHMOVING EQUIPMENT
                 </h3>
 
                 <ul>
@@ -946,7 +850,7 @@ footer {
                     <li>Backhoe Loaders</li>
                     <li>Articulated Dump Trucks</li>
                     <li>Compactors</li>
-                    <li>Skid Steer &amp; Track Loaders</li>
+                    <li>Skid Steer & Track Loaders</li>
                     <li>Drilling and ground-excavation equipment</li>
                     <li>Specialized attachments and work tools</li>
                 </ul>
@@ -954,21 +858,17 @@ footer {
             </div>
 
 
-            <div class="service-card">
+            <div class="capability">
 
-                <div class="service-icon">
-                    ⚙
-                </div>
+                <div class="capability-icon">⚙</div>
 
                 <h3>
-                    EQUIPMENT PARTS &amp;
-                    COMPONENTS
+                    EQUIPMENT PARTS & COMPONENTS
                 </h3>
 
-                <p>
+                <p style="margin-bottom:15px;">
                     We assist with identifying and sourcing
-                    OEM, aftermarket and remanufactured parts,
-                    including:
+                    OEM, aftermarket and remanufactured parts.
                 </p>
 
                 <ul>
@@ -993,277 +893,228 @@ footer {
 </section>
 
 
-<!-- =======================================================
-     STRATEGY
-======================================================= -->
+<!-- =========================
+     PROJECT SECTION
+========================= -->
 
-<section class="strategy">
+<section id="services" class="project-banner">
 
-    <div class="strategy-inner">
+    <h2>
+        WE IDENTIFY REQUIREMENTS,
+        SOURCE THE RIGHT SOLUTIONS
+    </h2>
 
-        <div class="strategy-icon">
-            ◎
-        </div>
+    <p>
+        AUT International Energy Partners works to identify
+        qualified companies, suppliers, manufacturers and
+        contractors capable of supporting strategic projects
+        and international opportunities.
+    </p>
 
-        <p class="strategy-text">
-            We identify requirements, source the right
-            solutions, and build strategic partnerships
-            that drive projects forward.
-        </p>
-
-    </div>
+    <a href="#contact" class="project-button">
+        DISCUSS A PROJECT &nbsp; →
+    </a>
 
 </section>
 
 
-<!-- =======================================================
+<!-- =========================
      CAPABILITIES
-======================================================= -->
+========================= -->
 
-<section class="values" id="capabilities">
-
-    <div class="values-grid">
-
-        <div class="value">
-
-            <div class="value-icon">◎</div>
-
-            <h3>GLOBAL REACH</h3>
-
-            <p>
-                Connecting qualified suppliers and
-                opportunities across international markets.
-            </p>
-
-        </div>
-
-
-        <div class="value">
-
-            <div class="value-icon">🤝</div>
-
-            <h3>STRATEGIC PARTNERSHIPS</h3>
-
-            <p>
-                Building long-term relationships based
-                on trust, integrity and results.
-            </p>
-
-        </div>
-
-
-        <div class="value">
-
-            <div class="value-icon">✓</div>
-
-            <h3>QUALITY &amp; RELIABILITY</h3>
-
-            <p>
-                Working with trusted manufacturers and
-                service providers that meet industry standards.
-            </p>
-
-        </div>
-
-
-        <div class="value">
-
-            <div class="value-icon">↗</div>
-
-            <h3>INDUSTRY EXPERIENCE</h3>
-
-            <p>
-                Understanding complex project requirements
-                and delivering effective solutions.
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =======================================================
-     CONTACT FORM
-======================================================= -->
-
-<section class="section contact" id="contact">
+<section id="capabilities" class="section">
 
     <div class="section-inner">
 
         <h2 class="section-title">
-            LET'S WORK TOGETHER
+            OUR CAPABILITIES
         </h2>
 
-        <div class="section-gold-line"></div>
+        <div class="capabilities">
 
+            <div class="capability">
+                <div class="capability-icon">◎</div>
 
-        <div class="contact-grid">
-
-
-            <!-- CONTACT INFORMATION -->
-
-            <div class="contact-info">
-
-                <h2>
-                    CONTACT AUT
-                </h2>
-
-                <div class="gold-line"></div>
+                <h3>GLOBAL REACH</h3>
 
                 <p>
-                    We welcome manufacturers, suppliers,
-                    contractors and technology companies
-                    interested in exploring international
-                    opportunities and partnerships.
+                    Connecting qualified suppliers and
+                    companies across international markets.
                 </p>
-
-                <p>
-                    <strong>Email:</strong><br>
-
-                    <a
-                        class="contact-email"
-                        href="mailto:autpartners@gmail.com"
-                    >
-                        autpartners@gmail.com
-                    </a>
-                </p>
-
-                <p>
-                    <strong>Market:</strong><br>
-                    United States &amp; International
-                </p>
-
             </div>
 
 
-            <!-- CUSTOMER FORM -->
+            <div class="capability">
+                <div class="capability-icon">🤝</div>
 
-            <form
-                class="contact-form"
-                action="mailto:autpartners@gmail.com"
-                method="post"
-                enctype="text/plain"
-            >
+                <h3>STRATEGIC PARTNERSHIPS</h3>
 
-                <h2>
-                    CUSTOMER INFORMATION
-                </h2>
+                <p>
+                    Building long-term relationships based
+                    on trust, integrity and results.
+                </p>
+            </div>
 
 
-                <div class="form-row">
+            <div class="capability">
+                <div class="capability-icon">✓</div>
 
-                    <div class="form-group">
+                <h3>QUALITY & RELIABILITY</h3>
 
-                        <label for="name">
-                            Full Name *
-                        </label>
+                <p>
+                    Working with trusted manufacturers and
+                    service providers that meet industry standards.
+                </p>
+            </div>
 
-                        <input
-                            type="text"
-                            id="name"
-                            name="Name"
-                            placeholder="Your full name"
-                            required
-                        >
+        </div>
 
-                    </div>
+    </div>
 
-
-                    <div class="form-group">
-
-                        <label for="company">
-                            Company Name *
-                        </label>
-
-                        <input
-                            type="text"
-                            id="company"
-                            name="Company"
-                            placeholder="Your company name"
-                            required
-                        >
-
-                    </div>
-
-                </div>
+</section>
 
 
-                <div class="form-row">
+<!-- =========================
+     CUSTOMER INQUIRY FORM
+========================= -->
 
-                    <div class="form-group">
+<section id="contact" class="contact-section">
 
-                        <label for="email">
-                            Email Address *
-                        </label>
+    <div class="contact-container">
 
-                        <input
-                            type="email"
-                            id="email"
-                            name="Email"
-                            placeholder="you@company.com"
-                            required
-                        >
+        <div class="contact-header">
 
-                    </div>
+            <h2>
+                CUSTOMER INQUIRY
+            </h2>
+
+            <p>
+                Tell us about your company, capabilities
+                or project requirements.
+            </p>
+
+        </div>
 
 
-                    <div class="form-group">
+        <form
+            class="inquiry-form"
+            action="mailto:autpartners@gmail.com"
+            method="post"
+            enctype="text/plain"
+        >
 
-                        <label for="phone">
-                            Phone Number
-                        </label>
+            <div class="form-title">
+                Customer Contact Information
+            </div>
 
-                        <input
-                            type="tel"
-                            id="phone"
-                            name="Phone"
-                            placeholder="Your phone number"
-                        >
 
-                    </div>
+            <div class="form-grid">
+
+
+                <div class="form-group">
+
+                    <label for="name">
+                        Full Name <span class="required">*</span>
+                    </label>
+
+                    <input
+                        type="text"
+                        id="name"
+                        name="Full Name"
+                        placeholder="Your full name"
+                        required
+                    >
 
                 </div>
 
 
                 <div class="form-group">
 
-                    <label for="interest">
-                        Area of Interest
+                    <label for="company">
+                        Company Name <span class="required">*</span>
                     </label>
 
-                    <select
-                        id="interest"
-                        name="Area of Interest"
+                    <input
+                        type="text"
+                        id="company"
+                        name="Company Name"
+                        placeholder="Your company name"
+                        required
                     >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="email">
+                        Email Address <span class="required">*</span>
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="Email Address"
+                        placeholder="you@company.com"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="phone">
+                        Phone Number
+                    </label>
+
+                    <input
+                        type="tel"
+                        id="phone"
+                        name="Phone Number"
+                        placeholder="Your phone number"
+                    >
+
+                </div>
+
+
+                <div class="form-group full">
+
+                    <label for="subject">
+                        Inquiry Type
+                    </label>
+
+                    <select id="subject" name="Inquiry Type">
 
                         <option value="">
                             Select an option
                         </option>
 
-                        <option>
-                            Energy &amp; Oilfield Solutions
+                        <option value="Business Development">
+                            Business Development
                         </option>
 
-                        <option>
-                            Heavy Construction &amp;
-                            Earthmoving Equipment
+                        <option value="Oilfield Services">
+                            Oilfield Services
                         </option>
 
-                        <option>
-                            Equipment Parts &amp; Components
+                        <option value="Equipment">
+                            Equipment
                         </option>
 
-                        <option>
-                            Technology Solutions
+                        <option value="Equipment Parts">
+                            Equipment Parts & Components
                         </option>
 
-                        <option>
-                            International Business Development
+                        <option value="Technology">
+                            Technology
                         </option>
 
-                        <option>
+                        <option value="International Project">
+                            International Project
+                        </option>
+
+                        <option value="Other">
                             Other
                         </option>
 
@@ -1272,59 +1123,80 @@ footer {
                 </div>
 
 
-                <div class="form-group">
+                <div class="form-group full">
 
                     <label for="message">
-                        Message *
+                        Message <span class="required">*</span>
                     </label>
 
                     <textarea
                         id="message"
                         name="Message"
-                        placeholder="Tell us about your company, capabilities, products or potential opportunity..."
+                        placeholder="Please tell us about your company, capabilities, project or inquiry..."
                         required
                     ></textarea>
 
                 </div>
 
 
-                <button
-                    type="submit"
-                    class="form-submit"
-                >
-                    SEND MESSAGE
-                </button>
+            </div>
 
-            </form>
 
-        </div>
+            <button
+                type="submit"
+                class="form-submit"
+            >
+                SEND INQUIRY →
+            </button>
+
+        </form>
 
     </div>
 
 </section>
 
-</main>
 
-
-<!-- =======================================================
+<!-- =========================
      FOOTER
-======================================================= -->
+========================= -->
 
 <footer>
 
     <div class="footer-main">
 
-        <div class="footer-brand">
-            AUT International Energy Partners
+        <div>
+
+            <div class="footer-heading">
+                LET'S WORK TOGETHER
+            </div>
+
+            <p>
+                We welcome manufacturers, suppliers,
+                contractors and technology companies
+                interested in exploring international
+                opportunities and partnerships.
+            </p>
+
         </div>
 
+
         <div>
-            <a
-                class="footer-email"
-                href="mailto:autpartners@gmail.com"
-            >
-                autpartners@gmail.com
-            </a>
+
+            <div class="footer-heading">
+                CONTACT
+            </div>
+
+            <p>
+                ✉
+                <a href="mailto:autpartners@gmail.com">
+                    autpartners@gmail.com
+                </a>
+            </p>
+
+            <p>
+                🌎 UNITED STATES | INTERNATIONAL
+            </p>
+
         </div>
 
     </div>
@@ -1340,7 +1212,7 @@ footer {
         <br><br>
 
         INTERNATIONAL BUSINESS DEVELOPMENT
-        &amp; STRATEGIC PARTNERSHIPS
+        & STRATEGIC PARTNERSHIPS
 
     </div>
 
