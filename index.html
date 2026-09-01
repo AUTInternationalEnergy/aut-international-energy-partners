@@ -2,1757 +2,1536 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta name="viewport"
-      content="width=device-width, initial-scale=1.0">
+<title>AUT International Energy Partners | Energy, Equipment & Industrial Solutions</title>
 
-<title>AUT International Energy Partners | Energy & Industrial Solutions</title>
+<meta name="description" content="AUT International Energy Partners connects qualified suppliers, manufacturers, contractors and technology companies with strategic opportunities across energy, infrastructure and industrial markets.">
 
-<meta name="description"
-      content="AUT International Energy Partners connects qualified suppliers, manufacturers, contractors and technology companies with energy, infrastructure and industrial opportunities worldwide.">
-
-<meta name="keywords"
-      content="oilfield services, oil and gas, energy, industrial equipment, construction equipment, drilling, Iraq oil and gas, international business development, equipment parts">
+<meta name="keywords" content="AUT International Energy Partners, oilfield services, oilfield equipment, energy equipment, construction equipment, industrial solutions, international business development">
 
 <style>
 
-/* =========================================================
-   GLOBAL
-========================================================= */
-
-:root {
-    --navy: #061a2b;
-    --navy2: #0b263d;
-    --gold: #e7a92f;
-    --gold2: #f5bd3c;
-    --white: #ffffff;
-    --light: #f5f6f7;
-    --text: #172235;
-    --muted: #657080;
-    --line: #dfe3e8;
-    --shadow: 0 12px 35px rgba(0,0,0,.12);
+:root{
+    --navy:#061a2d;
+    --navy2:#09243d;
+    --gold:#e7a21a;
+    --gold2:#f4b52a;
+    --white:#ffffff;
+    --light:#f6f7f9;
+    --text:#172638;
+    --muted:#667789;
+    --line:#dfe5eb;
 }
 
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
 }
 
-html {
-    scroll-behavior: smooth;
+html{
+    scroll-behavior:smooth;
 }
 
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    color: var(--text);
-    background: var(--white);
-    line-height: 1.6;
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    color:var(--text);
+    background:#fff;
+    line-height:1.6;
+    overflow-x:hidden;
 }
 
-img {
-    max-width: 100%;
-    display: block;
+a{
+    text-decoration:none;
+    color:inherit;
 }
 
-a {
-    color: inherit;
-    text-decoration: none;
+img{
+    max-width:100%;
+    display:block;
 }
 
-button,
-input,
-textarea {
-    font-family: inherit;
-}
-
-.container {
-    width: min(1180px, 92%);
-    margin: 0 auto;
-}
-
-
-/* =========================================================
+/* =========================
    HEADER
-========================================================= */
+========================= */
 
-.site-header {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    background: var(--navy);
-    border-bottom: 1px solid rgba(231,169,47,.25);
-    box-shadow: 0 4px 20px rgba(0,0,0,.15);
+header{
+    width:100%;
+    background:var(--navy);
+    position:sticky;
+    top:0;
+    z-index:1000;
+    box-shadow:0 3px 15px rgba(0,0,0,.18);
 }
 
-.header-inner {
-    min-height: 92px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 30px;
+.navbar{
+    max-width:1400px;
+    margin:auto;
+    min-height:88px;
+    padding:12px 38px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:30px;
 }
 
+/* AUT LOGO */
 
-/* =========================================================
-   AUT LOGO
-   Designed to resemble the provided reference logo
-========================================================= */
-
-.aut-logo {
-    display: flex;
-    align-items: center;
-    gap: 13px;
-    min-width: 0;
+.logo{
+    display:flex;
+    align-items:center;
+    gap:14px;
+    color:#fff;
+    flex-shrink:0;
 }
 
-.logo-globe {
-    width: 58px;
-    height: 58px;
-    border: 3px solid var(--gold);
-    border-radius: 50%;
-    position: relative;
-    flex: 0 0 58px;
-    overflow: hidden;
+.logo-globe{
+    width:62px;
+    height:62px;
+    border:3px solid var(--gold);
+    border-radius:50%;
+    position:relative;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:var(--gold);
+    font-size:30px;
+    font-weight:700;
 }
 
-.logo-globe::before {
-    content: "";
-    position: absolute;
-    width: 70px;
-    height: 25px;
-    border: 2px solid var(--gold);
-    border-radius: 50%;
-    top: 14px;
-    left: -9px;
-    transform: rotate(-18deg);
+.logo-globe:before{
+    content:"";
+    position:absolute;
+    width:34px;
+    height:54px;
+    border-left:2px solid var(--gold);
+    border-right:2px solid var(--gold);
+    border-radius:50%;
 }
 
-.logo-globe::after {
-    content: "";
-    position: absolute;
-    width: 25px;
-    height: 64px;
-    border-left: 2px solid var(--gold);
-    border-right: 2px solid var(--gold);
-    border-radius: 50%;
-    left: 14px;
-    top: -5px;
+.logo-globe:after{
+    content:"";
+    position:absolute;
+    width:50px;
+    height:20px;
+    border-top:2px solid var(--gold);
+    border-bottom:2px solid var(--gold);
+    border-radius:50%;
 }
 
-.logo-text {
-    display: flex;
-    align-items: center;
-    gap: 12px;
+.logo-main{
+    font-size:50px;
+    line-height:1;
+    font-weight:800;
+    letter-spacing:-2px;
 }
 
-.logo-aut {
-    color: var(--white);
-    font-size: 48px;
-    line-height: .9;
-    font-weight: 900;
-    letter-spacing: -3px;
+.logo-text{
+    display:flex;
+    flex-direction:column;
+    line-height:1.15;
 }
 
-.logo-divider {
-    width: 2px;
-    height: 44px;
-    background: var(--gold);
+.logo-text strong{
+    font-size:20px;
+    letter-spacing:.5px;
 }
 
-.logo-name {
-    display: flex;
-    flex-direction: column;
-    line-height: 1.05;
-    letter-spacing: 1.1px;
+.logo-text span{
+    font-size:17px;
+    font-weight:600;
+    letter-spacing:1.5px;
+    color:#fff;
 }
 
-.logo-name span:first-child {
-    color: var(--white);
-    font-size: 15px;
-    font-weight: 800;
+/* NAVIGATION */
+
+nav{
+    display:flex;
+    align-items:center;
+    gap:34px;
 }
 
-.logo-name span:last-child {
-    color: var(--white);
-    font-size: 15px;
-    font-weight: 800;
+nav a{
+    color:#fff;
+    font-size:15px;
+    font-weight:700;
+    text-transform:uppercase;
+    letter-spacing:.3px;
+    padding:10px 0;
+    transition:.2s ease;
 }
 
-
-/* =========================================================
-   NAVIGATION
-========================================================= */
-
-.main-nav {
-    display: flex;
-    align-items: center;
-    gap: 28px;
+nav a:hover{
+    color:var(--gold2);
 }
 
-.main-nav a {
-    color: var(--white);
-    font-size: 14px;
-    font-weight: 700;
-    letter-spacing: .4px;
-    transition: color .2s ease;
+.nav-contact{
+    background:var(--gold);
+    color:#07182a !important;
+    padding:13px 23px !important;
+    border-radius:2px;
 }
 
-.main-nav a:hover {
-    color: var(--gold);
+.nav-contact:hover{
+    background:var(--gold2);
 }
 
-.nav-button {
-    background: var(--gold);
-    color: var(--navy) !important;
-    padding: 12px 19px;
-    border-radius: 3px;
-}
-
-.nav-button:hover {
-    background: var(--gold2);
-}
-
-
-/* =========================================================
+/* =========================
    HERO
-========================================================= */
+========================= */
 
-.hero {
-    min-height: 650px;
-    position: relative;
-    display: flex;
-    align-items: center;
-    overflow: hidden;
-
-    background:
+.hero{
+    min-height:610px;
+    position:relative;
+    display:flex;
+    align-items:center;
+    background-image:
         linear-gradient(
             90deg,
             rgba(255,255,255,.98) 0%,
-            rgba(255,255,255,.94) 30%,
-            rgba(255,255,255,.60) 48%,
-            rgba(6,26,43,.08) 67%,
-            rgba(6,26,43,.18) 100%
+            rgba(255,255,255,.94) 26%,
+            rgba(255,255,255,.65) 43%,
+            rgba(255,255,255,.05) 67%,
+            rgba(0,0,0,.05) 100%
         ),
-        url("https://images.unsplash.com/photo-1516939884455-1445c8652f83?auto=format&fit=crop&w=2200&q=85")
-        center center / cover no-repeat;
+        url("https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=2200&q=85");
+    background-size:cover;
+    background-position:center;
 }
 
-.hero::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(
-        90deg,
-        rgba(255,255,255,.25),
-        transparent 60%
-    );
-    pointer-events: none;
+.hero-inner{
+    width:100%;
+    max-width:1400px;
+    margin:auto;
+    padding:70px 38px 80px;
 }
 
-.hero-content {
-    position: relative;
-    z-index: 2;
-    width: min(1180px, 92%);
-    margin: 0 auto;
-    padding: 90px 0;
+.hero-content{
+    max-width:600px;
 }
 
-.hero-copy {
-    width: min(610px, 100%);
+.eyebrow{
+    color:var(--navy);
+    font-size:16px;
+    font-weight:800;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    margin-bottom:14px;
 }
 
-.hero-kicker {
-    color: var(--gold);
-    font-size: 18px;
-    font-weight: 900;
-    letter-spacing: 3px;
-    margin-bottom: 15px;
+.hero h1{
+    font-size:64px;
+    line-height:1.03;
+    text-transform:uppercase;
+    font-weight:900;
+    letter-spacing:-1.5px;
+    margin-bottom:23px;
 }
 
-.hero h1 {
-    color: var(--navy);
-    font-size: clamp(44px, 6vw, 78px);
-    line-height: .98;
-    font-weight: 900;
-    letter-spacing: -2px;
-    margin-bottom: 12px;
+.hero h1 span{
+    color:var(--gold);
 }
 
-.hero h1 span {
-    display: block;
-    color: var(--gold);
+.gold-line{
+    width:62px;
+    height:4px;
+    background:var(--gold);
+    margin-bottom:25px;
 }
 
-.hero-rule {
-    width: 65px;
-    height: 4px;
-    background: var(--gold);
-    margin: 25px 0;
+.hero p{
+    max-width:500px;
+    font-size:18px;
+    line-height:1.65;
+    margin-bottom:28px;
+    color:#1c2d3f;
 }
 
-.hero-description {
-    max-width: 560px;
-    color: var(--text);
-    font-size: 18px;
-    line-height: 1.65;
-    font-weight: 500;
-    margin-bottom: 30px;
+.hero-buttons{
+    display:flex;
+    flex-wrap:wrap;
+    gap:14px;
 }
 
-.hero-buttons {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 14px;
+.btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    min-height:50px;
+    padding:13px 24px;
+    font-size:14px;
+    font-weight:800;
+    text-transform:uppercase;
+    letter-spacing:.3px;
+    transition:.2s ease;
 }
 
-.primary-button {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    min-height: 54px;
-    padding: 0 27px;
-    background: var(--navy);
-    color: var(--white);
-    border: 2px solid var(--navy);
-    font-size: 14px;
-    font-weight: 900;
-    letter-spacing: .5px;
-    cursor: pointer;
-    transition: all .2s ease;
+.btn-primary{
+    background:var(--navy);
+    color:#fff;
 }
 
-.primary-button:hover {
-    background: var(--gold);
-    border-color: var(--gold);
-    color: var(--navy);
+.btn-primary:hover{
+    background:#0d304e;
 }
 
-.secondary-button {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 54px;
-    padding: 0 27px;
-    border: 2px solid var(--navy);
-    color: var(--navy);
-    background: rgba(255,255,255,.85);
-    font-size: 14px;
-    font-weight: 900;
-    cursor: pointer;
+.btn-gold{
+    background:var(--gold);
+    color:#081a2c;
 }
 
-
-/* =========================================================
-   SECTION HEADERS
-========================================================= */
-
-.section {
-    padding: 85px 0;
+.btn-gold:hover{
+    background:var(--gold2);
 }
 
-.section-light {
-    background: var(--light);
+.btn-outline{
+    border:2px solid var(--navy);
+    color:var(--navy);
+    background:#fff;
 }
 
-.section-dark {
-    background: var(--navy);
-    color: var(--white);
+.btn-outline:hover{
+    background:var(--navy);
+    color:#fff;
 }
 
-.section-heading {
-    text-align: center;
-    margin-bottom: 50px;
+/* =========================
+   SECTION BASICS
+========================= */
+
+.section{
+    padding:75px 38px;
 }
 
-.section-heading .small-title {
-    color: var(--gold);
-    font-size: 14px;
-    font-weight: 900;
-    letter-spacing: 2.5px;
-    margin-bottom: 8px;
+.container{
+    max-width:1320px;
+    margin:auto;
 }
 
-.section-heading h2 {
-    color: var(--navy);
-    font-size: clamp(30px, 4vw, 45px);
-    line-height: 1.1;
-    font-weight: 900;
+.section-heading{
+    text-align:center;
+    margin-bottom:45px;
 }
 
-.section-dark .section-heading h2 {
-    color: var(--white);
+.section-label{
+    color:var(--gold);
+    font-size:16px;
+    font-weight:800;
+    text-transform:uppercase;
+    letter-spacing:1.5px;
+    margin-bottom:5px;
 }
 
-.section-heading .heading-line {
-    width: 55px;
-    height: 3px;
-    background: var(--gold);
-    margin: 17px auto 0;
+.section-heading h2{
+    color:var(--navy);
+    font-size:34px;
+    line-height:1.2;
+    text-transform:uppercase;
+    font-weight:900;
 }
 
-
-/* =========================================================
-   WHAT WE DO
-========================================================= */
-
-.services-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
+.heading-line{
+    width:48px;
+    height:3px;
+    background:var(--gold);
+    margin:13px auto 0;
 }
 
-.service-card {
-    background: var(--white);
-    border: 1px solid var(--line);
-    padding: 35px 30px;
-    box-shadow: 0 7px 25px rgba(0,0,0,.06);
+/* =========================
+   SERVICES
+========================= */
+
+.services{
+    background:#fff;
 }
 
-.service-icon {
-    width: 55px;
-    height: 55px;
-    border-radius: 50%;
-    background: var(--navy);
-    color: var(--gold);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 27px;
-    margin-bottom: 22px;
+.service-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:0;
 }
 
-.service-card h3 {
-    color: var(--navy);
-    font-size: 19px;
-    line-height: 1.2;
-    margin-bottom: 20px;
+.service-card{
+    padding:10px 42px 20px;
+    border-right:1px solid #e6c982;
 }
 
-.service-card ul {
-    list-style: none;
+.service-card:last-child{
+    border-right:none;
 }
 
-.service-card li {
-    position: relative;
-    padding-left: 17px;
-    margin-bottom: 9px;
-    font-size: 14px;
-    color: var(--text);
+.service-icon{
+    width:66px;
+    height:66px;
+    border-radius:50%;
+    background:var(--navy);
+    color:var(--gold);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:29px;
+    margin-bottom:17px;
 }
 
-.service-card li::before {
-    content: "";
-    width: 6px;
-    height: 6px;
-    background: var(--gold);
-    border-radius: 50%;
-    position: absolute;
-    left: 0;
-    top: 9px;
+.service-card h3{
+    font-size:19px;
+    line-height:1.25;
+    color:var(--navy);
+    text-transform:uppercase;
+    margin-bottom:17px;
 }
 
-
-/* =========================================================
-   FEATURE STRIP
-========================================================= */
-
-.feature-strip {
-    background:
-        linear-gradient(
-            rgba(6,26,43,.88),
-            rgba(6,26,43,.88)
-        ),
-        url("https://images.unsplash.com/photo-1586864387967-d02ef85d93e8?auto=format&fit=crop&w=2000&q=85")
-        center / cover no-repeat;
-
-    padding: 65px 0;
+.service-card ul{
+    list-style:none;
 }
 
-.feature-content {
-    max-width: 780px;
-    margin: auto;
-    text-align: center;
-    color: var(--white);
+.service-card li{
+    position:relative;
+    padding-left:18px;
+    margin-bottom:6px;
+    font-size:15px;
+    line-height:1.45;
 }
 
-.feature-symbol {
-    color: var(--gold);
-    font-size: 45px;
-    margin-bottom: 15px;
+.service-card li:before{
+    content:"";
+    width:6px;
+    height:6px;
+    background:var(--gold);
+    border-radius:50%;
+    position:absolute;
+    left:0;
+    top:9px;
 }
 
-.feature-content p {
-    font-size: 22px;
-    line-height: 1.5;
+/* =========================
+   IMAGE / PARTNERSHIP BANNER
+========================= */
+
+.image-banner{
+    min-height:235px;
+    display:grid;
+    grid-template-columns:1fr 1.2fr 1fr;
 }
 
+.banner-image{
+    min-height:235px;
+    background-size:cover;
+    background-position:center;
+}
 
-/* =========================================================
+.banner-left{
+    background-image:url("https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=1400&q=85");
+}
+
+.banner-right{
+    background-image:url("https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=1400&q=85");
+}
+
+.banner-center{
+    background:var(--navy);
+    color:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:35px 45px;
+    position:relative;
+}
+
+.banner-center:before,
+.banner-center:after{
+    content:"";
+    position:absolute;
+    top:0;
+    bottom:0;
+    width:3px;
+    background:var(--gold);
+}
+
+.banner-center:before{
+    left:0;
+    transform:skew(-8deg);
+}
+
+.banner-center:after{
+    right:0;
+    transform:skew(-8deg);
+}
+
+.banner-center-inner{
+    max-width:420px;
+}
+
+.banner-globe{
+    font-size:44px;
+    color:var(--gold);
+    margin-bottom:10px;
+}
+
+.banner-center p{
+    font-size:19px;
+    line-height:1.5;
+}
+
+/* =========================
    VALUES
-========================================================= */
+========================= */
 
-.values-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+.values{
+    background:var(--navy);
+    color:#fff;
 }
 
-.value {
-    padding: 25px 25px;
-    text-align: center;
-    border-right: 1px solid rgba(255,255,255,.25);
+.values-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
 }
 
-.value:last-child {
-    border-right: none;
+.value{
+    text-align:center;
+    padding:10px 30px;
+    border-right:1px solid rgba(255,255,255,.35);
 }
 
-.value-icon {
-    color: var(--gold);
-    font-size: 35px;
-    margin-bottom: 12px;
+.value:last-child{
+    border-right:none;
 }
 
-.value h3 {
-    font-size: 16px;
-    margin-bottom: 9px;
-    letter-spacing: .5px;
+.value-icon{
+    color:var(--gold);
+    font-size:38px;
+    margin-bottom:8px;
 }
 
-.value p {
-    color: rgba(255,255,255,.78);
-    font-size: 13px;
+.value h3{
+    font-size:16px;
+    text-transform:uppercase;
+    margin-bottom:7px;
 }
 
-
-/* =========================================================
-   ABOUT
-========================================================= */
-
-.about-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 55px;
-    align-items: center;
+.value p{
+    color:#e6ebf0;
+    font-size:14px;
+    line-height:1.5;
 }
 
-.about-image {
-    min-height: 430px;
-    background:
-        linear-gradient(rgba(6,26,43,.15), rgba(6,26,43,.15)),
-        url("https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=1400&q=85")
-        center / cover no-repeat;
-}
-
-.about-copy h2 {
-    color: var(--navy);
-    font-size: 38px;
-    line-height: 1.1;
-    margin-bottom: 20px;
-}
-
-.about-copy p {
-    color: var(--muted);
-    margin-bottom: 18px;
-}
-
-
-/* =========================================================
+/* =========================
    CONTACT
-========================================================= */
+========================= */
 
-.contact-section {
-    background: var(--light);
+.contact{
+    background:#fff;
 }
 
-.contact-grid {
-    display: grid;
-    grid-template-columns: .8fr 1.2fr;
-    gap: 50px;
-    align-items: start;
+.contact-grid{
+    display:grid;
+    grid-template-columns:1fr 1.5fr;
+    gap:60px;
+    align-items:start;
 }
 
-.contact-info {
-    background: var(--navy);
-    color: var(--white);
-    padding: 40px;
+.contact-info .section-label{
+    margin-bottom:4px;
 }
 
-.contact-info h3 {
-    font-size: 30px;
-    margin-bottom: 15px;
+.contact-info h2{
+    color:var(--navy);
+    font-size:38px;
+    line-height:1.15;
+    text-transform:uppercase;
+    margin-bottom:15px;
 }
 
-.contact-info p {
-    color: rgba(255,255,255,.8);
-    margin-bottom: 30px;
+.contact-info .gold-line{
+    margin-bottom:20px;
 }
 
-.contact-detail {
-    display: flex;
-    gap: 13px;
-    margin-bottom: 20px;
+.contact-info p{
+    max-width:500px;
+    font-size:16px;
+    margin-bottom:22px;
 }
 
-.contact-detail-icon {
-    color: var(--gold);
-    font-size: 20px;
+.contact-details{
+    display:flex;
+    flex-direction:column;
+    gap:13px;
 }
 
-.contact-detail strong {
-    display: block;
-    color: var(--white);
+.detail{
+    display:flex;
+    align-items:center;
+    gap:13px;
+    font-size:15px;
+    font-weight:600;
 }
 
-.contact-detail span {
-    color: rgba(255,255,255,.78);
-    font-size: 14px;
+.detail-icon{
+    width:34px;
+    height:34px;
+    border-radius:50%;
+    background:var(--navy);
+    color:var(--gold);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-shrink:0;
 }
 
-.contact-form {
-    background: var(--white);
-    padding: 40px;
-    box-shadow: var(--shadow);
-    border: 1px solid var(--line);
+/* FORM */
+
+.contact-form{
+    background:#f7f8fa;
+    border:1px solid var(--line);
+    padding:28px;
 }
 
-.contact-form h3 {
-    color: var(--navy);
-    font-size: 28px;
-    margin-bottom: 8px;
+.form-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:14px;
 }
 
-.contact-form > p {
-    color: var(--muted);
-    margin-bottom: 25px;
+.form-group{
+    display:flex;
+    flex-direction:column;
 }
 
-.form-row {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 18px;
+.form-group.full{
+    grid-column:1 / -1;
 }
 
-.form-group {
-    margin-bottom: 18px;
-}
-
-.form-group label {
-    display: block;
-    color: var(--navy);
-    font-size: 13px;
-    font-weight: 800;
-    margin-bottom: 7px;
+.form-group label{
+    font-size:13px;
+    font-weight:700;
+    margin-bottom:6px;
+    color:var(--navy);
 }
 
 .form-group input,
-.form-group textarea {
-    width: 100%;
-    border: 1px solid #cfd5dc;
-    background: #fff;
-    padding: 14px 15px;
-    font-size: 15px;
-    color: var(--text);
-    outline: none;
-    transition: border-color .2s ease;
+.form-group textarea{
+    width:100%;
+    border:1px solid #cbd3db;
+    background:#fff;
+    padding:13px 14px;
+    font-family:inherit;
+    font-size:15px;
+    outline:none;
+    border-radius:0;
 }
 
 .form-group input:focus,
-.form-group textarea:focus {
-    border-color: var(--gold);
+.form-group textarea:focus{
+    border-color:var(--gold);
 }
 
-.form-group textarea {
-    min-height: 145px;
-    resize: vertical;
+.form-group textarea{
+    min-height:145px;
+    resize:vertical;
 }
 
-.form-submit {
-    width: 100%;
-    min-height: 55px;
-    background: var(--gold);
-    border: 2px solid var(--gold);
-    color: var(--navy);
-    font-size: 15px;
-    font-weight: 900;
-    cursor: pointer;
-    transition: all .2s ease;
+.submit-button{
+    width:100%;
+    margin-top:15px;
+    border:0;
+    cursor:pointer;
+    background:var(--gold);
+    color:#081a2c;
+    padding:15px;
+    font-size:15px;
+    font-weight:900;
+    text-transform:uppercase;
 }
 
-.form-submit:hover {
-    background: var(--navy);
-    border-color: var(--navy);
-    color: var(--white);
+.submit-button:hover{
+    background:var(--gold2);
 }
 
+.form-note{
+    text-align:center;
+    color:var(--muted);
+    font-size:12px;
+    margin-top:9px;
+}
 
-/* =========================================================
+/* =========================
    FOOTER
-========================================================= */
+========================= */
 
-footer {
-    background: var(--navy);
-    color: var(--white);
+footer{
+    background:var(--navy);
+    color:#fff;
 }
 
-.footer-main {
-    padding: 45px 0;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 30px;
+.footer-main{
+    max-width:1320px;
+    margin:auto;
+    padding:30px 38px;
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr;
+    align-items:center;
+    gap:30px;
 }
 
-.footer-brand {
-    display: flex;
-    align-items: center;
-    gap: 12px;
+.footer-logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
 }
 
-.footer-brand .logo-globe {
-    width: 45px;
-    height: 45px;
-    flex-basis: 45px;
+.footer-logo .logo-globe{
+    width:48px;
+    height:48px;
+    font-size:22px;
 }
 
-.footer-brand .logo-aut {
-    font-size: 36px;
+.footer-logo .logo-main{
+    font-size:38px;
 }
 
-.footer-brand .logo-name span {
-    font-size: 12px;
+.footer-logo .logo-text strong{
+    font-size:14px;
 }
 
-.footer-text {
-    color: rgba(255,255,255,.7);
-    font-size: 13px;
-    max-width: 400px;
-    text-align: right;
+.footer-logo .logo-text span{
+    font-size:11px;
 }
 
-.footer-bottom {
-    border-top: 1px solid rgba(255,255,255,.12);
-    padding: 18px 0;
-    text-align: center;
-    color: rgba(255,255,255,.6);
-    font-size: 12px;
-    letter-spacing: 1px;
+.footer-copy{
+    text-align:center;
+    font-size:13px;
+    color:#dfe6ec;
 }
 
-
-/* =========================================================
-   MOBILE NAV
-========================================================= */
-
-.mobile-menu {
-    display: none;
+.footer-right{
+    text-align:right;
+    font-size:12px;
+    line-height:1.8;
+    color:#dfe6ec;
 }
 
-@media (max-width: 900px) {
+.footer-bottom{
+    border-top:1px solid rgba(255,255,255,.18);
+    text-align:center;
+    padding:14px 20px;
+    color:#dfe6ec;
+    font-size:11px;
+    letter-spacing:1px;
+}
 
-    .header-inner {
-        min-height: 78px;
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:1000px){
+
+    .navbar{
+        padding:12px 22px;
     }
 
-    .main-nav {
-        display: none;
+    nav{
+        gap:18px;
     }
 
-    .mobile-menu {
-        display: block;
-        color: var(--white);
-        font-size: 29px;
-        background: transparent;
-        border: none;
-        cursor: pointer;
+    nav a{
+        font-size:12px;
     }
 
-    .hero {
-        min-height: auto;
-        background:
+    .hero h1{
+        font-size:52px;
+    }
+
+    .service-card{
+        padding:10px 22px;
+    }
+
+    .contact-grid{
+        gap:35px;
+    }
+
+}
+
+@media(max-width:760px){
+
+    header{
+        position:relative;
+    }
+
+    .navbar{
+        min-height:auto;
+        padding:15px 18px;
+        flex-direction:column;
+        gap:14px;
+    }
+
+    .logo{
+        width:100%;
+        justify-content:flex-start;
+    }
+
+    .logo-globe{
+        width:52px;
+        height:52px;
+        font-size:25px;
+    }
+
+    .logo-main{
+        font-size:40px;
+    }
+
+    .logo-text strong{
+        font-size:15px;
+    }
+
+    .logo-text span{
+        font-size:12px;
+        letter-spacing:1px;
+    }
+
+    nav{
+        width:100%;
+        justify-content:center;
+        flex-wrap:wrap;
+        gap:10px 18px;
+    }
+
+    nav a{
+        font-size:11px;
+    }
+
+    .nav-contact{
+        padding:9px 13px !important;
+    }
+
+    .hero{
+        min-height:auto;
+        background-position:65% center;
+        background-image:
             linear-gradient(
-                rgba(255,255,255,.94),
-                rgba(255,255,255,.90)
+                90deg,
+                rgba(255,255,255,.98) 0%,
+                rgba(255,255,255,.94) 48%,
+                rgba(255,255,255,.55) 100%
             ),
-            url("https://images.unsplash.com/photo-1516939884455-1445c8652f83?auto=format&fit=crop&w=1600&q=85")
-            center / cover no-repeat;
+            url("https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=1600&q=85");
     }
 
-    .hero-content {
-        padding: 75px 0;
+    .hero-inner{
+        padding:55px 22px 60px;
     }
 
-    .hero-copy {
-        width: 100%;
+    .hero-content{
+        max-width:100%;
     }
 
-    .services-grid {
-        grid-template-columns: 1fr;
+    .eyebrow{
+        font-size:12px;
+        letter-spacing:1.4px;
     }
 
-    .values-grid {
-        grid-template-columns: 1fr 1fr;
+    .hero h1{
+        font-size:42px;
+        line-height:1.04;
+        letter-spacing:-.8px;
     }
 
-    .value {
-        border-bottom: 1px solid rgba(255,255,255,.2);
+    .hero p{
+        font-size:16px;
+        max-width:500px;
     }
 
-    .about-grid {
-        grid-template-columns: 1fr;
+    .section{
+        padding:55px 22px;
     }
 
-    .contact-grid {
-        grid-template-columns: 1fr;
+    .section-heading h2{
+        font-size:27px;
+    }
+
+    .service-grid{
+        grid-template-columns:1fr;
+        gap:25px;
+    }
+
+    .service-card{
+        border-right:none;
+        border-bottom:1px solid #e6c982;
+        padding:10px 0 28px;
+    }
+
+    .service-card:last-child{
+        border-bottom:none;
+    }
+
+    .image-banner{
+        grid-template-columns:1fr;
+    }
+
+    .banner-image{
+        min-height:180px;
+    }
+
+    .banner-center{
+        min-height:210px;
+    }
+
+    .values-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .value{
+        padding:22px 15px;
+        border-bottom:1px solid rgba(255,255,255,.25);
+    }
+
+    .value:nth-child(2){
+        border-right:none;
+    }
+
+    .value:nth-child(3),
+    .value:nth-child(4){
+        border-bottom:none;
+    }
+
+    .contact-grid{
+        grid-template-columns:1fr;
+    }
+
+    .contact-info h2{
+        font-size:31px;
+    }
+
+    .form-grid{
+        grid-template-columns:1fr;
+    }
+
+    .form-group.full{
+        grid-column:auto;
+    }
+
+    .contact-form{
+        padding:20px;
+    }
+
+    .footer-main{
+        grid-template-columns:1fr;
+        text-align:center;
+        padding:28px 22px;
+    }
+
+    .footer-logo{
+        justify-content:center;
+    }
+
+    .footer-right{
+        text-align:center;
     }
 }
 
+@media(max-width:430px){
 
-/* =========================================================
-   SMALL MOBILE / IPHONE
-========================================================= */
-
-@media (max-width: 600px) {
-
-    .container {
-        width: 90%;
+    .hero h1{
+        font-size:36px;
     }
 
-    .header-inner {
-        min-height: 72px;
+    .hero-buttons{
+        flex-direction:column;
+        align-items:stretch;
     }
 
-    .logo-globe {
-        width: 43px;
-        height: 43px;
-        flex-basis: 43px;
-        border-width: 2px;
+    .btn{
+        width:100%;
     }
 
-    .logo-globe::before {
-        width: 52px;
-        height: 19px;
-        top: 10px;
-        left: -7px;
+    .values-grid{
+        grid-template-columns:1fr;
     }
 
-    .logo-globe::after {
-        width: 19px;
-        height: 48px;
-        left: 10px;
-        top: -3px;
+    .value{
+        border-right:none !important;
+        border-bottom:1px solid rgba(255,255,255,.25) !important;
     }
 
-    .logo-aut {
-        font-size: 35px;
-        letter-spacing: -2px;
-    }
-
-    .logo-divider {
-        height: 32px;
-    }
-
-    .logo-name span:first-child,
-    .logo-name span:last-child {
-        font-size: 9px;
-        letter-spacing: .6px;
-    }
-
-    .logo-text {
-        gap: 8px;
-    }
-
-    .hero-content {
-        padding: 60px 0 65px;
-    }
-
-    .hero-kicker {
-        font-size: 13px;
-        letter-spacing: 2px;
-        line-height: 1.4;
-    }
-
-    .hero h1 {
-        font-size: 46px;
-        letter-spacing: -1.5px;
-    }
-
-    .hero-description {
-        font-size: 16px;
-        line-height: 1.55;
-    }
-
-    .hero-buttons {
-        flex-direction: column;
-        width: 100%;
-    }
-
-    .primary-button,
-    .secondary-button {
-        width: 100%;
-    }
-
-    .section {
-        padding: 60px 0;
-    }
-
-    .section-heading {
-        margin-bottom: 35px;
-    }
-
-    .section-heading h2 {
-        font-size: 32px;
-    }
-
-    .service-card {
-        padding: 28px 23px;
-    }
-
-    .feature-content p {
-        font-size: 18px;
-    }
-
-    .values-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .value {
-        border-right: none;
-        padding: 25px 15px;
-    }
-
-    .about-image {
-        min-height: 280px;
-    }
-
-    .about-copy h2 {
-        font-size: 31px;
-    }
-
-    .contact-info,
-    .contact-form {
-        padding: 28px 22px;
-    }
-
-    .form-row {
-        grid-template-columns: 1fr;
-        gap: 0;
-    }
-
-    .footer-main {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .footer-text {
-        text-align: left;
+    .value:last-child{
+        border-bottom:none !important;
     }
 }
 
 </style>
 </head>
 
-
 <body>
 
-
-<!-- =======================================================
+<!-- =========================
      HEADER
-======================================================= -->
+========================= -->
 
-<header class="site-header">
+<header>
 
-    <div class="container header-inner">
+<div class="navbar">
 
-        <a href="#top" class="aut-logo">
+<a href="#home" class="logo">
 
-            <div class="logo-globe"></div>
+    <div class="logo-globe">A</div>
 
-            <div class="logo-text">
+    <div class="logo-main">AUT</div>
 
-                <div class="logo-aut">AUT</div>
-
-                <div class="logo-divider"></div>
-
-                <div class="logo-name">
-                    <span>INTERNATIONAL</span>
-                    <span>ENERGY PARTNERS</span>
-                </div>
-
-            </div>
-
-        </a>
-
-
-        <nav class="main-nav">
-
-            <a href="#about">ABOUT</a>
-
-            <a href="#services">CAPABILITIES</a>
-
-            <a href="#partnerships">PARTNERSHIPS</a>
-
-            <a href="#contact" class="nav-button">
-                CONTACT US
-            </a>
-
-        </nav>
-
-
-        <button
-            class="mobile-menu"
-            onclick="toggleMobileMenu()"
-            aria-label="Open navigation">
-            ☰
-        </button>
-
+    <div class="logo-text">
+        <strong>INTERNATIONAL</strong>
+        <span>ENERGY PARTNERS</span>
     </div>
+
+</a>
+
+<nav>
+    <a href="#home">Home</a>
+    <a href="#about">About Us</a>
+    <a href="#services">Services</a>
+    <a href="#capabilities">Capabilities</a>
+    <a href="#contact" class="nav-contact">Contact Us</a>
+</nav>
+
+</div>
 
 </header>
 
 
-
-<!-- =======================================================
+<!-- =========================
      HERO
-======================================================= -->
+========================= -->
 
-<main id="top">
+<main>
 
-<section class="hero">
+<section class="hero" id="home">
 
-    <div class="hero-content">
+<div class="hero-inner">
 
-        <div class="hero-copy">
+<div class="hero-content">
 
-            <div class="hero-kicker">
-                INTERNATIONAL BUSINESS DEVELOPMENT
-            </div>
+<div class="eyebrow">
+International Business Development
+</div>
 
-            <h1>
-                CONNECTING
-                <span>CAPABILITIES.</span>
-                DELIVERING
-                <span>OPPORTUNITIES.</span>
-            </h1>
+<h1>
+Connecting <span>Capabilities.</span><br>
+Delivering <span>Opportunities.</span>
+</h1>
 
-            <div class="hero-rule"></div>
+<div class="gold-line"></div>
 
-            <p class="hero-description">
-                AUT International Energy Partners connects qualified
-                suppliers, manufacturers, contractors and technology
-                companies with strategic opportunities across energy,
-                infrastructure and industrial markets worldwide.
-            </p>
+<p>
+AUT International Energy Partners connects qualified suppliers,
+manufacturers, contractors and technology companies with strategic
+opportunities across energy, infrastructure and industrial markets.
+</p>
 
-            <div class="hero-buttons">
+<div class="hero-buttons">
 
-                <a href="#contact" class="primary-button">
-                    ✉ &nbsp; LET'S BUILD SUCCESS TOGETHER
-                </a>
+<a href="#contact" class="btn btn-primary">
+✉ &nbsp; Let's Build Success Together
+</a>
 
-                <a href="#services" class="secondary-button">
-                    OUR CAPABILITIES
-                </a>
+<a href="#services" class="btn btn-outline">
+Our Capabilities
+</a>
 
-            </div>
+</div>
 
-        </div>
+</div>
 
-    </div>
+</div>
 
 </section>
 
 
+<!-- =========================
+     WHAT WE DO
+========================= -->
 
-<!-- =======================================================
-     SERVICES
-======================================================= -->
+<section class="section services" id="services">
 
-<section id="services" class="section section-light">
+<div class="container">
 
-    <div class="container">
+<div class="section-heading">
 
-        <div class="section-heading">
+<div class="section-label">What We Do</div>
 
-            <div class="small-title">
-                OUR CAPABILITIES
-            </div>
+<h2>
+Energy, Equipment & Industrial Solutions
+</h2>
 
-            <h2>
-                WHAT WE DO
-            </h2>
+<div class="heading-line"></div>
 
-            <div class="heading-line"></div>
-
-        </div>
+</div>
 
 
-        <div class="services-grid">
+<div class="service-grid">
 
 
-            <!-- ENERGY -->
+<!-- SERVICE 1 -->
 
-            <div class="service-card">
+<div class="service-card">
 
-                <div class="service-icon">
-                    ⛽
-                </div>
+<div class="service-icon">♜</div>
 
-                <h3>
-                    ENERGY & OILFIELD SOLUTIONS
-                </h3>
+<h3>
+Energy & Oilfield Solutions
+</h3>
 
-                <ul>
-                    <li>Drilling rigs and drilling systems</li>
-                    <li>Drill bits and drilling tools</li>
-                    <li>Drill pipe and drill collars</li>
-                    <li>Casing and well components</li>
-                    <li>Mud pumps and drilling-fluid equipment</li>
-                    <li>Wellsite and field equipment</li>
-                    <li>Oilfield machinery and replacement components</li>
-                </ul>
+<ul>
 
-            </div>
+<li>Drilling rigs and drilling systems</li>
 
+<li>Drill bits and drilling tools</li>
 
-            <!-- CONSTRUCTION -->
+<li>Drill pipe and drill collars</li>
 
-            <div class="service-card">
+<li>Casing and well components</li>
 
-                <div class="service-icon">
-                    🚜
-                </div>
+<li>Mud pumps and drilling-fluid equipment</li>
 
-                <h3>
-                    HEAVY CONSTRUCTION &
-                    EARTHMOVING EQUIPMENT
-                </h3>
+<li>Wellsite and field equipment</li>
 
-                <ul>
-                    <li>Bulldozers / Dozers</li>
-                    <li>Hydraulic Excavators</li>
-                    <li>Wheel Loaders</li>
-                    <li>Motor Graders</li>
-                    <li>Backhoe Loaders</li>
-                    <li>Articulated Dump Trucks</li>
-                    <li>Compactors</li>
-                    <li>Skid Steer & Track Loaders</li>
-                    <li>Drilling and ground-excavation equipment</li>
-                    <li>Specialized attachments and work tools</li>
-                </ul>
+<li>Oilfield machinery and replacement components</li>
 
-            </div>
+</ul>
+
+</div>
 
 
-            <!-- PARTS -->
+<!-- SERVICE 2 -->
 
-            <div class="service-card">
+<div class="service-card">
 
-                <div class="service-icon">
-                    ⚙
-                </div>
+<div class="service-icon">⚒</div>
 
-                <h3>
-                    EQUIPMENT PARTS
-                    & COMPONENTS
-                </h3>
+<h3>
+Heavy Construction & Earthmoving Equipment
+</h3>
 
-                <ul>
-                    <li>Engines and powertrain components</li>
-                    <li>Hydraulic pumps, motors and cylinders</li>
-                    <li>Hydraulic hoses, fittings and adapters</li>
-                    <li>Undercarriage and Ground Engaging Tools</li>
-                    <li>Buckets, teeth, cutting edges and wear parts</li>
-                    <li>Filters, seals, gaskets and bearings</li>
-                    <li>Electrical and electronic components</li>
-                    <li>Cooling-system components</li>
-                    <li>Transmission and drivetrain components</li>
-                    <li>Replacement and rebuild components</li>
-                </ul>
+<ul>
 
-            </div>
+<li>Bulldozers / Dozers</li>
 
-        </div>
+<li>Hydraulic Excavators</li>
 
-    </div>
+<li>Wheel Loaders</li>
 
-</section>
+<li>Motor Graders</li>
+
+<li>Backhoe Loaders</li>
+
+<li>Articulated Dump Trucks</li>
+
+<li>Compactors</li>
+
+<li>Skid Steer & Track Loaders</li>
+
+<li>Drilling and ground-excavation equipment</li>
+
+<li>Specialized attachments and work tools</li>
+
+</ul>
+
+</div>
 
 
+<!-- SERVICE 3 -->
 
-<!-- =======================================================
-     STRATEGIC MESSAGE
-======================================================= -->
+<div class="service-card">
 
-<section class="feature-strip">
+<div class="service-icon">⚙</div>
 
-    <div class="container">
+<h3>
+Equipment Parts & Components
+</h3>
 
-        <div class="feature-content">
+<p style="margin-bottom:12px;font-size:15px;">
+We assist with identifying and sourcing OEM,
+aftermarket and remanufactured parts, including:
+</p>
 
-            <div class="feature-symbol">
-                ◎
-            </div>
+<ul>
 
-            <p>
-                We identify requirements, source the right
-                solutions, and build strategic partnerships
-                that drive projects forward.
-            </p>
+<li>Engines and powertrain components</li>
 
-        </div>
+<li>Hydraulic pumps, motors and cylinders</li>
 
-    </div>
+<li>Hydraulic hoses, fittings and adapters</li>
+
+<li>Undercarriage and Ground Engaging Tools (GET)</li>
+
+<li>Buckets, teeth, cutting edges and wear parts</li>
+
+<li>Filters, seals, gaskets and bearings</li>
+
+<li>Electrical and electronic components</li>
+
+<li>Cooling-system components</li>
+
+<li>Transmission and drivetrain components</li>
+
+<li>Replacement and rebuild components</li>
+
+</ul>
+
+</div>
+
+</div>
+
+</div>
 
 </section>
 
 
+<!-- =========================
+     IMAGE BANNER
+========================= -->
 
-<!-- =======================================================
+<section class="image-banner" id="capabilities">
+
+<div class="banner-image banner-left"></div>
+
+<div class="banner-center">
+
+<div class="banner-center-inner">
+
+<div class="banner-globe">◎</div>
+
+<p>
+We identify requirements, source the right
+solutions, and build strategic partnerships
+that drive projects forward.
+</p>
+
+</div>
+
+</div>
+
+<div class="banner-image banner-right"></div>
+
+</section>
+
+
+<!-- =========================
      VALUES
-======================================================= -->
+========================= -->
 
-<section id="partnerships" class="section section-dark">
+<section class="section values" id="about">
 
-    <div class="container">
+<div class="container">
 
-        <div class="values-grid">
-
-
-            <div class="value">
-
-                <div class="value-icon">
-                    ◎
-                </div>
-
-                <h3>
-                    GLOBAL REACH
-                </h3>
-
-                <p>
-                    Connecting qualified suppliers and
-                    opportunities across international markets.
-                </p>
-
-            </div>
+<div class="values-grid">
 
 
-            <div class="value">
+<div class="value">
 
-                <div class="value-icon">
-                    🤝
-                </div>
+<div class="value-icon">◎</div>
 
-                <h3>
-                    STRATEGIC PARTNERSHIPS
-                </h3>
+<h3>Global Reach</h3>
 
-                <p>
-                    Building long-term relationships based on
-                    trust, integrity and results.
-                </p>
+<p>
+Connecting qualified suppliers and opportunities
+across international markets.
+</p>
 
-            </div>
+</div>
 
 
-            <div class="value">
+<div class="value">
 
-                <div class="value-icon">
-                    ♢
-                </div>
+<div class="value-icon">🤝</div>
 
-                <h3>
-                    QUALITY & RELIABILITY
-                </h3>
+<h3>Strategic Partnerships</h3>
 
-                <p>
-                    Working with trusted manufacturers and
-                    service providers that meet industry standards.
-                </p>
+<p>
+Building long-term relationships based on trust,
+integrity and results.
+</p>
 
-            </div>
+</div>
 
 
-            <div class="value">
+<div class="value">
 
-                <div class="value-icon">
-                    ↗
-                </div>
+<div class="value-icon">♢</div>
 
-                <h3>
-                    INDUSTRY EXPERIENCE
-                </h3>
+<h3>Quality & Reliability</h3>
 
-                <p>
-                    Understanding complex project requirements
-                    and delivering effective solutions.
-                </p>
+<p>
+Working with trusted manufacturers and service
+providers that meet industry standards.
+</p>
 
-            </div>
+</div>
 
-        </div>
 
-    </div>
+<div class="value">
+
+<div class="value-icon">▥</div>
+
+<h3>Industry Experience</h3>
+
+<p>
+Understanding complex project requirements and
+delivering effective solutions.
+</p>
+
+</div>
+
+
+</div>
+
+</div>
 
 </section>
 
 
-
-<!-- =======================================================
-     ABOUT
-======================================================= -->
-
-<section id="about" class="section">
-
-    <div class="container">
-
-        <div class="about-grid">
-
-            <div class="about-image"></div>
-
-            <div class="about-copy">
-
-                <div class="hero-kicker">
-                    ABOUT AUT
-                </div>
-
-                <h2>
-                    BUILDING CONNECTIONS
-                    THAT CREATE OPPORTUNITY.
-                </h2>
-
-                <div class="hero-rule"></div>
-
-                <p>
-                    AUT International Energy Partners works with
-                    qualified manufacturers, suppliers, contractors
-                    and technology companies seeking strategic
-                    international business opportunities.
-                </p>
-
-                <p>
-                    Our role is to identify requirements, connect
-                    the right capabilities with the right
-                    opportunities, and help establish productive
-                    commercial relationships.
-                </p>
-
-                <p>
-                    We focus on energy, oilfield services,
-                    industrial equipment, construction,
-                    infrastructure and related technologies.
-                </p>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- =======================================================
+<!-- =========================
      CONTACT
-======================================================= -->
+========================= -->
 
-<section id="contact" class="section contact-section">
+<section class="section contact" id="contact">
 
-    <div class="container">
+<div class="container">
 
-        <div class="section-heading">
+<div class="contact-grid">
 
-            <div class="small-title">
-                LET'S WORK TOGETHER
-            </div>
 
-            <h2>
-                DISCUSS A PROJECT
-            </h2>
+<div class="contact-info">
 
-            <div class="heading-line"></div>
+<div class="section-label">
+Let's Work Together
+</div>
 
-        </div>
+<h2>
+Discuss a Project
+</h2>
 
+<div class="gold-line"></div>
 
-        <div class="contact-grid">
+<p>
+We welcome manufacturers, suppliers, contractors
+and technology companies interested in exploring
+international opportunities and partnerships.
+</p>
 
+<div class="contact-details">
 
-            <!-- CONTACT INFORMATION -->
+<div class="detail">
 
-            <div class="contact-info">
+<div class="detail-icon">✉</div>
 
-                <h3>
-                    Connect With AUT
-                </h3>
+<span>autpartners@gmail.com</span>
 
-                <p>
-                    We welcome manufacturers, suppliers,
-                    contractors and technology companies
-                    interested in exploring international
-                    opportunities and partnerships.
-                </p>
+</div>
 
 
-                <div class="contact-detail">
+<div class="detail">
 
-                    <div class="contact-detail-icon">
-                        ✉
-                    </div>
+<div class="detail-icon">◎</div>
 
-                    <div>
-                        <strong>Email</strong>
-                        <span>
-                            autpartners@gmail.com
-                        </span>
-                    </div>
+<span>United States | International</span>
 
-                </div>
+</div>
 
 
-                <div class="contact-detail">
+<div class="detail">
 
-                    <div class="contact-detail-icon">
-                        ◉
-                    </div>
+<div class="detail-icon">◉</div>
 
-                    <div>
-                        <strong>Market Focus</strong>
-                        <span>
-                            United States & International
-                        </span>
-                    </div>
+<span>Energy • Equipment • Technology • Industrial Solutions</span>
 
-                </div>
+</div>
 
+</div>
 
-                <div class="contact-detail">
+</div>
 
-                    <div class="contact-detail-icon">
-                        ◎
-                    </div>
 
-                    <div>
-                        <strong>Business Development</strong>
-                        <span>
-                            Energy • Equipment • Technology
-                        </span>
-                    </div>
+<!-- CONTACT FORM -->
 
-                </div>
+<div class="contact-form">
 
-            </div>
+<form
+action="mailto:autpartners@gmail.com"
+method="post"
+enctype="text/plain"
+>
 
+<div class="form-grid">
 
 
-            <!-- CONTACT FORM -->
+<div class="form-group">
 
-            <div class="contact-form">
+<label for="name">
+Full Name *
+</label>
 
-                <h3>
-                    Contact Us
-                </h3>
+<input
+type="text"
+id="name"
+name="Full Name"
+placeholder="Your full name"
+required
+>
 
-                <p>
-                    Tell us about your company or project.
-                    We will review your inquiry and respond
-                    by email.
-                </p>
+</div>
 
 
-                <form onsubmit="sendEmail(event)">
+<div class="form-group">
 
-                    <div class="form-row">
+<label for="company">
+Company Name *
+</label>
 
-                        <div class="form-group">
+<input
+type="text"
+id="company"
+name="Company Name"
+placeholder="Your company"
+required
+>
 
-                            <label for="name">
-                                NAME *
-                            </label>
+</div>
 
-                            <input
-                                type="text"
-                                id="name"
-                                name="name"
-                                placeholder="Your full name"
-                                required>
 
-                        </div>
+<div class="form-group">
 
+<label for="email">
+Email Address *
+</label>
 
-                        <div class="form-group">
+<input
+type="email"
+id="email"
+name="Email Address"
+placeholder="your@email.com"
+required
+>
 
-                            <label for="company">
-                                COMPANY NAME *
-                            </label>
+</div>
 
-                            <input
-                                type="text"
-                                id="company"
-                                name="company"
-                                placeholder="Your company"
-                                required>
 
-                        </div>
+<div class="form-group">
 
-                    </div>
+<label for="phone">
+Phone Number
+</label>
 
+<input
+type="tel"
+id="phone"
+name="Phone Number"
+placeholder="Your phone number"
+>
 
-                    <div class="form-row">
+</div>
 
-                        <div class="form-group">
 
-                            <label for="email">
-                                EMAIL *
-                            </label>
+<div class="form-group full">
 
-                            <input
-                                type="email"
-                                id="email"
-                                name="email"
-                                placeholder="your@email.com"
-                                required>
+<label for="message">
+Message *
+</label>
 
-                        </div>
+<textarea
+id="message"
+name="Message"
+placeholder="Tell us about your company, capabilities or project opportunity..."
+required
+></textarea>
 
+</div>
 
-                        <div class="form-group">
 
-                            <label for="phone">
-                                PHONE
-                            </label>
+</div>
 
-                            <input
-                                type="tel"
-                                id="phone"
-                                name="phone"
-                                placeholder="Your phone number">
 
-                        </div>
+<button
+type="submit"
+class="submit-button"
+>
+Send Message
+</button>
 
-                    </div>
+<div class="form-note">
+Selecting "Send Message" will open your email application
+with the information addressed to AUT International Energy Partners.
+</div>
 
+</form>
 
-                    <div class="form-group">
+</div>
 
-                        <label for="message">
-                            MESSAGE *
-                        </label>
+</div>
 
-                        <textarea
-                            id="message"
-                            name="message"
-                            placeholder="Tell us about your company, capabilities or project..."
-                            required></textarea>
-
-                    </div>
-
-
-                    <button
-                        type="submit"
-                        class="form-submit">
-
-                        SEND INQUIRY
-
-                    </button>
-
-                </form>
-
-            </div>
-
-        </div>
-
-    </div>
+</div>
 
 </section>
 
 </main>
 
 
-
-<!-- =======================================================
+<!-- =========================
      FOOTER
-======================================================= -->
+========================= -->
 
 <footer>
 
-    <div class="container">
-
-        <div class="footer-main">
-
-            <div class="footer-brand">
-
-                <div class="logo-globe"></div>
-
-                <div class="logo-text">
-
-                    <div class="logo-aut">
-                        AUT
-                    </div>
-
-                    <div class="logo-divider"></div>
-
-                    <div class="logo-name">
-                        <span>INTERNATIONAL</span>
-                        <span>ENERGY PARTNERS</span>
-                    </div>
-
-                </div>
-
-            </div>
+<div class="footer-main">
 
 
-            <div class="footer-text">
+<div class="footer-logo">
 
-                ENERGY • EQUIPMENT • TECHNOLOGY •
-                INDUSTRIAL SOLUTIONS
+<div class="logo-globe">A</div>
 
-                <br><br>
+<div class="logo-main">AUT</div>
 
-                INTERNATIONAL BUSINESS DEVELOPMENT
-                & STRATEGIC PARTNERSHIPS
+<div class="logo-text">
 
-            </div>
+<strong>INTERNATIONAL</strong>
 
-        </div>
+<span>ENERGY PARTNERS</span>
+
+</div>
+
+</div>
 
 
-        <div class="footer-bottom">
+<div class="footer-copy">
 
-            © 2026 AUT International Energy Partners.
-            All Rights Reserved.
+© 2026 AUT International Energy Partners.<br>
+All Rights Reserved.
 
-        </div>
+</div>
 
-    </div>
+
+<div class="footer-right">
+
+ENERGY • EQUIPMENT • TECHNOLOGY • INDUSTRIAL SOLUTIONS<br>
+
+INTERNATIONAL BUSINESS DEVELOPMENT & STRATEGIC PARTNERSHIPS
+
+</div>
+
+
+</div>
+
+
+<div class="footer-bottom">
+
+ENERGY &nbsp; • &nbsp;
+EQUIPMENT &nbsp; • &nbsp;
+TECHNOLOGY &nbsp; • &nbsp;
+INDUSTRIAL SOLUTIONS
+
+</div>
 
 </footer>
-
-
-
-<!-- =======================================================
-     JAVASCRIPT
-======================================================= -->
-
-<script>
-
-/* =========================================================
-   CONTACT FORM
-========================================================= */
-
-function sendEmail(event) {
-
-    event.preventDefault();
-
-    const name =
-        document.getElementById("name").value.trim();
-
-    const company =
-        document.getElementById("company").value.trim();
-
-    const email =
-        document.getElementById("email").value.trim();
-
-    const phone =
-        document.getElementById("phone").value.trim();
-
-    const message =
-        document.getElementById("message").value.trim();
-
-
-    const subject =
-        encodeURIComponent(
-            "Website Inquiry – AUT International Energy Partners"
-        );
-
-
-    const body =
-        encodeURIComponent(
-`New Website Inquiry
-
-Name:
-${name}
-
-Company:
-${company}
-
-Email:
-${email}
-
-Phone:
-${phone}
-
-Message:
-${message}
-
---------------------------------
-AUT International Energy Partners
-`
-        );
-
-
-    window.location.href =
-        "mailto:autpartners@gmail.com" +
-        "?subject=" + subject +
-        "&body=" + body;
-}
-
-
-/* =========================================================
-   MOBILE MENU
-========================================================= */
-
-function toggleMobileMenu() {
-
-    const nav =
-        document.querySelector(".main-nav");
-
-    if (nav.style.display === "flex") {
-
-        nav.style.display = "none";
-
-    } else {
-
-        nav.style.display = "flex";
-        nav.style.position = "absolute";
-        nav.style.top = "72px";
-        nav.style.left = "0";
-        nav.style.right = "0";
-        nav.style.padding = "22px";
-        nav.style.background = "#061a2b";
-        nav.style.flexDirection = "column";
-        nav.style.alignItems = "stretch";
-        nav.style.gap = "18px";
-
-    }
-
-}
-
-
-/* =========================================================
-   CLOSE MOBILE MENU WHEN LINK IS CLICKED
-========================================================= */
-
-document
-    .querySelectorAll(".main-nav a")
-    .forEach(function(link) {
-
-        link.addEventListener("click", function() {
-
-            if (window.innerWidth <= 900) {
-
-                document.querySelector(".main-nav")
-                    .style.display = "none";
-
-            }
-
-        });
-
-    });
-
-</script>
 
 
 </body>
