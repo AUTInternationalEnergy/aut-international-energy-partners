@@ -1,1926 +1,1735 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>AUT International Energy Partners | Energy, Equipment & Industrial Solutions</title>
-
-<meta name="description" content="AUT International Energy Partners connects qualified companies, suppliers, contractors and project stakeholders with opportunities across energy, oilfield, heavy equipment, infrastructure and industrial markets.">
-
-<style>
-:root{
-    --navy:#061525;
-    --navy2:#0b1d30;
-    --gold:#e7a92f;
-    --gold2:#f5bd3c;
-    --white:#ffffff;
-    --light:#f5f6f7;
-    --text:#172235;
-    --muted:#657080;
-    --line:#dfe3e8;
-    --shadow:0 12px 35px rgba(0,0,0,.12);
-}
-
-*{
-    box-sizing:border-box;
-    margin:0;
-    padding:0;
-}
-
-html{
-    scroll-behavior:smooth;
-}
-
-body{
-    font-family:Arial, Helvetica, sans-serif;
-    color:var(--text);
-    background:#fff;
-    line-height:1.6;
-}
-
-a{
-    text-decoration:none;
-    color:inherit;
-}
-
-img{
-    max-width:100%;
-    display:block;
-}
-
-/* =========================
-   HEADER
-========================= */
-
-header{
-    background:var(--navy);
-    color:#fff;
-    position:relative;
-    z-index:1000;
-}
-
-.topbar{
-    max-width:1400px;
-    margin:auto;
-    padding:18px 42px 8px;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    gap:30px;
-}
-
-.brand{
-    display:flex;
-    align-items:center;
-    gap:20px;
-}
-
-.logo-globe{
-    width:105px;
-    height:105px;
-    border:5px solid var(--gold);
-    border-radius:50%;
-    position:relative;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    flex-shrink:0;
-}
-
-.logo-globe:before{
-    content:"";
-    position:absolute;
-    width:128px;
-    height:42px;
-    border:4px solid var(--gold);
-    border-radius:50%;
-    transform:rotate(-24deg);
-}
-
-.logo-globe:after{
-    content:"";
-    position:absolute;
-    width:78px;
-    height:92px;
-    border-left:3px solid var(--gold);
-    border-right:3px solid var(--gold);
-    border-radius:50%;
-}
-
-.logo-text{
-    font-size:46px;
-    font-weight:700;
-    letter-spacing:2px;
-    color:var(--gold);
-    position:relative;
-    z-index:2;
-}
-
-.brand-divider{
-    height:72px;
-    width:3px;
-    background:var(--gold);
-}
-
-.brand-name{
-    display:flex;
-    flex-direction:column;
-}
-
-.brand-name-main{
-    font-size:34px;
-    letter-spacing:4px;
-    font-weight:400;
-    color:#fff;
-}
-
-.brand-name-sub{
-    font-size:18px;
-    letter-spacing:5px;
-    color:var(--gold);
-    font-weight:700;
-    margin-top:3px;
-}
-
-.header-right{
-    display:flex;
-    align-items:center;
-    gap:28px;
-}
-
-.header-contact{
-    display:flex;
-    flex-direction:column;
-    gap:7px;
-    color:#fff;
-    font-size:14px;
-}
-
-.header-contact span{
-    display:flex;
-    align-items:center;
-    gap:8px;
-}
-
-.contact-icon{
-    color:var(--gold);
-    font-size:18px;
-}
-
-.partner-btn{
-    background:var(--gold);
-    color:var(--navy);
-    padding:15px 27px;
-    font-weight:700;
-    letter-spacing:.4px;
-    transition:.25s;
-}
-
-.partner-btn:hover{
-    background:var(--gold2);
-    transform:translateY(-2px);
-}
-
-.navbar{
-    max-width:1400px;
-    margin:auto;
-    padding:5px 42px 18px;
-    display:flex;
-    justify-content:flex-end;
-}
-
-.nav{
-    list-style:none;
-    display:flex;
-    align-items:center;
-    gap:42px;
-}
-
-.nav > li{
-    position:relative;
-}
-
-.nav > li > a{
-    color:#fff;
-    font-size:15px;
-    font-weight:700;
-    padding:15px 0;
-    display:block;
-    position:relative;
-}
-
-.nav > li > a:hover,
-.nav > li.active > a{
-    color:var(--gold);
-}
-
-.nav > li.active > a:after{
-    content:"";
-    position:absolute;
-    height:3px;
-    background:var(--gold);
-    left:0;
-    right:0;
-    bottom:3px;
-}
-
-.dropdown{
-    position:absolute;
-    top:100%;
-    left:-15px;
-    width:250px;
-    background:#fff;
-    box-shadow:var(--shadow);
-    display:none;
-    padding:10px 0;
-}
-
-.nav li:hover .dropdown{
-    display:block;
-}
-
-.dropdown a{
-    display:block;
-    color:var(--navy);
-    padding:12px 20px;
-    font-size:14px;
-}
-
-.dropdown a:hover{
-    background:#f4f4f4;
-    color:#b27a10;
-}
-
-/* =========================
-   HERO
-========================= */
-
-.hero{
-    min-height:650px;
-    background-image:
-        linear-gradient(90deg,
-        rgba(3,15,29,.88) 0%,
-        rgba(3,15,29,.70) 37%,
-        rgba(3,15,29,.12) 72%,
-        rgba(3,15,29,.18) 100%),
-        url("aut-energy-hero.png");
-    background-size:cover;
-    background-position:center;
-    position:relative;
-    display:flex;
-    align-items:center;
-}
-
-.hero-content{
-    max-width:1400px;
-    width:100%;
-    margin:auto;
-    padding:75px 70px;
-    color:#fff;
-}
-
-.hero-content-inner{
-    max-width:650px;
-}
-
-.hero h1{
-    font-size:54px;
-    line-height:1.05;
-    text-transform:uppercase;
-    letter-spacing:1px;
-    margin-bottom:25px;
-}
-
-.hero h1 span{
-    color:var(--gold);
-}
-
-.gold-line{
-    width:410px;
-    max-width:100%;
-    height:3px;
-    background:var(--gold);
-    margin-bottom:25px;
-}
-
-.hero p{
-    font-size:19px;
-    line-height:1.65;
-    max-width:600px;
-    color:#f2f4f7;
-    margin-bottom:32px;
-}
-
-.hero-buttons{
-    display:flex;
-    gap:15px;
-    flex-wrap:wrap;
-}
-
-.btn{
-    display:inline-flex;
-    align-items:center;
-    justify-content:center;
-    min-width:220px;
-    padding:16px 24px;
-    font-weight:700;
-    letter-spacing:.5px;
-    transition:.25s;
-}
-
-.btn-gold{
-    background:var(--gold);
-    color:var(--navy);
-}
-
-.btn-gold:hover{
-    background:var(--gold2);
-    transform:translateY(-2px);
-}
-
-.btn-outline{
-    border:1px solid #fff;
-    color:#fff;
-    background:rgba(0,0,0,.18);
-}
-
-.btn-outline:hover{
-    background:#fff;
-    color:var(--navy);
-}
-
-/* =========================
-   STATS
-========================= */
-
-.stats{
-    background:var(--navy2);
-    color:#fff;
-}
-
-.stats-inner{
-    max-width:1400px;
-    margin:auto;
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-}
-
-.stat{
-    min-height:120px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    gap:18px;
-    border-right:1px solid rgba(255,255,255,.25);
-    padding:20px;
-}
-
-.stat:last-child{
-    border-right:none;
-}
-
-.stat-icon{
-    font-size:42px;
-    color:var(--gold);
-}
-
-.stat strong{
-    display:block;
-    font-size:16px;
-    letter-spacing:.5px;
-}
-
-.stat span{
-    display:block;
-    font-size:13px;
-    color:#d9dee5;
-    margin-top:3px;
-}
-
-/* =========================
-   GENERAL SECTIONS
-========================= */
-
-.section{
-    padding:85px 35px;
-}
-
-.section-inner{
-    max-width:1300px;
-    margin:auto;
-}
-
-.section-label{
-    text-align:center;
-    color:#c38b20;
-    font-size:14px;
-    font-weight:700;
-    letter-spacing:3px;
-    text-transform:uppercase;
-    margin-bottom:8px;
-}
-
-.section-title{
-    text-align:center;
-    font-size:38px;
-    color:var(--navy);
-    margin-bottom:15px;
-}
-
-.section-line{
-    width:65px;
-    height:3px;
-    background:var(--gold);
-    margin:0 auto 45px;
-}
-
-.section-intro{
-    max-width:850px;
-    margin:0 auto 50px;
-    text-align:center;
-    color:var(--muted);
-    font-size:17px;
-}
-
-/* =========================
-   SERVICES
-========================= */
-
-.services{
-    background:#fff;
-}
-
-.services-grid{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    border-top:1px solid var(--line);
-    border-left:1px solid var(--line);
-}
-
-.service-card{
-    padding:38px 28px;
-    border-right:1px solid var(--line);
-    border-bottom:1px solid var(--line);
-    min-height:240px;
-}
-
-.service-icon{
-    color:var(--gold);
-    font-size:45px;
-    margin-bottom:18px;
-}
-
-.service-card h3{
-    font-size:19px;
-    color:var(--navy);
-    margin-bottom:13px;
-}
-
-.service-card p{
-    color:var(--muted);
-    font-size:15px;
-}
-
-/* =========================
-   EQUIPMENT
-========================= */
-
-.equipment-section{
-    background:#f5f6f7;
-}
-
-.equipment-layout{
-    display:grid;
-    grid-template-columns:1fr 1.35fr;
-    gap:55px;
-    align-items:start;
-}
-
-.equipment-copy h2{
-    color:var(--navy);
-    font-size:34px;
-    line-height:1.2;
-    margin-bottom:20px;
-}
-
-.equipment-copy h2 span{
-    color:var(--gold);
-}
-
-.equipment-copy p{
-    color:var(--muted);
-    font-size:17px;
-    margin-bottom:18px;
-}
-
-.equipment-note{
-    border-left:4px solid var(--gold);
-    padding:18px 20px;
-    background:#fff;
-    color:var(--navy);
-    font-weight:600;
-    margin-top:25px;
-}
-
-.equipment-list{
-    background:#fff;
-    box-shadow:0 5px 25px rgba(0,0,0,.07);
-    padding:35px;
-}
-
-.equipment-list h3{
-    color:var(--navy);
-    font-size:22px;
-    margin-bottom:22px;
-}
-
-.equipment-items{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:0;
-}
-
-.equipment-item{
-    padding:13px 10px 13px 27px;
-    border-bottom:1px solid #e7e9ec;
-    color:#3f4b5a;
-    font-size:14px;
-    position:relative;
-}
-
-.equipment-item:before{
-    content:"✓";
-    position:absolute;
-    left:5px;
-    color:var(--gold);
-    font-weight:700;
-}
-
-.equipment-badge{
-    display:inline-block;
-    background:var(--navy);
-    color:#fff;
-    padding:8px 13px;
-    font-size:12px;
-    letter-spacing:1px;
-    font-weight:700;
-    margin-bottom:18px;
-}
-
-/* =========================
-   NEW / USED
-========================= */
-
-.condition-grid{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:25px;
-    margin-top:35px;
-}
-
-.condition-card{
-    padding:32px;
-    border:1px solid var(--line);
-    background:#fff;
-}
-
-.condition-card h3{
-    color:var(--navy);
-    font-size:23px;
-    margin-bottom:12px;
-}
-
-.condition-card p{
-    color:var(--muted);
-    font-size:15px;
-}
-
-/* =========================
-   OILFIELD
-========================= */
-
-.oilfield{
-    background:var(--navy);
-    color:#fff;
-}
-
-.oilfield .section-label{
-    color:var(--gold);
-}
-
-.oilfield .section-title{
-    color:#fff;
-}
-
-.oilfield .section-line{
-    margin-bottom:35px;
-}
-
-.oilfield-grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:25px;
-}
-
-.oilfield-card{
-    padding:32px;
-    border:1px solid rgba(255,255,255,.15);
-    background:rgba(255,255,255,.035);
-}
-
-.oilfield-card .icon{
-    color:var(--gold);
-    font-size:40px;
-    margin-bottom:15px;
-}
-
-.oilfield-card h3{
-    margin-bottom:12px;
-    font-size:20px;
-}
-
-.oilfield-card p{
-    color:#cfd6df;
-    font-size:15px;
-}
-
-/* =========================
-   PARTNERSHIPS
-========================= */
-
-.partnerships{
-    background:#fff;
-}
-
-.partnership-grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:25px;
-}
-
-.partnership-card{
-    padding:35px;
-    border:1px solid var(--line);
-}
-
-.partnership-card h3{
-    color:var(--navy);
-    margin-bottom:12px;
-}
-
-.partnership-card p{
-    color:var(--muted);
-    font-size:15px;
-}
-
-/* =========================
-   CTA
-========================= */
-
-.cta{
-    background:
-        linear-gradient(90deg,rgba(6,21,37,.96),rgba(6,21,37,.85)),
-        url("aut-energy-hero.png");
-    background-size:cover;
-    background-position:center;
-    color:#fff;
-    padding:80px 35px;
-}
-
-.cta-inner{
-    max-width:1150px;
-    margin:auto;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    gap:35px;
-}
-
-.cta h2{
-    font-size:40px;
-    margin-bottom:10px;
-}
-
-.cta p{
-    color:#d9dee5;
-    max-width:700px;
-}
-
-/* =========================
-   CONTACT
-========================= */
-
-.contact-section{
-    background:#f5f6f7;
-}
-
-.contact-grid{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:40px;
-}
-
-.contact-box{
-    background:#fff;
-    padding:38px;
-    border:1px solid var(--line);
-}
-
-.contact-box h3{
-    color:var(--navy);
-    margin-bottom:20px;
-    font-size:24px;
-}
-
-.contact-detail{
-    margin:15px 0;
-    color:var(--muted);
-}
-
-.contact-detail strong{
-    color:var(--navy);
-}
-
-/* =========================
-   FOOTER
-========================= */
-
-footer{
-    background:#030e1b;
-    color:#fff;
-    padding:55px 35px 25px;
-}
-
-.footer-inner{
-    max-width:1300px;
-    margin:auto;
-    display:grid;
-    grid-template-columns:1.5fr 1fr 1fr 1fr;
-    gap:45px;
-}
-
-.footer-brand h2{
-    font-size:25px;
-    letter-spacing:2px;
-    margin-bottom:8px;
-}
-
-.footer-brand h2 span{
-    color:var(--gold);
-}
-
-.footer-brand p{
-    color:#aeb8c5;
-    font-size:14px;
-    max-width:420px;
-}
-
-footer h4{
-    color:var(--gold);
-    margin-bottom:15px;
-    letter-spacing:1px;
-}
-
-footer ul{
-    list-style:none;
-}
-
-footer li{
-    margin:9px 0;
-    color:#aeb8c5;
-    font-size:14px;
-}
-
-footer a:hover{
-    color:var(--gold);
-}
-
-.copyright{
-    max-width:1300px;
-    margin:40px auto 0;
-    padding-top:20px;
-    border-top:1px solid rgba(255,255,255,.12);
-    color:#8d98a6;
-    font-size:13px;
-}
-
-/* =========================
-   MOBILE
-========================= */
-
-.mobile-menu{
-    display:none;
-}
-
-@media(max-width:1050px){
-
-    .topbar{
-        padding:18px 25px;
-    }
-
-    .navbar{
-        padding:0 25px 18px;
-    }
-
-    .nav{
-        gap:22px;
-    }
-
-    .header-right{
-        display:none;
-    }
-
-    .brand-name-main{
-        font-size:26px;
-    }
-
-    .brand-name-sub{
-        font-size:14px;
-    }
-
-    .logo-globe{
-        width:80px;
-        height:80px;
-    }
-
-    .logo-text{
-        font-size:34px;
-    }
-
-    .stats-inner{
-        grid-template-columns:1fr 1fr;
-    }
-
-    .stat:nth-child(2){
-        border-right:none;
-    }
-
-    .services-grid{
-        grid-template-columns:1fr 1fr;
-    }
-
-    .equipment-layout{
-        grid-template-columns:1fr;
-    }
-
-    .footer-inner{
-        grid-template-columns:1fr 1fr;
-    }
-}
-
-@media(max-width:700px){
-
-    .topbar{
-        padding:15px 18px;
-        justify-content:center;
-    }
-
-    .brand{
-        gap:10px;
-    }
-
-    .logo-globe{
-        width:65px;
-        height:65px;
-        border-width:3px;
-    }
-
-    .logo-globe:before{
-        width:80px;
-        height:27px;
-        border-width:2px;
-    }
-
-    .logo-globe:after{
-        width:48px;
-        height:57px;
-        border-width:2px;
-    }
-
-    .logo-text{
-        font-size:25px;
-    }
-
-    .brand-divider{
-        height:48px;
-        width:2px;
-    }
-
-    .brand-name-main{
-        font-size:20px;
-        letter-spacing:2px;
-    }
-
-    .brand-name-sub{
-        font-size:10px;
-        letter-spacing:3px;
-    }
-
-    .navbar{
-        padding:5px 15px 18px;
-        justify-content:center;
-    }
-
-    .nav{
-        justify-content:center;
-        flex-wrap:wrap;
-        gap:4px 20px;
-    }
-
-    .nav > li > a{
-        font-size:12px;
-        padding:8px 0;
-    }
-
-    .dropdown{
-        display:none !important;
-    }
-
-    .hero{
-        min-height:650px;
-        background-position:center;
-    }
-
-    .hero-content{
-        padding:55px 25px;
-    }
-
-    .hero h1{
-        font-size:39px;
-    }
-
-    .hero p{
-        font-size:16px;
-    }
-
-    .btn{
-        width:100%;
-    }
-
-    .stats-inner{
-        grid-template-columns:1fr 1fr;
-    }
-
-    .stat{
-        min-height:120px;
-        padding:15px 8px;
-        gap:8px;
-        text-align:center;
-        flex-direction:column;
-    }
-
-    .stat-icon{
-        font-size:30px;
-    }
-
-    .stat strong{
-        font-size:12px;
-    }
-
-    .stat span{
-        font-size:10px;
-    }
-
-    .section{
-        padding:60px 20px;
-    }
-
-    .section-title{
-        font-size:29px;
-    }
-
-    .services-grid{
-        grid-template-columns:1fr;
-    }
-
-    .equipment-copy h2{
-        font-size:29px;
-    }
-
-    .equipment-list{
-        padding:22px;
-    }
-
-    .equipment-items{
-        grid-template-columns:1fr;
-    }
-
-    .condition-grid{
-        grid-template-columns:1fr;
-    }
-
-    .oilfield-grid{
-        grid-template-columns:1fr;
-    }
-
-    .partnership-grid{
-        grid-template-columns:1fr;
-    }
-
-    .cta-inner{
-        flex-direction:column;
-        align-items:flex-start;
-    }
-
-    .cta h2{
-        font-size:30px;
-    }
-
-    .contact-grid{
-        grid-template-columns:1fr;
-    }
-
-    .footer-inner{
-        grid-template-columns:1fr;
-    }
-}
-</style>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>AUT International Energy Partners | Energy, Equipment & Industrial Solutions</title>
+
+    <meta name="description"
+          content="AUT International Energy Partners connects qualified suppliers, manufacturers, contractors and technology companies with international energy, equipment and industrial opportunities.">
+
+    <meta name="keywords"
+          content="oilfield services, oilfield equipment, energy solutions, drilling equipment, construction equipment, industrial solutions, Iraq oil and gas, international business development">
+
+    <style>
+
+        /* =========================================================
+           GLOBAL
+        ========================================================= */
+
+        :root {
+            --navy: #061525;
+            --navy2: #0b1d30;
+            --gold: #e7a92f;
+            --gold2: #f5bd3c;
+            --white: #ffffff;
+            --light: #f5f6f7;
+            --text: #172235;
+            --muted: #657080;
+            --line: #dfe3e8;
+            --shadow: 0 12px 35px rgba(0,0,0,.12);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+            color: var(--text);
+            background: var(--white);
+            line-height: 1.6;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        .container {
+            width: min(1180px, 92%);
+            margin: 0 auto;
+        }
+
+        .gold {
+            color: var(--gold);
+        }
+
+
+        /* =========================================================
+           HEADER / NAVIGATION
+        ========================================================= */
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(6, 21, 37, .98);
+            border-bottom: 1px solid rgba(255,255,255,.08);
+        }
+
+        .nav {
+            min-height: 82px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 30px;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: var(--white);
+            font-weight: 700;
+        }
+
+        .brand-mark {
+            width: 52px;
+            height: 52px;
+            border: 2px solid var(--gold);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--gold);
+            font-size: 25px;
+            font-weight: 700;
+        }
+
+        .brand-text {
+            line-height: 1.05;
+        }
+
+        .brand-main {
+            font-size: 27px;
+            letter-spacing: -1px;
+        }
+
+        .brand-sub {
+            font-size: 12px;
+            letter-spacing: 1.4px;
+            margin-top: 4px;
+            color: #e8edf2;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 34px;
+        }
+
+        nav a {
+            color: var(--white);
+            font-size: 14px;
+            font-weight: 700;
+            letter-spacing: .5px;
+            padding: 30px 0;
+            position: relative;
+        }
+
+        nav a:hover,
+        nav a.active {
+            color: var(--gold2);
+        }
+
+        nav a.active::after {
+            content: "";
+            position: absolute;
+            bottom: 18px;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: var(--gold);
+        }
+
+        .nav-button {
+            padding: 12px 18px !important;
+            border: 1px solid var(--gold);
+            color: var(--gold) !important;
+        }
+
+        .nav-button:hover {
+            background: var(--gold);
+            color: var(--navy) !important;
+        }
+
+
+        /* =========================================================
+           HERO
+        ========================================================= */
+
+        .hero {
+            min-height: 690px;
+            position: relative;
+            overflow: hidden;
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(6,21,37,.98) 0%,
+                    rgba(6,21,37,.90) 35%,
+                    rgba(6,21,37,.42) 62%,
+                    rgba(6,21,37,.18) 100%
+                ),
+                url("aut-energy-hero.png") center center / cover no-repeat;
+        }
+
+        .hero-inner {
+            min-height: 690px;
+            display: flex;
+            align-items: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-content {
+            width: min(670px, 100%);
+            padding: 75px 0;
+        }
+
+        .hero-kicker {
+            color: var(--gold);
+            font-size: 14px;
+            font-weight: 800;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 18px;
+        }
+
+        .hero h1 {
+            color: var(--white);
+            font-size: clamp(48px, 6vw, 78px);
+            line-height: .98;
+            letter-spacing: -2px;
+            font-weight: 800;
+            text-transform: uppercase;
+            margin-bottom: 28px;
+        }
+
+        .hero h1 span {
+            color: var(--gold);
+        }
+
+        .hero-rule {
+            width: 80px;
+            height: 4px;
+            background: var(--gold);
+            margin-bottom: 28px;
+        }
+
+        .hero-description {
+            max-width: 570px;
+            color: rgba(255,255,255,.91);
+            font-size: 19px;
+            line-height: 1.75;
+            margin-bottom: 34px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+        }
+
+        .button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 52px;
+            padding: 0 25px;
+            font-size: 14px;
+            font-weight: 800;
+            letter-spacing: .6px;
+            text-transform: uppercase;
+            transition: .2s ease;
+        }
+
+        .button-gold {
+            background: var(--gold);
+            color: var(--navy);
+        }
+
+        .button-gold:hover {
+            background: var(--gold2);
+            transform: translateY(-2px);
+        }
+
+        .button-outline {
+            border: 1px solid rgba(255,255,255,.65);
+            color: var(--white);
+        }
+
+        .button-outline:hover {
+            border-color: var(--gold);
+            color: var(--gold);
+        }
+
+
+        /* =========================================================
+           INTRO
+        ========================================================= */
+
+        .intro {
+            background: var(--white);
+            padding: 85px 0;
+        }
+
+        .intro-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 70px;
+            align-items: center;
+        }
+
+        .section-label {
+            color: var(--gold);
+            font-size: 13px;
+            font-weight: 800;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+            margin-bottom: 13px;
+        }
+
+        .section-title {
+            color: var(--navy);
+            font-size: clamp(32px, 4vw, 48px);
+            line-height: 1.08;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        .section-text {
+            color: var(--muted);
+            font-size: 17px;
+            line-height: 1.8;
+        }
+
+        .intro-card {
+            background: var(--navy);
+            color: var(--white);
+            padding: 40px;
+            position: relative;
+            box-shadow: var(--shadow);
+        }
+
+        .intro-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 6px;
+            height: 100%;
+            background: var(--gold);
+        }
+
+        .intro-card h3 {
+            font-size: 24px;
+            margin-bottom: 14px;
+        }
+
+        .intro-card p {
+            color: rgba(255,255,255,.8);
+            line-height: 1.8;
+        }
+
+
+        /* =========================================================
+           WHAT WE DO
+        ========================================================= */
+
+        .services {
+            background: var(--light);
+            padding: 90px 0;
+        }
+
+        .section-heading {
+            text-align: center;
+            max-width: 720px;
+            margin: 0 auto 55px;
+        }
+
+        .section-heading .section-title {
+            margin-bottom: 15px;
+        }
+
+        .gold-line {
+            width: 65px;
+            height: 3px;
+            background: var(--gold);
+            margin: 18px auto 0;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .service-card {
+            background: var(--white);
+            border: 1px solid var(--line);
+            padding: 35px 30px;
+            min-height: 430px;
+            transition: .25s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow);
+        }
+
+        .service-icon {
+            width: 62px;
+            height: 62px;
+            border-radius: 50%;
+            background: var(--navy);
+            color: var(--gold);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 27px;
+            margin-bottom: 24px;
+        }
+
+        .service-card h3 {
+            color: var(--navy);
+            font-size: 20px;
+            line-height: 1.25;
+            text-transform: uppercase;
+            margin-bottom: 18px;
+        }
+
+        .service-card ul {
+            list-style: none;
+        }
+
+        .service-card li {
+            position: relative;
+            padding-left: 18px;
+            margin-bottom: 9px;
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+        .service-card li::before {
+            content: "";
+            width: 6px;
+            height: 6px;
+            background: var(--gold);
+            border-radius: 50%;
+            position: absolute;
+            left: 0;
+            top: 9px;
+        }
+
+
+        /* =========================================================
+           FEATURE BAND
+        ========================================================= */
+
+        .feature-band {
+            background: var(--navy);
+            padding: 75px 0;
+            color: var(--white);
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 0;
+        }
+
+        .feature {
+            padding: 15px 28px;
+            text-align: center;
+            border-right: 1px solid rgba(255,255,255,.15);
+        }
+
+        .feature:last-child {
+            border-right: none;
+        }
+
+        .feature-icon {
+            font-size: 32px;
+            color: var(--gold);
+            margin-bottom: 16px;
+        }
+
+        .feature h3 {
+            font-size: 15px;
+            letter-spacing: .7px;
+            text-transform: uppercase;
+            margin-bottom: 9px;
+        }
+
+        .feature p {
+            color: rgba(255,255,255,.68);
+            font-size: 13px;
+            line-height: 1.65;
+        }
+
+
+        /* =========================================================
+           CAPABILITIES
+        ========================================================= */
+
+        .capabilities {
+            padding: 90px 0;
+            background: var(--white);
+        }
+
+        .capabilities-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .capability {
+            border: 1px solid var(--line);
+            padding: 32px;
+            background: #fff;
+        }
+
+        .capability h3 {
+            color: var(--navy);
+            margin-bottom: 14px;
+            font-size: 20px;
+            text-transform: uppercase;
+        }
+
+        .capability p {
+            color: var(--muted);
+            font-size: 15px;
+            line-height: 1.75;
+        }
+
+
+        /* =========================================================
+           PROJECT CTA
+        ========================================================= */
+
+        .project-cta {
+            background:
+                linear-gradient(
+                    100deg,
+                    rgba(6,21,37,.97),
+                    rgba(11,29,48,.90)
+                ),
+                url("aut-energy-hero.png") center / cover;
+            padding: 90px 0;
+        }
+
+        .project-cta-inner {
+            text-align: center;
+            max-width: 850px;
+            margin: auto;
+        }
+
+        .project-cta h2 {
+            color: var(--white);
+            font-size: clamp(35px, 5vw, 55px);
+            line-height: 1.1;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        .project-cta p {
+            color: rgba(255,255,255,.78);
+            font-size: 17px;
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+
+
+        /* =========================================================
+           CONTACT
+        ========================================================= */
+
+        .contact {
+            padding: 80px 0;
+            background: var(--light);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: start;
+        }
+
+        .contact-box {
+            background: var(--white);
+            border: 1px solid var(--line);
+            padding: 35px;
+        }
+
+        .contact-box h3 {
+            color: var(--navy);
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        .contact-item {
+            display: flex;
+            gap: 14px;
+            padding: 17px 0;
+            border-bottom: 1px solid var(--line);
+        }
+
+        .contact-item:last-child {
+            border-bottom: none;
+        }
+
+        .contact-icon {
+            color: var(--gold);
+            font-size: 21px;
+            width: 25px;
+        }
+
+        .contact-item strong {
+            display: block;
+            color: var(--navy);
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: .7px;
+        }
+
+        .contact-item span {
+            color: var(--muted);
+            font-size: 15px;
+        }
+
+
+        /* =========================================================
+           FOOTER
+        ========================================================= */
+
+        footer {
+            background: var(--navy);
+            color: var(--white);
+        }
+
+        .footer-main {
+            padding: 60px 0 45px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr;
+            gap: 50px;
+        }
+
+        .footer-brand h2 {
+            font-size: 28px;
+            margin-bottom: 14px;
+        }
+
+        .footer-brand p {
+            max-width: 450px;
+            color: rgba(255,255,255,.65);
+            font-size: 14px;
+            line-height: 1.8;
+        }
+
+        footer h4 {
+            color: var(--gold);
+            text-transform: uppercase;
+            font-size: 13px;
+            letter-spacing: 1.5px;
+            margin-bottom: 18px;
+        }
+
+        footer ul {
+            list-style: none;
+        }
+
+        footer li {
+            margin-bottom: 9px;
+        }
+
+        footer li a {
+            color: rgba(255,255,255,.7);
+            font-size: 14px;
+        }
+
+        footer li a:hover {
+            color: var(--gold);
+        }
+
+        .copyright {
+            border-top: 1px solid rgba(255,255,255,.1);
+            padding: 20px 0;
+            text-align: center;
+            color: rgba(255,255,255,.5);
+            font-size: 12px;
+        }
+
+
+        /* =========================================================
+           MOBILE
+        ========================================================= */
+
+        @media (max-width: 900px) {
+
+            .nav {
+                min-height: 70px;
+            }
+
+            nav {
+                display: none;
+            }
+
+            .hero {
+                min-height: 650px;
+                background:
+                    linear-gradient(
+                        180deg,
+                        rgba(6,21,37,.72) 0%,
+                        rgba(6,21,37,.94) 72%,
+                        rgba(6,21,37,.99) 100%
+                    ),
+                    url("aut-energy-hero.png") center / cover no-repeat;
+            }
+
+            .hero-inner {
+                min-height: 650px;
+            }
+
+            .hero-content {
+                padding: 60px 0;
+                width: 100%;
+            }
+
+            .hero h1 {
+                font-size: clamp(43px, 12vw, 66px);
+                letter-spacing: -1px;
+            }
+
+            .hero-description {
+                font-size: 17px;
+                line-height: 1.65;
+            }
+
+            .intro-grid,
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .service-card {
+                min-height: auto;
+            }
+
+            .feature-grid {
+                grid-template-columns: 1fr 1fr;
+                row-gap: 30px;
+            }
+
+            .feature:nth-child(2) {
+                border-right: none;
+            }
+
+            .capabilities-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 35px;
+            }
+        }
+
+
+        @media (max-width: 560px) {
+
+            .container {
+                width: 90%;
+            }
+
+            .brand-mark {
+                width: 44px;
+                height: 44px;
+                font-size: 20px;
+            }
+
+            .brand-main {
+                font-size: 23px;
+            }
+
+            .brand-sub {
+                font-size: 9px;
+            }
+
+            .hero {
+                min-height: 690px;
+            }
+
+            .hero-inner {
+                min-height: 690px;
+            }
+
+            .hero-content {
+                padding: 45px 0;
+            }
+
+            .hero-kicker {
+                font-size: 11px;
+                letter-spacing: 2px;
+            }
+
+            .hero h1 {
+                font-size: 48px;
+                line-height: 1;
+                margin-bottom: 22px;
+            }
+
+            .hero-description {
+                font-size: 16px;
+                line-height: 1.65;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .button {
+                width: 100%;
+            }
+
+            .intro,
+            .services,
+            .capabilities,
+            .contact {
+                padding: 65px 0;
+            }
+
+            .feature-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .feature {
+                border-right: none;
+                border-bottom: 1px solid rgba(255,255,255,.12);
+                padding-bottom: 25px;
+            }
+
+            .feature:last-child {
+                border-bottom: none;
+            }
+
+            .intro-card,
+            .contact-box,
+            .capability {
+                padding: 27px;
+            }
+        }
+
+    </style>
 </head>
+
 
 <body>
 
-<!-- =========================
+
+<!-- =========================================================
      HEADER
-========================= -->
+========================================================= -->
 
 <header>
 
-<div class="topbar">
+    <div class="container nav">
 
-    <a href="#home" class="brand">
+        <a href="#home" class="brand">
 
-        <div class="logo-globe">
-            <div class="logo-text">AUT</div>
-        </div>
+            <div class="brand-mark">
+                A
+            </div>
 
-        <div class="brand-divider"></div>
+            <div class="brand-text">
+                <div class="brand-main">
+                    AUT
+                </div>
 
-        <div class="brand-name">
-            <div class="brand-name-main">INTERNATIONAL</div>
-            <div class="brand-name-sub">ENERGY PARTNERS</div>
-        </div>
+                <div class="brand-sub">
+                    INTERNATIONAL ENERGY PARTNERS
+                </div>
+            </div>
 
-    </a>
-
-    <div class="header-right">
-
-        <div class="header-contact">
-            <span>
-                <span class="contact-icon">◎</span>
-                Global Reach. Local Insight.
-            </span>
-
-            <span>
-                <span class="contact-icon">✉</span>
-                info@autinternational.com
-            </span>
-        </div>
-
-        <a href="#contact" class="partner-btn">
-            PARTNER WITH US &nbsp; →
         </a>
 
+
+        <nav>
+
+            <a href="#home" class="active">
+                HOME
+            </a>
+
+            <a href="#about">
+                ABOUT US
+            </a>
+
+            <a href="#services">
+                SERVICES
+            </a>
+
+            <a href="#industries">
+                INDUSTRIES
+            </a>
+
+            <a href="#projects">
+                PROJECTS
+            </a>
+
+            <a href="#contact">
+                CONTACT
+            </a>
+
+        </nav>
+
     </div>
-
-</div>
-
-<nav class="navbar">
-
-<ul class="nav">
-
-    <li class="active">
-        <a href="#home">HOME</a>
-    </li>
-
-    <li>
-        <a href="#about">ABOUT US⌄</a>
-        <div class="dropdown">
-            <a href="#about">Company Overview</a>
-            <a href="#partnerships">Strategic Partnerships</a>
-            <a href="#contact">Contact AUT</a>
-        </div>
-    </li>
-
-    <li>
-        <a href="#services">SERVICES⌄</a>
-        <div class="dropdown">
-            <a href="#services">Energy & Oilfield Solutions</a>
-            <a href="#equipment">Equipment & Machinery</a>
-            <a href="#oilfield">Drilling & Well Construction</a>
-            <a href="#services">Procurement & Supply</a>
-        </div>
-    </li>
-
-    <li>
-        <a href="#industries">INDUSTRIES⌄</a>
-        <div class="dropdown">
-            <a href="#industries">Energy & Oilfield</a>
-            <a href="#industries">Construction</a>
-            <a href="#industries">Infrastructure</a>
-            <a href="#industries">Industrial Markets</a>
-        </div>
-    </li>
-
-    <li>
-        <a href="#projects">PROJECTS</a>
-    </li>
-
-    <li>
-        <a href="#contact">CONTACT</a>
-    </li>
-
-</ul>
-
-</nav>
 
 </header>
 
 
-<!-- =========================
+
+<!-- =========================================================
      HERO
-========================= -->
+========================================================= -->
 
 <section class="hero" id="home">
 
-<div class="hero-content">
+    <div class="container hero-inner">
 
-    <div class="hero-content-inner">
+        <div class="hero-content">
 
-        <h1>
-            CONNECTING <span>ENERGY.</span><br>
-            BUILDING OPPORTUNITY.
-        </h1>
+            <div class="hero-kicker">
+                International Business Development
+            </div>
 
-        <div class="gold-line"></div>
+            <h1>
+                CONNECTING<br>
+                <span>ENERGY.</span><br>
+                BUILDING<br>
+                OPPORTUNITY.
+            </h1>
 
-        <p>
-            AUT International Energy Partners connects qualified companies,
-            suppliers, contractors and project stakeholders with strategic
-            opportunities across energy, infrastructure and industrial markets.
-        </p>
+            <div class="hero-rule"></div>
 
-        <div class="hero-buttons">
+            <p class="hero-description">
+                AUT International Energy Partners connects qualified
+                companies, suppliers, manufacturers, contractors and
+                project stakeholders with strategic opportunities across
+                energy, infrastructure and industrial markets.
+            </p>
 
-            <a href="#contact" class="btn btn-gold">
-                DISCUSS A PROJECT &nbsp; →
-            </a>
+            <div class="hero-buttons">
 
-            <a href="#services" class="btn btn-outline">
-                OUR CAPABILITIES &nbsp; →
-            </a>
+                <a href="#contact"
+                   class="button button-gold">
+                    DISCUSS A PROJECT
+                </a>
+
+                <a href="#services"
+                   class="button button-outline">
+                    OUR CAPABILITIES
+                </a>
+
+            </div>
 
         </div>
 
     </div>
-
-</div>
 
 </section>
 
 
-<!-- =========================
-     STATS
-========================= -->
 
-<section class="stats">
+<!-- =========================================================
+     ABOUT / INTRODUCTION
+========================================================= -->
 
-<div class="stats-inner">
+<section class="intro" id="about">
 
-    <div class="stat">
-        <div class="stat-icon">◎</div>
+    <div class="container intro-grid">
+
         <div>
-            <strong>GLOBAL</strong>
-            <span>PARTNERSHIPS</span>
-        </div>
-    </div>
 
-    <div class="stat">
-        <div class="stat-icon">♧</div>
-        <div>
-            <strong>QUALIFIED</strong>
-            <span>SUPPLIER NETWORK</span>
-        </div>
-    </div>
+            <div class="section-label">
+                About AUT
+            </div>
 
-    <div class="stat">
-        <div class="stat-icon">♜</div>
-        <div>
-            <strong>ENERGY</strong>
-            <span>SECTOR FOCUS</span>
-        </div>
-    </div>
-
-    <div class="stat">
-        <div class="stat-icon">♢</div>
-        <div>
-            <strong>SAFE • RELIABLE</strong>
-            <span>RESPONSIBLE</span>
-        </div>
-    </div>
-
-</div>
-
-</section>
-
-
-<!-- =========================
-     ABOUT
-========================= -->
-
-<section class="section" id="about">
-
-<div class="section-inner">
-
-    <div class="section-label">WHO WE ARE</div>
-
-    <h2 class="section-title">
-        Connecting Capabilities. Creating Opportunities.
-    </h2>
-
-    <div class="section-line"></div>
-
-    <p class="section-intro">
-        AUT International Energy Partners works to connect qualified
-        companies, manufacturers, suppliers, contractors and project
-        stakeholders with opportunities across energy, oilfield,
-        construction, infrastructure and industrial markets.
-    </p>
-
-</div>
-
-</section>
-
-
-<!-- =========================
-     SERVICES
-========================= -->
-
-<section class="section services" id="services">
-
-<div class="section-inner">
-
-    <div class="section-label">WHAT WE DO</div>
-
-    <h2 class="section-title">
-        Integrated Energy & Industrial Solutions
-    </h2>
-
-    <div class="section-line"></div>
-
-    <div class="services-grid">
-
-        <div class="service-card">
-            <div class="service-icon">♜</div>
-            <h3>ENERGY & OILFIELD SOLUTIONS</h3>
-            <p>
-                Supporting upstream, midstream and downstream
-                opportunities with qualified technical and commercial
-                resources.
-            </p>
-        </div>
-
-        <div class="service-card">
-            <div class="service-icon">🛒</div>
-            <h3>PROCUREMENT & SUPPLY</h3>
-            <p>
-                Connecting projects with qualified suppliers,
-                manufacturers, distributors and technology providers.
-            </p>
-        </div>
-
-        <div class="service-card">
-            <div class="service-icon">⚙</div>
-            <h3>HEAVY CONSTRUCTION SERVICES</h3>
-            <p>
-                Access to heavy equipment, earthmoving machinery,
-                civil works resources and infrastructure support.
-            </p>
-        </div>
-
-        <div class="service-card">
-            <div class="service-icon">🤝</div>
-            <h3>STRATEGIC PARTNERSHIPS</h3>
-            <p>
-                Building long-term relationships that connect
-                capabilities, resources and project requirements.
-            </p>
-        </div>
-
-    </div>
-
-</div>
-
-</section>
-
-
-<!-- =========================
-     EQUIPMENT
-========================= -->
-
-<section class="section equipment-section" id="equipment">
-
-<div class="section-inner">
-
-    <div class="section-label">EQUIPMENT & COMPONENTS</div>
-
-    <h2 class="section-title">
-        Heavy Equipment, Oilfield Machinery & Industrial Parts
-    </h2>
-
-    <div class="section-line"></div>
-
-    <div class="equipment-layout">
-
-        <div class="equipment-copy">
-
-            <span class="equipment-badge">
-                NEW & USED EQUIPMENT
-            </span>
-
-            <h2>
-                Sourcing the equipment and components
-                <span>projects need.</span>
+            <h2 class="section-title">
+                Connecting capabilities.
+                Delivering opportunities.
             </h2>
 
-            <p>
-                AUT International Energy Partners connects qualified
-                buyers, contractors and project operators with reliable
-                sources for new and used equipment, heavy machinery,
-                oilfield equipment and industrial components.
+            <p class="section-text">
+                AUT International Energy Partners works to connect
+                qualified suppliers, manufacturers, contractors and
+                technology companies with international business
+                opportunities.
             </p>
-
-            <p>
-                Our sourcing capabilities support energy, oilfield,
-                construction, infrastructure and industrial projects,
-                subject to availability, technical specifications,
-                condition and project requirements.
-            </p>
-
-            <div class="equipment-note">
-                We focus on matching project requirements with
-                appropriate equipment, components and qualified
-                suppliers.
-            </div>
 
         </div>
 
 
-        <div class="equipment-list">
+        <div class="intro-card">
 
             <h3>
-                Equipment & Component Categories
-            </h3>
-
-            <div class="equipment-items">
-
-                <div class="equipment-item">
-                    Bulldozers & Crawler Dozers
-                </div>
-
-                <div class="equipment-item">
-                    Excavators & Hydraulic Excavators
-                </div>
-
-                <div class="equipment-item">
-                    Wheel Loaders
-                </div>
-
-                <div class="equipment-item">
-                    Backhoe Loaders
-                </div>
-
-                <div class="equipment-item">
-                    Motor Graders
-                </div>
-
-                <div class="equipment-item">
-                    Compactors & Rollers
-                </div>
-
-                <div class="equipment-item">
-                    Cranes & Material-Handling Equipment
-                </div>
-
-                <div class="equipment-item">
-                    Drilling Equipment
-                </div>
-
-                <div class="equipment-item">
-                    Well-Construction Equipment
-                </div>
-
-                <div class="equipment-item">
-                    Oilfield & Well-Servicing Equipment
-                </div>
-
-                <div class="equipment-item">
-                    Pumps & Motors
-                </div>
-
-                <div class="equipment-item">
-                    Hydraulic Systems
-                </div>
-
-                <div class="equipment-item">
-                    Heavy-Duty Machinery Components
-                </div>
-
-                <div class="equipment-item">
-                    Transmission & Drivetrain Components
-                </div>
-
-                <div class="equipment-item">
-                    Hydraulic Cylinders, Hoses & Fittings
-                </div>
-
-                <div class="equipment-item">
-                    Undercarriage Components
-                </div>
-
-                <div class="equipment-item">
-                    Buckets, Teeth & Cutting Edges
-                </div>
-
-                <div class="equipment-item">
-                    Wear Parts
-                </div>
-
-                <div class="equipment-item">
-                    Engines & Powertrain Components
-                </div>
-
-                <div class="equipment-item">
-                    Electrical & Control Components
-                </div>
-
-                <div class="equipment-item">
-                    Replacement Parts
-                </div>
-
-                <div class="equipment-item">
-                    Rebuilt Parts
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</div>
-
-</section>
-
-
-<!-- =========================
-     EQUIPMENT CONDITION
-========================= -->
-
-<section class="section" id="equipment-conditions">
-
-<div class="section-inner">
-
-    <div class="section-label">EQUIPMENT SOURCING</div>
-
-    <h2 class="section-title">
-        New & Used Equipment
-    </h2>
-
-    <div class="section-line"></div>
-
-    <div class="condition-grid">
-
-        <div class="condition-card">
-
-            <h3>NEW EQUIPMENT</h3>
-
-            <p>
-                Sourcing new machinery, equipment and industrial
-                components through qualified manufacturers, dealers,
-                distributors and suppliers according to project
-                specifications and availability.
-            </p>
-
-        </div>
-
-        <div class="condition-card">
-
-            <h3>USED EQUIPMENT</h3>
-
-            <p>
-                Sourcing used heavy machinery, oilfield equipment and
-                industrial components based on equipment requirements,
-                availability, condition and project specifications.
-            </p>
-
-        </div>
-
-    </div>
-
-</div>
-
-</section>
-
-
-<!-- =========================
-     OILFIELD & WELLS
-========================= -->
-
-<section class="section oilfield" id="oilfield">
-
-<div class="section-inner">
-
-    <div class="section-label">
-        OILFIELD & WELL-CONSTRUCTION
-    </div>
-
-    <h2 class="section-title">
-        Drilling & Well-Construction Support
-    </h2>
-
-    <div class="section-line"></div>
-
-    <p class="section-intro" style="color:#cfd6df;">
-        AUT can assist project stakeholders in sourcing equipment
-        and components required for drilling, well construction,
-        well servicing and related oilfield operations.
-    </p>
-
-    <div class="oilfield-grid">
-
-        <div class="oilfield-card">
-
-            <div class="icon">♜</div>
-
-            <h3>
-                DRILLING EQUIPMENT
+                Strategic Business Development
             </h3>
 
             <p>
-                Equipment and machinery supporting drilling and
-                well-development operations, subject to project
-                specifications and supplier availability.
+                We identify requirements, source qualified companies
+                and facilitate strategic relationships that can help
+                move projects forward. Our focus is on connecting
+                capabilities with real commercial opportunities.
             </p>
 
         </div>
 
-        <div class="oilfield-card">
+    </div>
 
-            <div class="icon">⚙</div>
+</section>
+
+
+
+<!-- =========================================================
+     WHAT WE DO
+========================================================= -->
+
+<section class="services" id="services">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <div class="section-label">
+                What We Do
+            </div>
+
+            <h2 class="section-title">
+                Energy, Equipment & Industrial Solutions
+            </h2>
+
+            <p class="section-text">
+                Connecting qualified companies with project requirements,
+                sourcing needs and strategic opportunities.
+            </p>
+
+            <div class="gold-line"></div>
+
+        </div>
+
+
+        <div class="services-grid">
+
+
+            <!-- ENERGY -->
+
+            <div class="service-card">
+
+                <div class="service-icon">
+                    ⚙
+                </div>
+
+                <h3>
+                    Energy & Oilfield Solutions
+                </h3>
+
+                <ul>
+
+                    <li>
+                        Drilling rigs and drilling systems
+                    </li>
+
+                    <li>
+                        Drill bits and drilling tools
+                    </li>
+
+                    <li>
+                        Drill pipe and drill collars
+                    </li>
+
+                    <li>
+                        Casing and well components
+                    </li>
+
+                    <li>
+                        Mud pumps and drilling-fluid equipment
+                    </li>
+
+                    <li>
+                        Wellsite and field equipment
+                    </li>
+
+                    <li>
+                        Oilfield machinery and replacement components
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+
+            <!-- CONSTRUCTION -->
+
+            <div class="service-card">
+
+                <div class="service-icon">
+                    ⛏
+                </div>
+
+                <h3>
+                    Heavy Construction &
+                    Earthmoving Equipment
+                </h3>
+
+                <ul>
+
+                    <li>
+                        Bulldozers / Dozers
+                    </li>
+
+                    <li>
+                        Hydraulic Excavators
+                    </li>
+
+                    <li>
+                        Wheel Loaders
+                    </li>
+
+                    <li>
+                        Motor Graders
+                    </li>
+
+                    <li>
+                        Backhoe Loaders
+                    </li>
+
+                    <li>
+                        Articulated Dump Trucks
+                    </li>
+
+                    <li>
+                        Compactors
+                    </li>
+
+                    <li>
+                        Skid Steer & Track Loaders
+                    </li>
+
+                    <li>
+                        Drilling and ground-excavation equipment
+                    </li>
+
+                    <li>
+                        Specialized attachments and work tools
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+
+            <!-- PARTS -->
+
+            <div class="service-card">
+
+                <div class="service-icon">
+                    ⚙
+                </div>
+
+                <h3>
+                    Equipment Parts &
+                    Components
+                </h3>
+
+                <p class="section-text"
+                   style="font-size:14px; margin-bottom:18px;">
+                    We assist with identifying and sourcing OEM,
+                    aftermarket and remanufactured parts.
+                </p>
+
+                <ul>
+
+                    <li>
+                        Engines and powertrain components
+                    </li>
+
+                    <li>
+                        Hydraulic pumps, motors and cylinders
+                    </li>
+
+                    <li>
+                        Hydraulic hoses, fittings and adapters
+                    </li>
+
+                    <li>
+                        Undercarriage and Ground Engaging Tools
+                    </li>
+
+                    <li>
+                        Buckets, teeth, cutting edges and wear parts
+                    </li>
+
+                    <li>
+                        Filters, seals, gaskets and bearings
+                    </li>
+
+                    <li>
+                        Electrical and electronic components
+                    </li>
+
+                    <li>
+                        Cooling-system components
+                    </li>
+
+                    <li>
+                        Transmission and drivetrain components
+                    </li>
+
+                    <li>
+                        Replacement and rebuild components
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     INDUSTRIES / STRENGTHS
+========================================================= -->
+
+<section class="feature-band" id="industries">
+
+    <div class="container feature-grid">
+
+
+        <div class="feature">
+
+            <div class="feature-icon">
+                ◎
+            </div>
 
             <h3>
-                WELL-CONSTRUCTION SUPPORT
+                Global Reach
             </h3>
 
             <p>
-                Sourcing equipment, components, pumps, power systems
-                and related resources for well-construction projects.
+                Connecting qualified suppliers and opportunities
+                across international markets.
             </p>
 
         </div>
 
-        <div class="oilfield-card">
 
-            <div class="icon">◆</div>
+        <div class="feature">
+
+            <div class="feature-icon">
+                🤝
+            </div>
 
             <h3>
-                OILFIELD COMPONENTS
+                Strategic Partnerships
             </h3>
 
             <p>
-                Access to qualified sources for pumps, motors,
-                hydraulic systems, drilling components and other
-                oilfield equipment and parts.
+                Building long-term relationships based on trust,
+                integrity and results.
             </p>
 
         </div>
 
-    </div>
 
-</div>
+        <div class="feature">
 
-</section>
-
-
-<!-- =========================
-     INDUSTRIES
-========================= -->
-
-<section class="section" id="industries">
-
-<div class="section-inner">
-
-    <div class="section-label">
-        INDUSTRIES
-    </div>
-
-    <h2 class="section-title">
-        Markets We Support
-    </h2>
-
-    <div class="section-line"></div>
-
-    <div class="partnership-grid">
-
-        <div class="partnership-card">
-            <h3>ENERGY & OILFIELD</h3>
-            <p>
-                Supporting upstream, midstream, downstream,
-                drilling and oilfield-related opportunities.
-            </p>
-        </div>
-
-        <div class="partnership-card">
-            <h3>CONSTRUCTION</h3>
-            <p>
-                Connecting projects with heavy equipment,
-                machinery, components and qualified resources.
-            </p>
-        </div>
-
-        <div class="partnership-card">
-            <h3>INFRASTRUCTURE</h3>
-            <p>
-                Supporting infrastructure and industrial projects
-                requiring equipment, procurement and supply resources.
-            </p>
-        </div>
-
-        <div class="partnership-card">
-            <h3>INDUSTRIAL MARKETS</h3>
-            <p>
-                Sourcing industrial equipment, machinery,
-                components and specialized project resources.
-            </p>
-        </div>
-
-        <div class="partnership-card">
-            <h3>HEAVY EQUIPMENT</h3>
-            <p>
-                Supporting requirements for earthmoving,
-                construction and heavy-duty machinery.
-            </p>
-        </div>
-
-        <div class="partnership-card">
-            <h3>GLOBAL PROCUREMENT</h3>
-            <p>
-                Connecting project requirements with qualified
-                manufacturers, suppliers and commercial partners.
-            </p>
-        </div>
-
-    </div>
-
-</div>
-
-</section>
-
-
-<!-- =========================
-     PROJECTS
-========================= -->
-
-<section class="section" id="projects">
-
-<div class="section-inner">
-
-    <div class="section-label">
-        PROJECTS
-    </div>
-
-    <h2 class="section-title">
-        Building Opportunities Through Partnerships
-    </h2>
-
-    <div class="section-line"></div>
-
-    <p class="section-intro">
-        AUT International Energy Partners works with project
-        stakeholders and qualified companies to identify capabilities,
-        equipment, supply resources and strategic opportunities that
-        support successful project execution.
-    </p>
-
-</div>
-
-</section>
-
-
-<!-- =========================
-     PARTNERSHIPS
-========================= -->
-
-<section class="section partnerships" id="partnerships">
-
-<div class="section-inner">
-
-    <div class="section-label">
-        PARTNER NETWORK
-    </div>
-
-    <h2 class="section-title">
-        Strategic Partnerships
-    </h2>
-
-    <div class="section-line"></div>
-
-    <div class="partnership-grid">
-
-        <div class="partnership-card">
-            <h3>QUALIFIED SUPPLIERS</h3>
-            <p>
-                Connecting project requirements with manufacturers,
-                distributors and qualified suppliers.
-            </p>
-        </div>
-
-        <div class="partnership-card">
-            <h3>MANUFACTURERS</h3>
-            <p>
-                Supporting opportunities involving equipment,
-                machinery, technology and industrial components.
-            </p>
-        </div>
-
-        <div class="partnership-card">
-            <h3>CONTRACTORS</h3>
-            <p>
-                Helping project stakeholders identify appropriate
-                capabilities and commercial resources.
-            </p>
-        </div>
-
-    </div>
-
-</div>
-
-</section>
-
-
-<!-- =========================
-     CTA
-========================= -->
-
-<section class="cta">
-
-<div class="cta-inner">
-
-    <div>
-        <h2>Have a Project or Equipment Requirement?</h2>
-
-        <p>
-            Tell AUT what you need. We can help identify qualified
-            suppliers, equipment sources and potential project
-            partners based on your requirements.
-        </p>
-    </div>
-
-    <a href="#contact" class="btn btn-gold">
-        DISCUSS A PROJECT &nbsp; →
-    </a>
-
-</div>
-
-</section>
-
-
-<!-- =========================
-     CONTACT
-========================= -->
-
-<section class="section contact-section" id="contact">
-
-<div class="section-inner">
-
-    <div class="section-label">
-        CONTACT
-    </div>
-
-    <h2 class="section-title">
-        Let's Build Opportunity Together
-    </h2>
-
-    <div class="section-line"></div>
-
-    <div class="contact-grid">
-
-        <div class="contact-box">
-
-            <h3>AUT International Energy Partners</h3>
-
-            <div class="contact-detail">
-                <strong>Email:</strong><br>
-                info@autinternational.com
+            <div class="feature-icon">
+                ♢
             </div>
 
-            <div class="contact-detail">
-                <strong>Partnerships:</strong><br>
-                Contact AUT regarding equipment sourcing,
-                procurement, energy opportunities and strategic
-                project partnerships.
-            </div>
+            <h3>
+                Quality & Reliability
+            </h3>
+
+            <p>
+                Working with trusted manufacturers and service
+                providers that meet industry standards.
+            </p>
 
         </div>
 
 
-        <div class="contact-box">
+        <div class="feature">
 
-            <h3>Project & Equipment Inquiries</h3>
-
-            <div class="contact-detail">
-                <strong>Equipment:</strong><br>
-                New and used heavy equipment, oilfield machinery,
-                industrial components and replacement parts.
+            <div class="feature-icon">
+                ↗
             </div>
 
-            <div class="contact-detail">
-                <strong>Projects:</strong><br>
-                Energy, oilfield, drilling, well construction,
-                infrastructure and industrial opportunities.
+            <h3>
+                Industry Experience
+            </h3>
+
+            <p>
+                Understanding complex project requirements and
+                delivering effective solutions.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     CAPABILITIES
+========================================================= -->
+
+<section class="capabilities">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <div class="section-label">
+                Our Capabilities
             </div>
+
+            <h2 class="section-title">
+                From Requirements to Opportunity
+            </h2>
+
+            <p class="section-text">
+                We help identify requirements, locate qualified
+                companies and establish strategic commercial
+                connections.
+            </p>
+
+            <div class="gold-line"></div>
+
+        </div>
+
+
+        <div class="capabilities-grid">
+
+
+            <div class="capability">
+
+                <h3>
+                    Supplier Identification
+                </h3>
+
+                <p>
+                    Identifying qualified manufacturers, suppliers,
+                    contractors and service providers based on
+                    specific project requirements.
+                </p>
+
+            </div>
+
+
+            <div class="capability">
+
+                <h3>
+                    Equipment Sourcing
+                </h3>
+
+                <p>
+                    Supporting sourcing requirements for energy,
+                    oilfield, construction and industrial equipment,
+                    components and replacement parts.
+                </p>
+
+            </div>
+
+
+            <div class="capability">
+
+                <h3>
+                    Business Development
+                </h3>
+
+                <p>
+                    Facilitating introductions and developing
+                    commercial relationships between qualified
+                    companies and project stakeholders.
+                </p>
+
+            </div>
+
+
+            <div class="capability">
+
+                <h3>
+                    International Opportunities
+                </h3>
+
+                <p>
+                    Connecting capable companies with international
+                    markets and project opportunities where their
+                    products, services and expertise may be relevant.
+                </p>
+
+            </div>
+
 
         </div>
 
     </div>
 
-</div>
-
 </section>
 
 
-<!-- =========================
-     FOOTER
-========================= -->
 
-<footer>
+<!-- =========================================================
+     PROJECT CTA
+========================================================= -->
 
-<div class="footer-inner">
+<section class="project-cta" id="projects">
 
-    <div class="footer-brand">
+    <div class="container project-cta-inner">
 
         <h2>
-            AUT <span>INTERNATIONAL ENERGY PARTNERS</span>
+            Have a Project<br>
+            or Capability?
         </h2>
 
         <p>
-            Connecting qualified companies, suppliers, contractors
-            and project stakeholders with strategic opportunities
-            across energy, infrastructure and industrial markets.
+            Let's discuss how AUT International Energy Partners
+            can help connect your company with qualified
+            opportunities and strategic partners.
         </p>
 
-    </div>
-
-
-    <div>
-
-        <h4>CAPABILITIES</h4>
-
-        <ul>
-            <li><a href="#services">Energy & Oilfield</a></li>
-            <li><a href="#equipment">Heavy Equipment</a></li>
-            <li><a href="#equipment">Industrial Parts</a></li>
-            <li><a href="#oilfield">Well Construction</a></li>
-        </ul>
+        <a href="#contact"
+           class="button button-gold">
+            DISCUSS A PROJECT →
+        </a>
 
     </div>
 
+</section>
 
-    <div>
 
-        <h4>MARKETS</h4>
 
-        <ul>
-            <li><a href="#industries">Energy</a></li>
-            <li><a href="#industries">Oilfield</a></li>
-            <li><a href="#industries">Construction</a></li>
-            <li><a href="#industries">Infrastructure</a></li>
-        </ul>
+<!-- =========================================================
+     CONTACT
+========================================================= -->
+
+<section class="contact" id="contact">
+
+    <div class="container contact-grid">
+
+
+        <div>
+
+            <div class="section-label">
+                Let's Work Together
+            </div>
+
+            <h2 class="section-title">
+                Build the Right Connection.
+            </h2>
+
+            <p class="section-text">
+                We welcome manufacturers, suppliers, contractors
+                and technology companies interested in exploring
+                international opportunities and partnerships.
+            </p>
+
+        </div>
+
+
+        <div class="contact-box">
+
+            <h3>
+                Contact AUT
+            </h3>
+
+
+            <div class="contact-item">
+
+                <div class="contact-icon">
+                    ✉
+                </div>
+
+                <div>
+
+                    <strong>
+                        Email
+                    </strong>
+
+                    <span>
+                        autpartners@gmail.com
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="contact-item">
+
+                <div class="contact-icon">
+                    ◎
+                </div>
+
+                <div>
+
+                    <strong>
+                        Market
+                    </strong>
+
+                    <span>
+                        United States | International
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="contact-item">
+
+                <div class="contact-icon">
+                    ◆
+                </div>
+
+                <div>
+
+                    <strong>
+                        Focus
+                    </strong>
+
+                    <span>
+                        Energy • Equipment • Technology •
+                        Industrial Solutions
+                    </span>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer>
+
+    <div class="container footer-main">
+
+        <div class="footer-grid">
+
+
+            <div class="footer-brand">
+
+                <h2>
+                    AUT <span class="gold">International Energy Partners</span>
+                </h2>
+
+                <p>
+                    Connecting qualified companies, suppliers,
+                    manufacturers and project stakeholders with
+                    international opportunities across energy,
+                    equipment, technology and industrial markets.
+                </p>
+
+            </div>
+
+
+            <div>
+
+                <h4>
+                    Navigation
+                </h4>
+
+                <ul>
+
+                    <li>
+                        <a href="#home">
+                            Home
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#about">
+                            About Us
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#services">
+                            Services
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#industries">
+                            Industries
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <div>
+
+                <h4>
+                    Contact
+                </h4>
+
+                <ul>
+
+                    <li>
+                        <a href="mailto:autpartners@gmail.com">
+                            autpartners@gmail.com
+                        </a>
+                    </li>
+
+                    <li>
+                        United States
+                    </li>
+
+                    <li>
+                        International
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+        </div>
 
     </div>
 
 
-    <div>
+    <div class="copyright">
 
-        <h4>CONNECT</h4>
-
-        <ul>
-            <li><a href="#contact">Contact AUT</a></li>
-            <li><a href="#partnerships">Partner With Us</a></li>
-            <li><a href="#projects">Projects</a></li>
-        </ul>
+        © 2026 AUT International Energy Partners.
+        All Rights Reserved.
 
     </div>
-
-</div>
-
-
-<div class="copyright">
-    © 2026 AUT International Energy Partners. All rights reserved.
-</div>
 
 </footer>
+
+
+
+<!-- =========================================================
+     SIMPLE JAVASCRIPT
+========================================================= -->
+
+<script>
+
+    /* Smooth navigation */
+
+    document.querySelectorAll('a[href^="#"]').forEach(function(link) {
+
+        link.addEventListener("click", function(event) {
+
+            const targetId = this.getAttribute("href");
+
+            if (targetId === "#") {
+                return;
+            }
+
+            const target = document.querySelector(targetId);
+
+            if (target) {
+
+                event.preventDefault();
+
+                target.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start"
+                });
+
+            }
+
+        });
+
+    });
+
+
+    /* Highlight active navigation item */
+
+    const sections = document.querySelectorAll("section[id]");
+    const navLinks = document.querySelectorAll("nav a[href^='#']");
+
+    window.addEventListener("scroll", function() {
+
+        let current = "";
+
+        sections.forEach(function(section) {
+
+            const sectionTop =
+                section.offsetTop - 150;
+
+            if (window.scrollY >= sectionTop) {
+                current = section.getAttribute("id");
+            }
+
+        });
+
+        navLinks.forEach(function(link) {
+
+            link.classList.remove("active");
+
+            if (link.getAttribute("href") === "#" + current) {
+                link.classList.add("active");
+            }
+
+        });
+
+    });
+
+</script>
+
 
 </body>
 </html>
